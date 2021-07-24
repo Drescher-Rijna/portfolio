@@ -22,13 +22,12 @@ a {
 
 /* NAVIGATION */
 header {
-  @apply bg-gray-100;
+  @apply bg-white;
   @apply h-20;
   @apply w-full;
   @apply max-w-full;
   @apply mx-0;
-  @apply px-0;
-  @apply -mt-20;
+  @apply px-7;
   @apply flex;
   @apply justify-center;
   @apply items-center;
@@ -61,29 +60,96 @@ header {
 
 /* MOBIL MENU CONTAINER */
 .mobil-menu-container {
-  @apply bg-gray-100;
+  @apply bg-white;
   @apply h-screen;
   @apply w-full;
   @apply z-50;
   @apply absolute;
   @apply -left-full;
   @apply transition-all;
-  @apply mt-14;
   @apply px-3;
   @apply py-8;
+  @apply top-20;
 }
 
 .mobil-menu-container-active {
-  @apply bg-gray-100;
+  @apply bg-white;
   @apply h-screen;
   @apply w-full;
   @apply z-50;
   @apply absolute;
   @apply left-0;
   @apply transition-all;
-  @apply mt-14;
-  @apply px-3;
+  @apply px-6;
   @apply py-8;
+  @apply top-20;
+}
+
+.socials-mobil {
+  @apply mt-5;
+}
+
+.socials-mobil ul {
+  @apply flex;
+  @apply justify-end;
+}
+
+.socials-mobil ul li {
+  @apply pl-6;
+}
+
+.menu-liste-mobil li {
+  @apply py-6;
+}
+
+.menu-liste-mobil li:nth-child(1) {
+  @apply pt-0;
 }
 
 
+/* DESKTOP MENU LIST */
+.global-menu-desktop {
+  @apply w-full;
+  @apply justify-between;
+  @apply flex;
+}
+
+.menu-liste-desktop {
+  @apply flex;
+  margin-right: -126px;
+}
+
+.menu-liste-desktop li {
+  @apply px-7;
+}
+
+.socials-desktop ul {
+  @apply flex;
+  @apply justify-evenly;
+}
+
+.socials-desktop ul li {
+  @apply px-7;
+}
+
+/* Footer socials */
+footer {
+  @apply p-5;
+  @apply mt-8;
+  @apply relative;
+  @apply w-full;
+}
+
+footer p {
+  @apply text-center;
+}
+
+.footer-socials {
+  @apply py-3;
+  @apply text-left;
+  @apply w-full;
+}
+
+.footer-socials li {
+  @apply py-3;
+}
