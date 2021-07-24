@@ -1,3 +1,8 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -14,3 +19,71 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* NAVIGATION */
+header {
+  @apply bg-gray-100;
+  @apply h-20;
+  @apply w-full;
+  @apply max-w-full;
+  @apply mx-0;
+  @apply px-0;
+  @apply -mt-20;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply top-0;
+  @apply z-10;
+  @apply text-base;
+  @apply sticky;
+}
+
+/* BURGER MENU BUTTON */
+#menu-btn {
+  @apply mt-auto;
+  @apply ml-auto;
+  @apply mb-auto;
+  @apply mr-4;
+  @apply cursor-pointer;
+  @apply outline-none;
+  @apply border-none;
+  @apply bg-transparent;
+}
+
+#menu-btn div {
+  @apply bg-black;
+  @apply w-8;
+  @apply my-1;
+  @apply mx-0;
+  @apply h-1;
+  @apply rounded;
+}
+
+/* MOBIL MENU CONTAINER */
+.mobil-menu-container {
+  @apply bg-gray-100;
+  @apply h-screen;
+  @apply w-full;
+  @apply z-50;
+  @apply absolute;
+  @apply -left-full;
+  @apply transition-all;
+  @apply mt-14;
+  @apply px-3;
+  @apply py-8;
+}
+
+.mobil-menu-container-active {
+  @apply bg-gray-100;
+  @apply h-screen;
+  @apply w-full;
+  @apply z-50;
+  @apply absolute;
+  @apply left-0;
+  @apply transition-all;
+  @apply mt-14;
+  @apply px-3;
+  @apply py-8;
+}
+
+
