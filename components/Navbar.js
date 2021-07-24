@@ -3,7 +3,7 @@ import NavbarDesktop from "./NavbarDesktop";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [screenSize, setScreenSize] = useState();
+    const [screenSize, setScreenSize] = useState(window.innerWidth);
 
     useEffect(() => {
         function handleResize() {
@@ -21,9 +21,12 @@ const Navbar = () => {
 
     return (
         <header>
+            
+            {screenSize < 768 &&
             <div id="logo">
                 Logo
             </div>
+            }
 
             
             {screenSize < 768 &&
@@ -37,8 +40,31 @@ const Navbar = () => {
             {screenSize < 768 &&
                     <div id="mobil-menu-container" className={menuOpen ? 'mobil-menu-container-active' : 'mobil-menu-container'}>
                         <nav className="global-menu-mobil">
-                            
+                            <ul className="menu-liste-mobil">
+                                <li>
+                                    Om mig
+                                </li>
+                                <li>
+                                    Projekter
+                                </li>
+                                <li>
+                                    Skillset
+                                </li>
+                                <li>
+                                    Kontakt mig
+                                </li>
+                            </ul>
                         </nav>
+                        <div className="socials-mobil">
+                            <ul>
+                                <li>
+                                    GH
+                                </li>
+                                <li>
+                                    LI
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 }
 
@@ -48,7 +74,7 @@ const Navbar = () => {
 
                 {screenSize > 768 &&
                     <NavbarDesktop />
-                }
+                }       
 
         </header>
     )
