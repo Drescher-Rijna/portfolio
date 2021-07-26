@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react";
 import NavbarDesktop from "./NavbarDesktop";
+import * as Scroll from 'react-scroll';
+import { Link } from 'react-scroll'
+import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
+import { animateScroll as scroll } from 'react-scroll'
 
 const Navbar = () => {
+    const [screenSize, setScreenSize] = useState();
     const [menuOpen, setMenuOpen] = useState(false);
-    const [screenSize, setScreenSize] = useState(window.innerWidth);
+    
+    useEffect(() => {
+        setScreenSize(window.innerWidth);
+    },[]);
 
     useEffect(() => {
         function handleResize() {
@@ -19,12 +27,17 @@ const Navbar = () => {
         setMenuOpen(!menuOpen);
     }
 
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    }
+    
+
     return (
         <header>
             
             {screenSize < 768 &&
-            <div id="logo">
-                Logo
+            <div className="logo" >
+                <Link to='/' onClick={toggleHome}>Logo</Link>
             </div>
             }
 
@@ -41,18 +54,26 @@ const Navbar = () => {
                     <div id="mobil-menu-container" className={menuOpen ? 'mobil-menu-container-active' : 'mobil-menu-container'}>
                         <nav className="global-menu-mobil">
                             <ul className="menu-liste-mobil">
-                                <li>
-                                    Om mig
-                                </li>
-                                <li>
-                                    Projekter
-                                </li>
-                                <li>
-                                    Skillset
-                                </li>
-                                <li>
-                                    Kontakt mig
-                                </li>
+                                <Link activeClass="activeMobil" to='om-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                    <li>
+                                        Om mig
+                                    </li>
+                                </Link>
+                                <Link activeClass="activeMobil" to='projekter-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                    <li>
+                                        Projekter
+                                    </li>
+                                </Link>
+                                <Link activeClass="activeMobil" to='skillset-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                    <li>
+                                        Skillset
+                                    </li>
+                                </Link>
+                                <Link activeClass="activeMobil" to='kontakt-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                    <li>
+                                        Kontakt mig
+                                    </li>
+                                </Link>
                             </ul>
                         </nav>
                         <div className="socials-mobil">
