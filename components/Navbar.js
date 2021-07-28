@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import NavbarDesktop from "./NavbarDesktop";
 import * as Scroll from 'react-scroll';
-import { Link } from 'react-scroll'
+import { Link as LinkS } from 'react-scroll'
 import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
 import { animateScroll as scroll } from 'react-scroll'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+
 
 const Navbar = () => {
     const [screenSize, setScreenSize] = useState();
@@ -37,7 +40,9 @@ const Navbar = () => {
             
             {screenSize < 768 &&
             <div className="logo" >
-                <Link to='/' onClick={toggleHome}>Logo</Link>
+                <LinkS to='/' onClick={toggleHome}>
+                    <img src="/logo-black-white.png" />
+                </LinkS>
             </div>
             }
 
@@ -54,35 +59,39 @@ const Navbar = () => {
                     <div id="mobil-menu-container" className={menuOpen ? 'mobil-menu-container-active' : 'mobil-menu-container'}>
                         <nav className="global-menu-mobil">
                             <ul className="menu-liste-mobil">
-                                <Link activeClass="activeMobil" to='om-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
-                                    <li>
+                                <LinkS activeClass="activeMobil" to='om-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                    <li onClick={screenSize < 768 ? handleBurgermenu : undefined}>
                                         Om mig
                                     </li>
-                                </Link>
-                                <Link activeClass="activeMobil" to='projekter-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
-                                    <li>
+                                </LinkS>
+                                <LinkS activeClass="activeMobil" to='projekter-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                    <li onClick={screenSize < 768 ? handleBurgermenu : undefined}>
                                         Projekter
                                     </li>
-                                </Link>
-                                <Link activeClass="activeMobil" to='skillset-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
-                                    <li>
+                                </LinkS>
+                                <LinkS activeClass="activeMobil" to='skillset-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                    <li onClick={screenSize < 768 ? handleBurgermenu : undefined}>
                                         Skillset
                                     </li>
-                                </Link>
-                                <Link activeClass="activeMobil" to='kontakt-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
-                                    <li>
+                                </LinkS>
+                                <LinkS activeClass="activeMobil" to='kontakt-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                    <li onClick={screenSize < 768 ? handleBurgermenu : undefined}>
                                         Kontakt mig
                                     </li>
-                                </Link>
+                                </LinkS>
                             </ul>
                         </nav>
                         <div className="socials-mobil">
                             <ul>
                                 <li>
-                                    GH
+                                    <a href="https://github.com/Drescher-Rijna" target="_blank">
+                                        <FontAwesomeIcon icon={faGithub} />
+                                    </a>
                                 </li>
                                 <li>
-                                    LI
+                                    <a href="https://www.linkedin.com/in/drescher-rijna/" target="_blank">
+                                        <FontAwesomeIcon icon={faLinkedin} />
+                                    </a>
                                 </li>
                             </ul>
                         </div>

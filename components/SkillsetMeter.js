@@ -1,9 +1,44 @@
 import { motion, useAnimation } from "framer-motion"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 
 const SkillsetMeter = ({imgUrl, skill, level, inView}) => {    
+
+    const [screenSize, setScreenSize] = useState();
+    const [logoPosOffset, setLogoPosOffset] = useState(10);
+    
+    useEffect(() => {
+        setScreenSize(window.innerWidth);
+    },[]);
+
+    useEffect(() => {
+        function handleResize() {
+            setScreenSize(window.innerWidth);
+            console.log(screenSize);
+
+            if(screenSize < 480) {
+                setLogoPosOffset(7)
+            }
+            
+            if(screenSize > 480 || screenSize == 480) {
+                setLogoPosOffset(7)
+            }
+
+            if(screenSize > 640 || screenSize == 640) {
+                setLogoPosOffset(5)
+            }
+
+            if(screenSize > 1025 || screenSize == 1025) {
+                setLogoPosOffset(10)
+            }
+
+            console.log(logoPosOffset);
+            
+        }
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    },[screenSize]);
 
     const animation = useAnimation();
     const logoAnimation = useAnimation();
@@ -34,7 +69,7 @@ const SkillsetMeter = ({imgUrl, skill, level, inView}) => {
     },[inView]);
 
     const bar_width = `${level}%`;
-    const logo_pos = `${level-8}%`;
+    const logo_pos = `${level-logoPosOffset}%`;
 
     return (
         <div className="skillset-container">
