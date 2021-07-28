@@ -30,7 +30,7 @@ export default function Home() {
               Hvem er Drescher Rijna?
             </h2>
             <div className="om-mig-photo">
-              <img src="/photo-af-mig.png" />
+              <img src="/Drescher_300x400px.png" />
             </div>
             <article>
               <p>

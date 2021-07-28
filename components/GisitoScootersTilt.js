@@ -15,7 +15,9 @@ const GisitoScootersTilt = () => {
                 </article>
             
                 <div className="project-container-gisitoscooters">
-                    
+                    <div className="gisitoscooters-mockup">
+
+                    </div>      
                 </div>
             </div>
        </Tilt>

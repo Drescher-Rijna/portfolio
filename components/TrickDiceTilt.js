@@ -15,8 +15,8 @@ const TrickDiceTilt = () => {
                 </article>
             
                 <div className="project-container-trickdice">
-                    <video autoPlay loop className="mockup-trickdice">
-                        <source src="/mockup-video.mp4" type="video/mp4" />
+                    <video autoPlay muted loop className="mockup-trickdice">
+                        <source src="/mock.webm" type="video/webm" />
                     </video>
                 </div>
             </div>

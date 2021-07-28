@@ -21,22 +21,22 @@ const NavbarDesktop = () => {
             <div className="header-bg">
             
             <ul className="menu-liste-desktop">
-                <LinkS activeClass="active" to='om-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
+                <LinkS className="nav-link" activeClass="active" to='om-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
                     <li>
                         Om mig
                     </li>
                 </LinkS>
-                <LinkS activeClass="active" to='projekter-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
+                <LinkS className="nav-link" activeClass="active" to='projekter-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
                     <li>
                         Projekter
                     </li>
                 </LinkS>
-                <LinkS activeClass="active" to='skillset-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
+                <LinkS className="nav-link" activeClass="active" to='skillset-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
                     <li>
                         Skillset
                     </li>
                 </LinkS>
-                <LinkS activeClass="active" to='kontakt-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
+                <LinkS className="nav-link" activeClass="active" to='kontakt-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
                     <li>
                         Kontakt mig
                     </li>

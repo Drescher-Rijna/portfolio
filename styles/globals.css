@@ -360,6 +360,7 @@ footer p {
 }
 
 .tilt-gisitoscooters {
+  @apply overflow-hidden;
   height: 510px;
   background-color: #00a14b;
   @apply ease-in-out;
@@ -367,6 +368,41 @@ footer p {
 
 .tilt-gisitoscooters:hover {
   background-color: #017a39;
+}
+
+.tilt-gisitoscooters:hover .gisitoscooters-mockup {
+  transform: scale(1.1);
+}
+
+.tilt-inner-gisitoscooters {
+  @apply relative;
+  @apply grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "description-gisitoscooters"
+  "gisitoscooters-mockup";
+  @apply gap-y-10;
+}
+
+.tilt-desc-gisitoscooters {
+  grid-area: description-gisitoscooters;
+}
+
+.project-container-gisitoscooters {
+  @apply relative;
+  grid-area: gisitoscooters-mockup;
+  
+}
+
+.gisitoscooters-mockup {
+  @apply ease-in-out;
+  transition: all 1s;
+  @apply absolute;
+  width: 100%;
+  height: 370px;
+  background: url('../public/mockup-gisito.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .gisitoscooters-area {
@@ -544,6 +580,11 @@ footer p {
     @apply px-7;
     @apply py-2;
     @apply text-white;
+  }
+
+  .menu-liste-desktop a:hover  {
+    @apply border-b-4;
+    @apply border-green-300;
   }
 
   .socials-desktop ul {
@@ -942,6 +983,8 @@ footer p {
     background-color: #017a39;
   }
 
+  
+
   .gisitoscooters-area {
     grid-area: gisitoscooters;
   }
@@ -1130,17 +1173,69 @@ footer p {
   }
 
   .tilt-toscoot {
-    
+    @apply flex;
+    @apply relative;
+    @apply items-center;
     @apply h-80;
     @apply ease-in-out;
     background-color: #a10a02;
-    background-image: -webkit-linear-gradient( -45deg, #a10a02 0%, #a10a02 50%, #f2f2f2 50%, #f2f2f2 100%);
-    background-image: linear-gradient( -45deg, #a10a02 0%, #a10a02 50%, #f2f2f2 50%, #f2f2f2 100%);
+    background-image: -webkit-linear-gradient( -55deg, #a10a02 0%, #a10a02 55%, #f2f2f2 55%, #f2f2f2 100%);
+    background-image: linear-gradient( -55deg, #a10a02 0%, #a10a02 55%, #f2f2f2 55%, #f2f2f2 100%);
   }
 
   .tilt-toscoot:hover {
-    background-image: -webkit-linear-gradient( -45deg, #b90900 0%, #b90900 50%, #e2e2e2 50%, #e2e2e2 100%);
-    background-image: linear-gradient( -45deg, #b90900 0%, #b90900 50%, #e2e2e2 50%, #e2e2e2 100%);
+    background-image: -webkit-linear-gradient( -55deg, #b90900 0%, #b90900 55%, #e2e2e2 55%, #e2e2e2 100%);
+    background-image: linear-gradient( -55deg, #b90900 0%, #b90900 55%, #e2e2e2 55%, #e2e2e2 100%);
+  }
+
+  .tilt-toscoot:hover .mockup-toscoot {
+    transform: scale(1.1);
+  }
+
+  .tilt-inner-toscoot {
+    @apply relative;
+    @apply py-10;
+    @apply px-20;
+    @apply grid;
+    @apply gap-x-28;
+    @apply items-center;
+    @apply align-middle;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "description-toscoot mockup-toscoot";
+  }
+
+  .tilt-desc-toscoot {
+    grid-area: description-toscoot;
+    @apply text-black;
+    @apply grid;
+    @apply grid-cols-1;
+    @apply gap-y-11;
+  }
+
+
+  .mockup-toscoot {
+    @apply ease-in-out;
+    transition: all 1s;
+    @apply absolute;
+    grid-area: mockup-toscoot;
+    transform: rotate(-25deg);
+    z-index: 2;
+  }
+
+  .project-container-toscoot {
+    @apply relative;
+    @apply w-full;
+    @apply flex;
+    @apply items-center;
+  }
+
+  .tilt-gisitoscooters {
+    
+    height: 600px;
+    margin-top: 50px;
+    background-color: #00a14b;
+    @apply ease-in-out;
   }
 
   .tilt-trickdice {
@@ -1154,6 +1249,11 @@ footer p {
   .tilt-trickdice:hover {
     background-image: -webkit-linear-gradient( -55deg, #008079 0%, #008079 55%, #bb0b49 55%, #bb0b49 100%);
     background-image: linear-gradient( -55deg, #008079 0%, #008079 55%, #bb0b49 55%, #bb0b49 100%);
+  }
+
+  .tilt-trickdice:hover .mockup-trickdice {
+    transform: scale(1.1);
+    transform: rotate(3deg);
   }
 
   .tilt-inner-trickdice {
@@ -1177,6 +1277,8 @@ footer p {
 
 
   .mockup-trickdice {
+    @apply ease-in-out;
+    transition: all 1s;
     @apply absolute;
     grid-area: mockup-trickdice;
     @apply max-h-96;
