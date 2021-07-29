@@ -159,7 +159,7 @@ header {
   @apply bg-green-600;
   @apply w-full;
   @apply max-w-full;
-  @apply mx-0;
+  @apply mx-7;
   @apply px-7;
   @apply flex;
   @apply items-center;
@@ -1168,7 +1168,7 @@ footer p {
     @apply max-w-full;
     @apply mx-0;
     @apply px-0;
-    @apply pl-7;
+    @apply pl-0;
     @apply flex;
     @apply items-center;
     @apply top-0;
@@ -1178,8 +1178,13 @@ footer p {
     @apply max-h-16;
   }
 
+  .header-bg {
+    @apply px-0;
+    @apply mx-0;
+  }
+
   .logo {
-    @apply pr-12;
+    @apply pr-4;
     @apply pl-4;
     @apply flex;
     @apply items-center;
@@ -1187,7 +1192,7 @@ footer p {
   }
   
   .logo img {
-    width: 75px;
+    width: 65px;
   }
 
   /* DESKTOP MENU LIST */
@@ -1207,31 +1212,12 @@ footer p {
     @apply px-7;
     @apply py-2;
     @apply text-white;
+    @apply text-base;
   }
 
   .menu-liste-desktop a:hover  {
     @apply border-b-4;
     @apply border-green-300;
-  }
-
-  .socials-desktop ul {
-    @apply flex;
-    @apply justify-evenly;
-  }
-
-  .socials-desktop ul li {
-    @apply px-7;
-    
-  }
-
-  .socials-desktop ul li a {
-    @apply cursor-pointer;
-    @apply text-2xl;
-    
-  } 
-
-  .socials-desktop ul li:hover a * {
-    @apply text-green-600;
   }
 
   .global-menu-desktop {
@@ -1254,29 +1240,61 @@ footer p {
     @apply max-h-14;
     @apply mt-1;
     @apply border-b-4;
-    @apply border-green-600;
+    @apply border-transparent;
+  }
+
+
+  /* socials */
+  .socials-desktop ul li a {
+    @apply cursor-pointer;
+    @apply text-xl;
+    
+  } 
+
+  .socials-desktop ul li:hover a * {
+    @apply text-green-600;
   }
 
   .socials-desktop ul {
-    @apply flex;
-    @apply justify-evenly;
-    @apply items-center;
-    @apply h-14;
-    @apply max-h-14;
+    width: 75px;
+    @apply pr-4;
+    @apply pl-4;
+    @apply pt-1;
+    @apply gap-x-2;
+    @apply gap-y-1;
+    @apply grid;
+    grid-template-areas: 
+    "desktop-li desktop-git"
+    "desktop-ig desktop-ig";
+  }
+
+  .social-desktop-ig {
+    grid-area: desktop-ig;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    
+  }
+
+  .social-desktop-li {
+    grid-area: desktop-li;
+  }
+
+  .social-desktop-git {
+    grid-area: desktop-git;
   }
 
   .socials-desktop ul li {
-    @apply px-7;
+    @apply px-0;
     
   }
 
 
-
   /* Om mig section */
   #om-mig-section {
-    @apply px-40;
+    @apply px-20;
     @apply flex;
     @apply items-center;
+    @apply gap-y-3;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -1285,13 +1303,16 @@ footer p {
 
   /* Projekter section */
   #projekter-section {
-    @apply px-40;
+    @apply px-20;
     @apply my-20;
+    @apply mb-4;
+    @apply pb-16;
     display: grid;
     grid-template-columns: 1fr 1fr;
     @apply gap-y-8;
     @apply gap-x-8;
     grid-template-areas: 
+      "projekt-titel projekt-titel"
       "toscoot toscoot"
       "gisitoscooters dawinti"
       "trickdice trickdice"; 
@@ -1316,57 +1337,83 @@ footer p {
   }
 
   .tilt-toscoot {
-    @apply h-80;
+    @apply h-60;
     @apply ease-in-out;
     background-color: #a10a02;
-    background-image: -webkit-linear-gradient( -45deg, #a10a02 0%, #a10a02 50%, #f2f2f2 50%, #f2f2f2 100%);
-    background-image: linear-gradient( -45deg, #a10a02 0%, #a10a02 50%, #f2f2f2 50%, #f2f2f2 100%);
+    background-image: -webkit-linear-gradient( -55deg, #a10a02 0%, #a10a02 45%, #f2f2f2 45%, #f2f2f2 100%);
+    background-image: linear-gradient( -55deg, #a10a02 0%, #a10a02 45%, #f2f2f2 45%, #f2f2f2 100%);
   }
 
   .tilt-toscoot:hover {
-    background-image: -webkit-linear-gradient( -45deg, #b90900 0%, #b90900 50%, #e2e2e2 50%, #e2e2e2 100%);
-    background-image: linear-gradient( -45deg, #b90900 0%, #b90900 50%, #e2e2e2 50%, #e2e2e2 100%);
+    background-image: -webkit-linear-gradient( -55deg, #b90900 0%, #b90900 45%, #e2e2e2 45%, #e2e2e2 100%);
+    background-image: linear-gradient( -55deg, #b90900 0%, #b90900 45%, #e2e2e2 45%, #e2e2e2 100%);
   }
 
   .tilt-trickdice {
-    @apply h-80;
+    @apply h-60;
     background-color: #00a19a;
     @apply ease-in-out;
-    background-image: -webkit-linear-gradient( -45deg, #00a19a 0%, #00a19a 50%, #d60b52 50%, #d60b52 100%);
-    background-image: linear-gradient( -45deg, #00a19a 0%, #00a19a 50%, #d60b52 50%, #d60b52 100%);
+    background-image: -webkit-linear-gradient( -55deg, #00a19a 0%, #00a19a 55%, #d60b52 55%, #d60b52 100%);
+    background-image: linear-gradient( -55deg, #00a19a 0%, #00a19a 55%, #d60b52 55%, #d60b52 100%);
   }
 
   .tilt-trickdice:hover {
-    background-image: -webkit-linear-gradient( -45deg, #008079 0%, #008079 50%, #bb0b49 50%, #bb0b49 100%);
-    background-image: linear-gradient( -45deg, #008079 0%, #008079 50%, #bb0b49 50%, #bb0b49 100%);
+    background-image: -webkit-linear-gradient( -55deg, #008079 0%, #008079 55%, #bb0b49 55%, #bb0b49 100%);
+    background-image: linear-gradient( -55deg, #008079 0%, #008079 55%, #bb0b49 55%, #bb0b49 100%);
+  }
+
+  .tilt-trickdice:hover .mockup-trickdice {
+    transform: scale(1.1) rotate(-10deg);
+  }
+
+  .mockup-trickdice  {
+    transform: rotate(-10deg);
   }
 
   .tilt-inner-trickdice {
     @apply relative;
-    @apply py-10;
-    @apply px-16;
+    @apply max-h-60;
+    @apply p-5;
     @apply grid;
-    @apply gap-x-28;
+    @apply gap-x-0;
+    @apply items-center;
+    @apply place-content-center;
     grid-template-columns: 2fr 2fr;
     grid-template-areas: 
-    "description-trickdice mockup-trickdice";
+    "mockup-trickdice description-trickdice";
   }
 
   .tilt-desc-trickdice {
     grid-area: description-trickdice;
+    @apply max-h-60;
+    @apply h-60;
+    @apply p-5;
+    @apply pl-8;
+    @apply grid;
+    @apply grid-cols-1;
+    @apply gap-y-3;
     @apply text-white;
   }
 
+
   .mockup-trickdice {
+    @apply ease-in-out;
+    transition: all 1s;
     @apply absolute;
     grid-area: mockup-trickdice;
-    @apply max-h-96;
+    @apply max-h-80;
+    @apply m-0;
+    z-index: 2;
+  }
+
+  .project-container-trickdice {
+    @apply relative;
+    @apply w-full;
     @apply flex;
     @apply items-center;
-    @apply transform;
-    @apply rotate-3;
-    @apply -mt-16;
-    @apply float-right;
+    @apply justify-start;
+    @apply m-0;
+    @apply ml-5;
   }
 
   .tilt-gisitoscooters {
@@ -1380,6 +1427,23 @@ footer p {
     background-color: #017a39;
   }
 
+  .tilt-gisitoscooters:hover .gisitoscooters-mockup {
+    transform: scale(1.2);
+  }
+
+  .gisitoscooters-mockup {
+    background-size: 110%;
+    background-position: top;
+  }
+
+  .tilt-dawinti:hover .dawinti-mockup {
+    transform: scale(1.2);
+  }
+
+  .dawinti-mockup {
+    background-size: 110%;
+    background-position: top;
+  }
   
 
   .gisitoscooters-area {
@@ -1399,7 +1463,7 @@ footer p {
 
 /* Skillset section */
 #skillset-section {
-  @apply px-40;
+  @apply px-20;
   @apply my-20;
 }
 
@@ -1416,14 +1480,14 @@ footer p {
 
   /* Kontakt mig */
   #kontakt-mig-section {
-    @apply px-40;
+    @apply px-20;
     @apply my-20;
     @apply flex;
     @apply flex-col;
     @apply justify-center;
     @apply items-center;
     @apply gap-y-8;
-    @apply mx-36;
+    @apply mx-10;
   }
 
   .kontakt-mig-form {
@@ -1474,31 +1538,42 @@ footer p {
 
 
 
-/* min-width 1080px */
+/* min-width 1024px */
 @screen lg {
   /* DESKTOP MENU LIST */
-  .global-menu-desktop {
-    @apply w-full;
-    @apply justify-between;
-    @apply flex;
+  .logo img {
+    width: 75px;
   }
 
-  .menu-liste-desktop {
-    @apply flex;
+  .logo {
+    @apply pl-12;
+    @apply pr-12;
   }
 
   .menu-liste-desktop li {
     @apply px-7;
   }
 
+  /* socials */
   .socials-desktop ul {
     @apply flex;
     @apply justify-evenly;
+    width: auto;
+    @apply pr-3;
+    @apply pl-3;
+    @apply pt-0;
   }
 
   .socials-desktop ul li {
-    @apply px-7;
+    @apply px-2;
   }
+  
+  .socials-desktop ul li a {
+    @apply text-2xl;
+    
+  } 
+
+  
 
   /* Footer socials */
   footer {
@@ -1515,8 +1590,8 @@ footer p {
   }
 
   .footer-socials li a{
-    @apply py-3;
-    @apply text-xl;
+    @apply py-0;
+    @apply text-2xl;
   }
 
 
@@ -1535,209 +1610,37 @@ footer p {
   /* Projekter section */
   #projekter-section {
     @apply px-40;
-    @apply my-28;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    @apply gap-y-14;
-    @apply gap-x-14;
-    grid-template-areas: 
-      "toscoot toscoot"
-      "gisitoscooters dawinti"
-      "trickdice trickdice"; 
+    @apply my-20;
+    @apply mb-12;
+    @apply gap-y-10;
+    @apply gap-x-10;
   }
 
-  .Tilt {
-    @apply w-full;
-    @apply bg-gray-100;
-    @apply rounded-3xl;
-    
+  #projekter-section h2 {
+    @apply -mb-6;
   }
 
-  .tilt-dawinti {
-    
-    height: 600px;
-    background-color: #fcaf3b;
-    margin-bottom: 50px;
-    @apply ease-in-out;
+
+
+  /* Skillset section */
+  #skillset-section {
+    @apply px-40;
+    @apply my-20;
   }
 
-  .tilt-dawinti:hover {
-    background-color: #dd9932;
-  }
-
-  .tilt-toscoot {
-    @apply flex;
-    @apply relative;
-    @apply items-center;
-    @apply h-80;
-    @apply ease-in-out;
-    background-color: #a10a02;
-    background-image: -webkit-linear-gradient( -55deg, #a10a02 0%, #a10a02 55%, #f2f2f2 55%, #f2f2f2 100%);
-    background-image: linear-gradient( -55deg, #a10a02 0%, #a10a02 55%, #f2f2f2 55%, #f2f2f2 100%);
-  }
-
-  .tilt-toscoot:hover {
-    background-image: -webkit-linear-gradient( -55deg, #b90900 0%, #b90900 55%, #e2e2e2 55%, #e2e2e2 100%);
-    background-image: linear-gradient( -55deg, #b90900 0%, #b90900 55%, #e2e2e2 55%, #e2e2e2 100%);
-  }
-
-  .tilt-toscoot:hover .mockup-toscoot {
-    transform: scale(1.1);
-  }
-
-  .tilt-inner-toscoot {
-    @apply relative;
-    @apply py-10;
-    @apply px-20;
+  .skills-container {
     @apply grid;
-    @apply gap-x-28;
-    @apply items-center;
-    @apply align-middle;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 
-    "description-toscoot mockup-toscoot";
+    @apply grid-cols-3;
+    @apply gap-y-16;
+    @apply gap-x-16;
   }
-
-  .tilt-desc-toscoot {
-    grid-area: description-toscoot;
-    @apply text-black;
-    @apply grid;
-    @apply grid-cols-1;
-    @apply gap-y-11;
-  }
-
-
-  .mockup-toscoot {
-    @apply ease-in-out;
-    transition: all 1s;
-    @apply absolute;
-    grid-area: mockup-toscoot;
-    transform: rotate(-25deg);
-    z-index: 2;
-  }
-
-  .project-container-toscoot {
-    @apply relative;
-    @apply w-full;
-    @apply flex;
-    @apply items-center;
-  }
-
-  .tilt-gisitoscooters {
-    
-    height: 600px;
-    margin-top: 50px;
-    background-color: #00a14b;
-    @apply ease-in-out;
-  }
-
-  .tilt-trickdice {
-    @apply h-80;
-    background-color: #00a19a;
-    @apply ease-in-out;
-    background-image: -webkit-linear-gradient( -55deg, #00a19a 0%, #00a19a 55%, #d60b52 55%, #d60b52 100%);
-    background-image: linear-gradient( -55deg, #00a19a 0%, #00a19a 55%, #d60b52 55%, #d60b52 100%);
-  }
-
-  .tilt-trickdice:hover {
-    background-image: -webkit-linear-gradient( -55deg, #008079 0%, #008079 55%, #bb0b49 55%, #bb0b49 100%);
-    background-image: linear-gradient( -55deg, #008079 0%, #008079 55%, #bb0b49 55%, #bb0b49 100%);
-  }
-
-  .tilt-trickdice:hover .mockup-trickdice {
-    transform: scale(1.1);
-    transform: rotate(3deg);
-  }
-
-  .tilt-inner-trickdice {
-    @apply relative;
-    @apply py-10;
-    @apply px-20;
-    @apply grid;
-    @apply gap-x-28;
-    grid-template-columns: 2fr 2fr;
-    grid-template-areas: 
-    "mockup-trickdice description-trickdice";
-  }
-
-  .tilt-desc-trickdice {
-    grid-area: description-trickdice;
-    @apply text-white;
-    @apply grid;
-    @apply grid-cols-1;
-    @apply gap-y-11;
-  }
-
-
-  .mockup-trickdice {
-    @apply ease-in-out;
-    transition: all 1s;
-    @apply absolute;
-    grid-area: mockup-trickdice;
-    @apply max-h-96;
-    @apply transform;
-    @apply rotate-3;
-    @apply mt-auto;
-    z-index: 2;
-  }
-
-  .project-container-trickdice {
-    @apply relative;
-    @apply w-full;
-    @apply flex;
-    @apply items-center;
-    @apply justify-start;
-  }
-
-  .tilt-gisitoscooters {
-    height: 600px;
-    margin-top: 50px;
-    background-color: #00a14b;
-    @apply ease-in-out;
-  }
-
-  .tilt-gisitoscooters:hover {
-    background-color: #017a39;
-  }
-
-  .gisitoscooters-area {
-    grid-area: gisitoscooters;
-  }
-  .toscoot-area {
-    grid-area: toscoot;
-  }
-  .trickdice-area {
-    grid-area: trickdice;
-  }
-  .dawinti-area {
-    grid-area: dawinti;
-  }
-
-
-
-/* Skillset section */
-#skillset-section {
-  @apply px-40;
-  @apply my-20;
-}
-
-.skills-container {
-  @apply grid;
-  @apply grid-cols-3;
-  @apply gap-y-16;
-  @apply gap-x-16;
-}
-
-
-
-
 
 
 
   /* Kontakt mig */
   #kontakt-mig-section {
     @apply px-40;
-    @apply my-20;
+    @apply my-28;
     @apply flex;
     @apply flex-col;
     @apply justify-center;
@@ -1789,6 +1692,153 @@ footer p {
   }
 
   
+}
+
+
+@screen xl {
+  /* DESKTOP MENU LIST */
+  .logo img {
+    width: 75px;
+  }
+
+  .logo {
+    @apply pl-14;
+    @apply pr-20;
+  }
+
+  .menu-liste-desktop li {
+    @apply px-7;
+  }
+
+  /* socials */
+  .socials-desktop ul {
+    @apply flex;
+    @apply justify-evenly;
+    width: auto;
+    @apply pr-3;
+    @apply pl-3;
+    @apply pt-0;
+  }
+
+  .socials-desktop ul li {
+    @apply px-4;
+  }
+
+
+
+  /* Om mig section */
+  #om-mig-section {
+    @apply px-60;
+    @apply flex;
+    @apply items-center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  
+
+  /* Projekter section */
+  #projekter-section {
+    @apply px-60;
+    @apply my-8;
+    @apply py-20;
+    @apply gap-y-16;
+    @apply gap-x-16;
+  }
+
+  #projekter-section h2 {
+    @apply -mb-6;
+  }
+
+  .tilt-dawinti,
+  .tilt-gisitoscooters {
+    height: 550px;
+  }
+
+  .tilt-inner-dawinti,
+  .tilt-inner-gisitoscooters {
+    max-height: 600px;
+  }
+
+  .tilt-trickdice,
+  .tilt-toscoot {
+    @apply h-80;
+  }
+
+  .tilt-trickdice {
+    @apply justify-center;
+    @apply align-middle;
+  }
+
+  .tilt-desc-toscoot {
+    @apply pl-16;
+  }
+
+  .tilt-trickdice:hover .mockup-trickdice {
+    transform: scale(1.3) rotate(-10deg);
+  }
+  .tilt-toscoot:hover .mockup-toscoot {
+    transform: scale(1.5) rotate(-18deg);
+  }
+
+  .mockup-toscoot {
+    transform: scale(1.4) rotate(-18deg);
+  }
+
+  .mockup-trickdice {
+    transform: scale(1.2) rotate(-10deg);
+  }
+
+
+  .mockup-trickdice {
+    @apply max-h-80;
+    @apply m-0;
+    z-index: 2;
+  }
+
+  .project-container-trickdice {
+    @apply flex;
+    @apply items-center;
+    @apply justify-start;
+    @apply m-0;
+    @apply ml-24;
+    top: 15px;
+  }
+
+  .tilt-inner-trickdice {
+    @apply max-h-72;
+    @apply p-5;
+  }
+
+  .tilt-desc-trickdice {
+    @apply max-h-72;
+    @apply p-5;
+    @apply pt-12;
+    @apply pl-16;
+    @apply gap-y-3;
+    @apply place-content-center;
+  }
+
+
+  /* Skillset section */
+  #skillset-section {
+    @apply px-60;
+    @apply my-20;
+  }
+
+  /* Kontakt mig */
+  #kontakt-mig-section {
+    @apply px-60;
+    @apply my-28;
+    @apply flex;
+    @apply flex-col;
+    @apply justify-center;
+    @apply items-center;
+    @apply gap-y-8;
+    @apply mx-36;
+  }
+
+
 }
 
 
