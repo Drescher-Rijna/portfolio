@@ -8,6 +8,7 @@
 
 html,
 body {
+  
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -20,6 +21,110 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* FONT SIZES ACROOS ALL SCREENS */
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-2xl;
+  max-lines: 1;
+}
+
+h3, button {
+  @apply text-lg;
+}
+
+p, div {
+  @apply text-base;
+}
+
+a, li {
+  @apply text-lg;
+}
+
+@screen sm {
+  h1 {
+
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+
+  }
+
+  h4 {
+
+  }
+
+  p, div {
+
+  }
+
+  a, li {
+
+  }
+
+}
+
+
+@screen md {
+  h1 {
+
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+
+  }
+
+  h4 {
+
+  }
+
+  p, div {
+
+  }
+
+  a, li {
+    
+  }
+}
+
+
+@screen lg {
+  h1 {
+
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+
+  }
+
+  h4 {
+
+  }
+
+  p, div {
+
+  }
+
+  a, li {
+    
+  }
 }
 
 a {
@@ -35,7 +140,9 @@ a {
 
 .activeMobil {
   @apply border-l-4;
+  @apply border-opacity-100;
   @apply border-green-300;
+
 }
 
 
@@ -95,7 +202,7 @@ header * {
 }
 
 
-
+/* FOOTER FOR ALL SCREENS */
 footer {
   color: black;
   @apply flex;
@@ -103,6 +210,7 @@ footer {
 
 .footer-bg {
   @apply p-5;
+  @apply pl-10;
   @apply w-full;
   @apply flex;
   @apply justify-center;
@@ -110,6 +218,45 @@ footer {
   @apply bg-green-600;
   @apply rounded-tl-full;
   @apply text-white;
+}
+
+/* Footer socials */
+footer {
+  @apply mt-8;
+  @apply relative;
+  
+}
+
+footer p {
+  @apply text-center;
+  @apply mt-auto;
+  @apply text-base;
+}
+
+.footer-socials {
+  @apply py-3;
+  @apply text-left;
+  @apply px-6;
+}
+
+.footer-socials li a {
+  @apply text-2xl;
+}
+
+.footer-socials {
+  @apply grid;
+  @apply gap-x-7;
+  @apply gap-y-7;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.footer-socials li a:hover {
+  @apply text-green-600;
+}
+
+.footer-socials li a:active {
+  @apply text-green-600;
 }
 
 /* BURGER MENU BUTTON */
@@ -141,8 +288,7 @@ footer {
   @apply absolute;
   @apply -left-full;
   @apply transition-all;
-  @apply px-3;
-  @apply py-8;
+  @apply p-8;
   @apply top-16;
 }
 
@@ -154,12 +300,47 @@ footer {
   @apply absolute;
   @apply left-0;
   @apply transition-all;
-  @apply px-6;
-  @apply py-8;
+  @apply p-8;
   @apply top-16;
 }
 
-.menu-liste-mobil ul li:active a {
+.menu-liste-mobil ul a {
+  @apply border-l-4;
+  @apply border-black;
+}
+
+.menu-liste-mobil li {
+  @apply py-6;
+}
+
+.menu-liste-mobil li:nth-child(1) {
+  @apply pt-0;
+}
+
+.menu-liste-mobil ul a:active {
+  @apply text-black;
+  @apply border-l-4;
+  @apply border-green-300;
+}
+
+.menu-liste-mobil ul a:focus {
+  @apply text-black;
+  @apply border-l-4;
+  @apply border-green-300;
+}
+
+
+
+/* SOCIALS */
+.socials-mobil ul a {
+  @apply text-2xl;
+}
+
+.socials-mobil ul a:hover {
+  @apply text-black;
+}
+
+.socials-mobil ul a:focus {
   @apply text-black;
 }
 
@@ -172,104 +353,68 @@ footer {
   @apply justify-end;
 }
 
-.socials-mobil ul li a {
+.socials-mobil ul li {
   @apply pl-6;
-  @apply cursor-pointer;
-  @apply text-2xl;
-}
-
-.socials-mobil ul li a:hover a * {
-  @apply text-black;
-}
-
-.socials-mobil ul li a:focus a * {
-  @apply text-black;
-}
-
-.menu-liste-mobil li {
-  @apply py-6;
-}
-
-.menu-liste-mobil li:nth-child(1) {
-  @apply pt-0;
 }
 
 
-
-/* Footer socials */
-footer {
-  @apply mt-8;
-  @apply relative;
-  
-}
-
-footer p {
-  @apply text-center;
-  @apply mt-auto;
-}
-
-.footer-socials {
-  @apply py-3;
-  @apply text-left;
-  @apply px-6;
-}
-
-.footer-socials li {
-  @apply py-3;
-  @apply cursor-pointer;
-}
-
-.footer-socials li a:hover {
-  @apply text-green-600;
-}
-
-.footer-socials li a:active {
-  @apply text-green-600;
-}
-
+/* MOBIL */
+/* HERO-IMAGE */
 #hero-section {
-  @apply px-20;
-  @apply my-20;
+  @apply px-6;
+  @apply my-36;
   @apply max-h-96;
   @apply flex;
 }
 
 #hero-section img {
   @apply max-h-96;
-  @apply ml-auto;
 }
 
-
-
-
-/* MOBIL */
 
 /* Om mig section */
 #om-mig-section {
   @apply px-6;
-  @apply my-20;
-  @apply flex;
-  @apply flex-col;
+  @apply my-28;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply gap-y-7;
   @apply items-center;
+  @apply items-center;
+}
+
+#om-mig-section h2 {
+  @apply text-center;
 }
 
 .om-mig-photo img {
   @apply rounded-full;
+  @apply max-h-72;
+  @apply m-auto;
 }
 
 
 /* Projekter section */
 #projekter-section {
+  overflow: hidden;
   @apply px-6;
-  @apply my-20;
+  @apply my-28;
+  @apply pb-6;
   display: grid;
   grid-template-columns: 1fr;
-  @apply gap-y-8;
+  @apply gap-y-14;
   grid-template-areas: 
+    "projekt-titel"
     "toscoot"
     "gisitoscooters"
     "dawinti"
     "trickdice"; 
+}
+
+#projekter-section h2 {
+  grid-area: projekt-titel;
+  @apply text-center;
+  @apply -mb-10;
 }
 
 .Tilt {
@@ -277,6 +422,21 @@ footer p {
   @apply bg-gray-100;
   @apply rounded-3xl;
 }
+
+.tilt-desc-dawinti,
+.tilt-desc-gisitoscooters,
+.tilt-desc-toscoot,
+.tilt-desc-trickdice {
+  @apply p-7;
+}
+
+.tilt-desc-dawinti img,
+.tilt-desc-gisitoscooters img,
+.tilt-desc-toscoot img,
+.tilt-desc-trickdice img {
+  @apply h-20;
+}
+
 
 .mockup-trickdice {
   @apply max-h-96;
@@ -303,6 +463,7 @@ footer p {
 }
 
 .tilt-inner-dawinti {
+  max-height: 510px;
   @apply relative;
   @apply grid;
   grid-template-rows: 1fr 2fr;
@@ -313,12 +474,18 @@ footer p {
 
 .tilt-desc-dawinti {
   grid-area: description-dawinti;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply gap-y-3;
+  @apply text-black;
+  @apply pb-0;
+  
 }
 
 .project-container-dawinti {
   @apply relative;
   grid-area: dawinti-mockup;
-  
+  @apply h-full;
 }
 
 .dawinti-mockup {
@@ -326,15 +493,19 @@ footer p {
   transition: all 1s;
   @apply absolute;
   width: 100%;
-  height: 420px;
+  height: 100%;
   background: url('../public/dawinti-mockup.png');
-  background-size: cover;
+  background-size: 110%;
   background-repeat: no-repeat;
   background-position: top;
 }
 
+
+
 .tilt-toscoot {
   height: 510px;
+  @apply flex;
+  @apply items-center;
   @apply ease-in-out;
   background-color: #a10a02;
   background-image: -webkit-linear-gradient( -15deg, #a10a02 0%, #a10a02 40%, #f2f2f2 40%, #f2f2f2 100%);
@@ -345,6 +516,41 @@ footer p {
   background-image: -webkit-linear-gradient( -15deg, #b90900 0%, #b90900 40%, #e2e2e2 40%, #e2e2e2 100%);
   background-image: linear-gradient( -15deg, #b90900 0%, #b90900 40%, #e2e2e2 40%, #e2e2e2 100%);
 }
+
+.tilt-toscoot:hover .mockup-toscoot {
+  transform: scale(1.1);
+}
+
+.tilt-inner-toscoot {
+  max-height: 500px;
+  @apply grid;
+  @apply gap-y-3;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "description-toscoot"
+  "mockup-toscoot";
+}
+
+.mockup-toscoot {
+  @apply ease-in-out;
+  transition: all 1s;
+  transform: rotate(-15deg);
+  z-index: 3;
+}
+
+.project-container-toscoot {
+  grid-area: mockup-toscoot;
+  z-index: 3;
+}
+
+.tilt-desc-toscoot {
+    grid-area: description-toscoot;
+    @apply grid;
+    @apply grid-cols-1;
+    @apply gap-y-3;
+}
+
+
 
 .tilt-trickdice { 
   height: 510px;
@@ -358,6 +564,51 @@ footer p {
   background-image: -webkit-linear-gradient( 15deg, #008079 0%, #008079 40%, #bb0b49 40%, #bb0b49 100%);
   background-image: linear-gradient( 15deg, #008079 0%, #008079 40%, #bb0b49 40%, #bb0b49 100%);
 }
+
+.tilt-inner-trickdice {
+  max-height: 500px;
+  @apply grid;
+  @apply gap-y-3;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "description-trickdice"
+  "mockup-trickdice";
+}
+
+.mockup-trickdice {
+  @apply ease-in-out;
+  transition: all 1s;
+  transform: rotate(15deg);
+  z-index: 3;
+  @apply absolute;
+  @apply max-h-80;
+  @apply mr-5;
+  
+}
+
+.project-container-trickdice {
+  grid-area: mockup-trickdice;
+  z-index: 3;
+  @apply max-h-80;
+  @apply h-80;
+  @apply max-w-full;
+  @apply relative;
+  @apply flex;
+  @apply justify-end;
+  
+  @apply -mt-10;
+}
+
+.tilt-desc-trickdice {
+    grid-area: description-trickdice;
+    @apply grid;
+    @apply grid-cols-1;
+    @apply gap-y-3;
+    @apply pb-0;
+    @apply text-white;
+}
+
+
 
 .tilt-gisitoscooters {
   @apply overflow-hidden;
@@ -375,21 +626,27 @@ footer p {
 }
 
 .tilt-inner-gisitoscooters {
+  max-height: 510px;
   @apply relative;
   @apply grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 0.25fr 1.75fr;
   grid-template-areas: "description-gisitoscooters"
   "gisitoscooters-mockup";
-  @apply gap-y-10;
 }
 
 .tilt-desc-gisitoscooters {
   grid-area: description-gisitoscooters;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply gap-y-3;
+  @apply text-white;
+  @apply pb-0;
 }
 
 .project-container-gisitoscooters {
   @apply relative;
   grid-area: gisitoscooters-mockup;
+  height: 100%;
   
 }
 
@@ -398,9 +655,9 @@ footer p {
   transition: all 1s;
   @apply absolute;
   width: 100%;
-  height: 370px;
+  height: 100%;
   background: url('../public/mockup-gisito.png');
-  background-size: cover;
+  background-size: 110%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -423,10 +680,14 @@ footer p {
 /* Skillset section */
 #skillset-section {
   @apply px-6;
-  @apply my-20;
+  @apply my-28;
   @apply grid;
   @apply grid-cols-1;
   @apply gap-y-12;
+}
+
+.skillset-section-titel {
+  @apply text-center;
 }
 
 .level-meter {
@@ -441,6 +702,10 @@ footer p {
   @apply flex;
   @apply flex-row;
   @apply justify-evenly;
+  
+}
+
+.levels li {
   @apply text-base;
 }
 
@@ -504,7 +769,7 @@ footer p {
 /* Kontakt mig */
 #kontakt-mig-section {
   @apply px-6;
-  @apply my-20;
+  @apply my-28;
   @apply flex;
   @apply flex-col;
   @apply justify-center;
@@ -513,7 +778,6 @@ footer p {
 }
 
 #kontakt-mig-section h2 {
-  @apply text-3xl;
   @apply text-center;
 }
 
@@ -564,87 +828,51 @@ footer p {
 
 /* min-width 480px */
 @screen sm {
-  /* DESKTOP MENU LIST */
-  .global-menu-desktop {
-    @apply w-full;
-    @apply justify-between;
+
+  /* HERO-IMAGE */
+  #hero-section {
+    @apply px-6;
+    @apply my-36;
+    @apply max-h-96;
     @apply flex;
+    @apply items-center;
+    @apply justify-center;
   }
 
-  .menu-liste-desktop {
-    @apply flex;
-    
+  #hero-section img {
+    @apply max-h-96;
+
   }
-
-  .menu-liste-desktop li {
-    @apply px-7;
-    @apply py-2;
-    @apply text-white;
-  }
-
-  .menu-liste-desktop a:hover  {
-    @apply border-b-4;
-    @apply border-green-300;
-  }
-
-  .socials-desktop ul {
-    @apply flex;
-    @apply justify-evenly;
-  }
-
-  .socials-desktop ul li {
-    @apply px-7;
-    
-  }
-
-  .socials-desktop ul li a {
-    @apply cursor-pointer;
-    @apply text-2xl;
-    
-  } 
-
-  .socials-desktop ul li:hover a * {
-    @apply text-green-600;
-  }
-
-  /* Footer socials */
-  footer {
-    @apply mt-8;
-    @apply relative;
-  }
-
-  footer p {
-    @apply text-center;
-  }
-
-  .footer-socials {
-    @apply py-3;
-    @apply text-left;
-  }
-
-  .footer-socials li {
-    @apply py-3;
-  }
-
-  .footer-socials li a {
-    @apply text-2xl;
-  }
-
 
   /* Om mig section */
   #om-mig-section {
-    @apply px-40;
+    @apply px-6;
     @apply flex;
     @apply items-center;
     display: grid;
+    @apply gap-x-5;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "om-mig-photo om-mig-titel"
+    "om-mig-photo om-mig-tekst";
+  }
+
+  .om-mig-photo {
+    grid-area: om-mig-photo;
+  }
+  #om-mig-section h2 {
+    grid-area: om-mig-titel;
+    @apply text-left;
+  }
+  #om-mig-section article {
+    grid-area: om-mig-tekst;
   }
 
 
 
   /* Projekter section */
   #projekter-section {
-    @apply px-14;
+    @apply px-6;
     @apply my-20;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -733,8 +961,6 @@ footer p {
 
 
 
-
-
   /* Kontakt mig */
   #kontakt-mig-section {
     @apply px-14;
@@ -744,10 +970,6 @@ footer p {
     @apply justify-center;
     @apply items-center;
     @apply gap-y-8;
-  }
-
-  #kontakt-mig-section h2 {
-    @apply text-4xl;
   }
 
   .kontakt-mig-form {
@@ -804,7 +1026,6 @@ footer p {
   header * {
     color: #1a1a1a;
     font-weight: 600;
-    @apply text-base;
   }
 
   header {
@@ -818,7 +1039,6 @@ footer p {
     @apply items-center;
     @apply top-0;
     @apply z-10;
-    @apply text-base;
     @apply sticky;
     @apply h-16;
     @apply max-h-16;
@@ -837,6 +1057,49 @@ footer p {
   }
 
   /* DESKTOP MENU LIST */
+  /* DESKTOP MENU LIST */
+  .global-menu-desktop {
+    @apply w-full;
+    @apply justify-between;
+    @apply flex;
+  }
+
+  .menu-liste-desktop {
+    @apply flex;
+    
+  }
+
+  .menu-liste-desktop li {
+    @apply px-7;
+    @apply py-2;
+    @apply text-white;
+  }
+
+  .menu-liste-desktop a:hover  {
+    @apply border-b-4;
+    @apply border-green-300;
+  }
+
+  .socials-desktop ul {
+    @apply flex;
+    @apply justify-evenly;
+  }
+
+  .socials-desktop ul li {
+    @apply px-7;
+    
+  }
+
+  .socials-desktop ul li a {
+    @apply cursor-pointer;
+    @apply text-2xl;
+    
+  } 
+
+  .socials-desktop ul li:hover a * {
+    @apply text-green-600;
+  }
+
   .global-menu-desktop {
     @apply w-full;
     @apply justify-between;
@@ -1027,10 +1290,6 @@ footer p {
     @apply items-center;
     @apply gap-y-8;
     @apply mx-36;
-  }
-
-  #kontakt-mig-section h2 {
-    @apply text-5xl;
   }
 
   .kontakt-mig-form {
@@ -1354,10 +1613,6 @@ footer p {
     @apply mx-36;
   }
 
-  #kontakt-mig-section h2 {
-    @apply text-5xl;
-  }
-
   .kontakt-mig-form {
     @apply flex;
     @apply flex-col;
@@ -1402,3 +1657,5 @@ footer p {
 
   
 }
+
+

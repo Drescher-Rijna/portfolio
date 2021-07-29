@@ -50,6 +50,7 @@ export default function Home() {
             </article>
           </section>
           <section id="projekter-section">
+            <h2>Projekter</h2>
             <Link href='/Gisito-Scooters' exact>
               <div className="gisitoscooters-area">
                 <GisitoScootersTilt />
@@ -72,6 +73,7 @@ export default function Home() {
             </Link>
           </section>
           <section ref={ref} id="skillset-section">
+            <h2 className="skillset-section-titel" >Skillset</h2>
             <div className="skills-container">
               <SkillsetMeter skill="HTML" level={90} imgUrl="/HTML.png" inView={inView} />
               <SkillsetMeter skill="CSS" level={90} imgUrl="/CSS.png" inView={inView} />
