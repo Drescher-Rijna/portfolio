@@ -398,11 +398,11 @@ footer p {
 #projekter-section {
   overflow: hidden;
   @apply px-6;
-  @apply my-28;
-  @apply pb-6;
+  @apply mt-28;
+  @apply pb-20;
   display: grid;
   grid-template-columns: 1fr;
-  @apply gap-y-14;
+  @apply gap-y-20;
   grid-template-areas: 
     "projekt-titel"
     "toscoot"
@@ -518,24 +518,29 @@ footer p {
 }
 
 .tilt-toscoot:hover .mockup-toscoot {
-  transform: scale(1.1);
+  transform: scale(1.5) rotate(-18deg);
+  
 }
 
 .tilt-inner-toscoot {
   max-height: 500px;
+  max-width: 100%;
   @apply grid;
-  @apply gap-y-3;
-  grid-template-columns: 1fr;
+  @apply gap-y-0;
+  @apply place-content-center;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas: 
   "description-toscoot"
   "mockup-toscoot";
 }
 
+
 .mockup-toscoot {
   @apply ease-in-out;
   transition: all 1s;
-  transform: rotate(-15deg);
   z-index: 3;
+  transform: scale(1.4) rotate(-18deg);
 }
 
 .project-container-toscoot {
@@ -548,6 +553,7 @@ footer p {
     @apply grid;
     @apply grid-cols-1;
     @apply gap-y-3;
+    @apply pb-0;
 }
 
 
@@ -825,8 +831,19 @@ footer p {
 
 
 
+/* 420 px */
+@media only screen and (min-width: 420px) {
+  #projekter-section {
+    @apply gap-y-24;
+  }
 
-/* min-width 480px */
+  #projekter-section h2 {
+    @apply -mb-16;
+  }
+}
+
+
+/* min-width 640px */
 @screen sm {
 
   /* HERO-IMAGE */
@@ -872,16 +889,23 @@ footer p {
 
   /* Projekter section */
   #projekter-section {
+    overflow: hidden;
     @apply px-6;
-    @apply my-20;
+    @apply mt-20;
+    @apply pb-20;
     display: grid;
     grid-template-columns: 1fr 1fr;
     @apply gap-y-6;
     @apply gap-x-6;
     grid-template-areas: 
+      "projekt-titel projekt-titel"
       "toscoot toscoot"
       "gisitoscooters dawinti"
       "trickdice trickdice"; 
+  }
+  
+  #projekter-section h2 {
+    @apply mb-0;
   }
 
   .Tilt {
@@ -892,9 +916,9 @@ footer p {
   }
 
   .tilt-dawinti {
-    height: 450px;
+    height: 510px;
     background-color: #fcaf3b;
-    margin-bottom: 50px;
+    margin-top: 50px;
     @apply ease-in-out;
   }
 
@@ -902,35 +926,145 @@ footer p {
     background-color: #dd9932;
   }
 
+  
+
   .tilt-toscoot {
-    @apply h-80;
+    @apply flex;
+    @apply relative;
+    @apply justify-center;
+    @apply align-middle;
+    @apply h-72;
     @apply ease-in-out;
     background-color: #a10a02;
-    background-image: -webkit-linear-gradient( -45deg, #a10a02 0%, #a10a02 50%, #f2f2f2 50%, #f2f2f2 100%);
-    background-image: linear-gradient( -45deg, #a10a02 0%, #a10a02 50%, #f2f2f2 50%, #f2f2f2 100%);
+    background-image: -webkit-linear-gradient( -55deg, #a10a02 0%, #a10a02 50%, #f2f2f2 50%, #f2f2f2 100%);
+    background-image: linear-gradient( -55deg, #a10a02 0%, #a10a02 50%, #f2f2f2 50%, #f2f2f2 100%);
   }
 
   .tilt-toscoot:hover {
-    background-image: -webkit-linear-gradient( -45deg, #b90900 0%, #b90900 50%, #e2e2e2 50%, #e2e2e2 100%);
-    background-image: linear-gradient( -45deg, #b90900 0%, #b90900 50%, #e2e2e2 50%, #e2e2e2 100%);
+    background-image: -webkit-linear-gradient( -55deg, #b90900 0%, #b90900 50%, #e2e2e2 50%, #e2e2e2 100%);
+    background-image: linear-gradient( -55deg, #b90900 0%, #b90900 50%, #e2e2e2 50%, #e2e2e2 100%);
   }
 
+  .tilt-toscoot:hover .mockup-toscoot {
+    transform: scale(1.1);
+  }
+
+  .tilt-inner-toscoot {
+    @apply relative;
+    @apply max-h-72;
+    @apply p-5;
+    @apply grid;
+    @apply gap-x-0;
+    @apply items-center;
+    @apply place-content-center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "description-toscoot mockup-toscoot";
+  }
+
+  .tilt-desc-toscoot {
+    grid-area: description-toscoot;
+    @apply max-h-72;
+    @apply text-black;
+    @apply p-5;
+    @apply grid;
+    @apply grid-cols-1;
+    @apply gap-y-3;
+  }
+
+
+  .mockup-toscoot {
+    @apply ease-in-out;
+    transition: all 1s;
+    @apply absolute;
+    grid-area: mockup-toscoot;
+    transform: rotate(0deg);
+    min-width: 300px;
+    max-width: 400px;
+    z-index: 2;
+  }
+
+  .project-container-toscoot {
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply relative;
+    @apply w-full;
+    @apply h-72;
+  }
+
+
   .tilt-trickdice {
-    @apply h-80;
+    @apply h-72;
+    @apply flex;
+    @apply justify-center;
+    @apply align-middle;
     background-color: #00a19a;
     @apply ease-in-out;
-    background-image: -webkit-linear-gradient( -45deg, #00a19a 0%, #00a19a 50%, #d60b52 50%, #d60b52 100%);
-    background-image: linear-gradient( -45deg, #00a19a 0%, #00a19a 50%, #d60b52 50%, #d60b52 100%);
+    background-image: -webkit-linear-gradient( -55deg, #00a19a 0%, #00a19a 60%, #d60b52 60%, #d60b52 100%);
+    background-image: linear-gradient( -55deg, #00a19a 0%, #00a19a 60%, #d60b52 60%, #d60b52 100%);
   }
 
   .tilt-trickdice:hover {
-    background-image: -webkit-linear-gradient( -45deg, #008079 0%, #008079 50%, #bb0b49 50%, #bb0b49 100%);
-    background-image: linear-gradient( -45deg, #008079 0%, #008079 50%, #bb0b49 50%, #bb0b49 100%);
+    background-image: -webkit-linear-gradient( -55deg, #008079 0%, #008079 60%, #bb0b49 60%, #bb0b49 100%);
+    background-image: linear-gradient( -55deg, #008079 0%, #008079 60%, #bb0b49 60%, #bb0b49 100%);
+  }
+
+  .tilt-trickdice:hover .mockup-trickdice {
+    transform: scale(1.1);
+  }
+
+  .mockup-trickdice  {
+    transform: rotate(-10deg);
+  }
+
+  .tilt-inner-trickdice {
+    @apply relative;
+    @apply max-h-72;
+    @apply p-5;
+    @apply grid;
+    @apply gap-x-0;
+    @apply items-center;
+    @apply place-content-center;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: 
+    "mockup-trickdice description-trickdice";
+  }
+
+  .tilt-desc-trickdice {
+    grid-area: description-trickdice;
+    @apply max-h-72;
+    @apply h-72;
+    @apply p-5;
+    @apply grid;
+    @apply grid-cols-1;
+    @apply gap-y-3;
+    @apply text-white;
+  }
+
+
+  .mockup-trickdice {
+    @apply ease-in-out;
+    transition: all 1s;
+    @apply absolute;
+    grid-area: mockup-trickdice;
+    @apply max-h-96;
+    @apply m-0;
+    z-index: 2;
+  }
+
+  .project-container-trickdice {
+    @apply relative;
+    @apply w-full;
+    @apply flex;
+    @apply items-center;
+    @apply justify-start;
+    @apply m-0;
   }
 
   .tilt-gisitoscooters {
-    height: 450px;
-    margin-top: 50px;
+    height: 510px;
+    margin-bottom: 50px;
     background-color: #00a14b;
     @apply ease-in-out;
   }
@@ -1556,7 +1690,6 @@ footer p {
   }
 
   .tilt-gisitoscooters {
-    
     height: 600px;
     margin-top: 50px;
     background-color: #00a14b;
