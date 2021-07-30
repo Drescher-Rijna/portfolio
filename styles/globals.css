@@ -430,14 +430,6 @@ footer p {
   @apply p-7;
 }
 
-.tilt-desc-dawinti img,
-.tilt-desc-gisitoscooters img,
-.tilt-desc-toscoot img,
-.tilt-desc-trickdice img {
-  @apply h-20;
-}
-
-
 .mockup-trickdice {
   @apply max-h-96;
   @apply flex;
@@ -479,6 +471,7 @@ footer p {
   @apply gap-y-3;
   @apply text-black;
   @apply pb-0;
+  @apply place-items-center;
   
 }
 
@@ -554,6 +547,7 @@ footer p {
     @apply grid-cols-1;
     @apply gap-y-3;
     @apply pb-0;
+    @apply place-items-start;
 }
 
 
@@ -1755,6 +1749,13 @@ footer p {
     height: 550px;
   }
 
+  .tilt-inner-dawinti {
+    height: 530px;
+  }
+  .tilt-inner-gisitoscooters {
+    height: 550px;
+  }
+
   .tilt-inner-dawinti,
   .tilt-inner-gisitoscooters {
     max-height: 600px;
@@ -1811,7 +1812,8 @@ footer p {
   }
 
   .tilt-desc-trickdice {
-    @apply max-h-72;
+    @apply max-h-80;
+    @apply h-80;
     @apply p-5;
     @apply pt-12;
     @apply pl-16;

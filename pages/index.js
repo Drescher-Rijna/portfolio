@@ -8,6 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
+import Head from 'next/head'
 
 export default function Home() {
 

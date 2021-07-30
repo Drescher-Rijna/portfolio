@@ -1,4 +1,5 @@
 import Tilt from 'react-parallax-tilt';
+import Image from 'next/image';
 
 const TrickDiceTilt = () => {
     return (
@@ -11,7 +12,7 @@ const TrickDiceTilt = () => {
                     <p>
                         Løbehjulsterninger i lommen til at afholde sjove konkurrencer med sine venner.
                     </p>
-                    <img src="/JS.png" />
+                    <img src="/trick-dice-logo.png" width="120" />
                 </article>
             
                 <div className="project-container-trickdice">

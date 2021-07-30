@@ -1,17 +1,15 @@
 import Tilt from 'react-parallax-tilt';
+import Image from 'next/image';
 
 const GisitoScootersTilt = () => {
     return (
         <Tilt className="Tilt tilt-gisitoscooters" tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable={true} scale={1} glareMaxOpacity={0.7}  >
             <div className="Tilt-inner tilt-inner-gisitoscooters"> 
                 <article className="tilt-desc-gisitoscooters">
-                    <h3>    
-                        GISITO SCOOTERS
-                    </h3>
+                    <Image src="/gisitoscooters-logo.svg" width={120} height={80} />
                     <p>
                         Løbehjul webshop med stort galleri af Løbehjul, dele og beskyttelse til alle riders
                     </p>
-                    <img src="/JS.png" />
                 </article>
             
                 <div className="project-container-gisitoscooters">
