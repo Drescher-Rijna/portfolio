@@ -1,5 +1,4 @@
 import Tilt from 'react-parallax-tilt';
-import Image from 'next/image';
 
 const TrickDiceTilt = () => {
     return (

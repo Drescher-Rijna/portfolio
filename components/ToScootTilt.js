@@ -1,5 +1,4 @@
 import Tilt from 'react-parallax-tilt';
-import Image from 'next/image';
 
 const ToScootTilt = () => {
     return (
@@ -12,7 +11,7 @@ const ToScootTilt = () => {
                     <p>
                         Performance tracker app for løbehjulskøre til at holde styr på og optimere sin progression.
                     </p>
-                    <Image src="/toscoot-logo-transparent.svg" width={120} height={120} />
+                    <img src="/toscoot-logo-transparent.svg" width="120" />
                 </article>
             
                 <div className="project-container-toscoot">

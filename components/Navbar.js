@@ -48,7 +48,7 @@ const Navbar = () => {
 
             
             {screenSize < 768 &&
-            <button id="menu-btn" onClick={handleBurgermenu}>
+            <button id="menu-btn" onClick={handleBurgermenu} className={menuOpen ? 'burgermenu-icon-active' : 'burgermenu-icon-inactive'}>
                 <div></div>
                 <div></div>
                 <div></div>

@@ -1,6 +1,5 @@
 import Tilt from 'react-parallax-tilt';
 import mockup from '../public/dawinti-mockup.png';
-import Image from 'next/image'
 
 const DaWintiTilt = () => {
     return (

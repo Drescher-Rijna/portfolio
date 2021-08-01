@@ -9,6 +9,8 @@ import { useEffect } from 'react'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import Head from 'next/head'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
 
@@ -23,7 +25,38 @@ export default function Home() {
       <Navbar/>
         <div className="content">
           <section id="hero-section">
+            <article>
+              <h1>
+                Multimediedesigner
+              </h1>
+              <p>
+                Multimediedesigner studerende i 3. semester, som har kompetence i webudvikling UX/UI,
+                og er altid optimistik og på udkig efter forbedringer.
+              </p>
+              <button>
+                Se mine projekter
+              </button>
+            </article>
             <img src="/heroimage.png" />
+            <div className="socials-hero">
+                <ul>
+                    <li className="social-hero-git">
+                        <a href="https://github.com/Drescher-Rijna" target="_blank">
+                            <FontAwesomeIcon icon={faGithub} />
+                        </a>
+                    </li>
+                    <li className="social-hero-li">
+                        <a href="https://www.linkedin.com/in/drescher-rijna/" target="_blank">
+                            <FontAwesomeIcon icon={faLinkedin} />
+                        </a>
+                    </li>
+                    <li className="social-hero-ig">
+                        <a href="https://www.instagram.com/thisisgisito/" target="_blank">
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                    </li>
+                </ul>
+            </div>
           </section>
 
           <section id="om-mig-section">
