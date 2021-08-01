@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return (
@@ -15,9 +15,14 @@ const Footer = () => {
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                 </li>
+                <li>
+                    <a href="https://www.instagram.com/thisisgisito/" target="_blank">
+                        <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+                </li>
             </ul>
             <div className="footer-bg">
-                <p>&#169; Drescher Ferdinand Rijna 2021</p>
+                <p>&#169; Drescher Rijna 2021</p>
             </div>
         </footer>
     )

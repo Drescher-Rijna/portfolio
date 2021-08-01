@@ -5,7 +5,7 @@ import { Link as LinkS } from 'react-scroll'
 import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
 import { animateScroll as scroll } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 
 const Navbar = () => {
@@ -48,7 +48,7 @@ const Navbar = () => {
 
             
             {screenSize < 768 &&
-            <button id="menu-btn" onClick={handleBurgermenu}>
+            <button id="menu-btn" onClick={handleBurgermenu} className={menuOpen ? 'burgermenu-icon-active' : 'burgermenu-icon-inactive'}>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -91,6 +91,11 @@ const Navbar = () => {
                                 <li>
                                     <a href="https://www.linkedin.com/in/drescher-rijna/" target="_blank">
                                         <FontAwesomeIcon icon={faLinkedin} />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/thisisgisito/" target="_blank">
+                                        <FontAwesomeIcon icon={faInstagram} />
                                     </a>
                                 </li>
                             </ul>
