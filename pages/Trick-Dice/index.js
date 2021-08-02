@@ -3,10 +3,12 @@ import Link from 'next/link';
 const TrickDice = () => {  
     return (
       <>
-        <header>
+        <header className="header-detail-page">
             
-            <div className="logo" >
-                <Link href='/'>Logo</Link>
+            <div className="logo-detail-page" >
+                <Link href='/'>
+                  <img src="/logo-black-white.png" />
+                </Link>
             </div> 
 
         </header>
