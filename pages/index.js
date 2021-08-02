@@ -5,7 +5,7 @@ import TrickDiceTilt from '../components/TrickDiceTilt'
 import DaWintiTilt from '../components/DaWintiTilt'
 import SkillsetMeter from '../components/SkillsetMeter'
 import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import Head from 'next/head'
@@ -15,10 +15,27 @@ import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-
 export default function Home() {
 
   const {ref, inView} = useInView();
+  
+  const [send, setSend] = useState(false);
+  const[name,setName]=useState("");
+  const[message, setMessage]=useState("");
+  const[email,setEmail]=useState("");
 
   useEffect(()=>{
     console.log(inView);
   },[inView]);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (name != "" || email != "" || message != "") {
+      setSend(true);
+      setName("");
+      setEmail("");
+      setMessage("");
+    } else {
+      setSend(false);
+    }
+  }
 
   return (
     <div className={styles.container}>
@@ -125,17 +142,34 @@ export default function Home() {
           </section>
           <section id="kontakt-mig-section">
             <h2>Kom i kontakt med mig</h2>
-            <form className="kontakt-mig-form">
-              <input type="text" placeholder="Fornavn" />
-              <input type="text" placeholder="Efternavn" />
-              <input type="text" placeholder="Email" />
-              <textarea placeholder="Skriv en besked...">
+            <form className="kontakt-mig-form" method="post" action="none" accept-charset="ISO-8859-1" 
+            onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; 
+            window.onbeforeunload = function () {document.charset=originalCharset;};" >
+              <input type="text" onChange={(e)=>{setName(e.target.value)}} value={name} name="realname" placeholder="Fulde navn" required />
+              <input type="text" onChange={(e)=>{setEmail(e.target.value)}} value={email} name="email" placeholder="Email" required />
+              <textarea required onChange={(e)=>{setMessage(e.target.value)}} value={message} name="Message" placeholder="Skriv en besked...">
 
               </textarea>
-              <button type="submit">
+              <button type="submit" value="Send" onSubmit={handleSubmit}>
                 Send
               </button>
+              <input type="hidden" name="recipient" value="drescherrijna@drescher-rijna.dk" /> 
+              <input type="hidden" name="subject" value="Subject" /> 
+              <input type="hidden" name="required" value="realname,email,Message" /> 
             </form>
+            {send ?
+              <div id="onSubmit-message" className={send ? "thank-you-style" : "error-style"}>
+                {send ?
+                  <p className="thank-you-message">
+                    Tak for din besked. Jeg vil svare tilbage hurtigst muligt.
+                  </p> :
+                  <p className="error-message">
+                    Der skete en fejl under sendelsen. Har du udfyldt alle felter korrekt?
+                  </p>
+                }
+                
+              </div> : ""
+            }
           </section>
         </div>
     </div>

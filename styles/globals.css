@@ -15,6 +15,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.details-content {
+  min-height: 65vh;
+}
+
 * {
   font-family: 'Quicksand', sans-serif;
 }
@@ -179,6 +183,60 @@ header * {
   @apply text-base;
 }
 
+.header-detail-page {
+  @apply bg-green-600;
+  @apply flex;
+  @apply flex-row;
+  @apply justify-between;
+  @apply items-center;
+  @apply px-7;
+  @apply m-0;
+}
+
+.header-detail-page button {
+  background-color: white;
+  @apply text-green-600;
+  @apply px-4;
+  @apply py-2;
+  @apply rounded-full;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply border-2;
+  @apply border-white;
+}
+
+.header-detail-page button:hover {
+  background-color: transparent;
+  @apply text-white;
+  @apply border-white;
+}
+
+.details-navigation-links {
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+}
+
+.socials-detail ul {
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+}
+
+.socials-detail ul li {
+  @apply pl-6; 
+}
+
+.socials-detail ul li * {
+  @apply text-white;
+  @apply text-2xl;
+}
+
+.socials-detail ul li a:hover * {
+  @apply text-black;
+}
+
 .logo {
   @apply flex;
   @apply items-center;
@@ -187,8 +245,19 @@ header * {
 
 .logo img {
   @apply w-14;
+  
 }
 
+.logo-detail-page {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+}
+
+.logo-detail-page img {
+  @apply w-14;
+  @apply cursor-pointer;
+}
 
 /* FOOTER FOR ALL SCREENS */
 footer {
@@ -497,6 +566,7 @@ footer p {
   @apply w-full;
   @apply bg-gray-100;
   @apply rounded-3xl;
+  @apply cursor-pointer;
 }
 
 .tilt-desc-dawinti,
@@ -909,6 +979,148 @@ footer p {
 
 
 
+/* DETAIL PAGES FOR PROJECTS */
+/* DA WINTI */
+#dawinti-intro {
+  @apply px-6;
+  @apply my-28;
+  @apply mt-20;
+  @apply grid;
+  @apply gap-y-7;
+  grid-template-areas: 
+  "dawinti-kontekst"
+  "dawinti-link";
+}
+
+#dawinti-intro h1 {
+  @apply text-center;
+  color: #F8BB3A;
+}
+
+#overblik-tekst {
+  grid-area: dawinti-kontekst;
+  @apply text-center;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply gap-y-3;
+}
+
+#overblik-tekst p {
+  @apply text-left;
+}
+
+.tools-used {
+  @apply max-w-full;
+  @apply flex;
+  @apply flex-row;
+  @apply gap-y-1;
+  flex-wrap: wrap;
+  @apply justify-start;
+  @apply items-center;
+
+}
+
+.tools-used li {
+  @apply text-xs;
+  @apply pr-1;
+  @apply text-green-600;
+}
+
+
+/* LINKS */
+#dawinti-project-link {
+  grid-area: dawinti-link;
+  @apply text-center;
+  @apply grid;
+  @apply gap-y-7;
+   
+}
+
+#dawinti-project-grid {
+  @apply relative;
+  @apply w-full;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply place-items-center;
+}
+
+#dawinti-plugin-grid {
+  @apply relative;
+  @apply w-full;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply place-items-center;
+}
+
+.link-overlay-tekst {
+  @apply text-white;
+  @apply absolute;
+  z-index: 2;
+  background-color: #f8bc3ae7;
+  @apply rounded-full;
+  @apply px-6;
+  @apply py-3;
+}
+
+.link-overlay-tekst p {
+  text-decoration: underline;
+}
+
+#dawinti-siden {
+  @apply h-80;
+  @apply w-full;
+  @apply overflow-hidden;
+  @apply border;
+  border-color: #1a1a1a;
+  @apply rounded-2xl;
+}
+
+#dawinti-plugin {
+  @apply h-80;
+  @apply w-full;
+  @apply overflow-hidden;
+  @apply border;
+  border-color: #1a1a1a;
+  @apply rounded-2xl;
+}
+
+#dawinti-siden:hover #dawinti-siden-bg,
+#dawinti-plugin:hover #dawinti-plugin-bg {
+  transform: scale(1.1);
+  filter: grayscale(20%) blur(1px);
+}
+
+#link-overlay-siden:hover #dawinti-siden-bg,
+#link-overlay-git:hover #dawinti-plugin-bg {
+  transform: scale(1.1);
+  filter: grayscale(20%) blur(1px);
+}
+
+#dawinti-siden-bg {
+  @apply h-full;
+  @apply w-full;
+  background: url('../public/dawinti-projekt-bg.PNG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s all ease-in-out;
+  filter: grayscale(0) blur(0);
+}
+
+#dawinti-plugin-bg {
+  @apply h-full;
+  @apply w-full;
+  background: url('../public/dawinti-plugin-bg.PNG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s all ease-in-out;
+  filter: grayscale(0) blur(0);
+}
+
+
+
+
 /* 420 px */
 @media only screen and (min-width: 420px) and (max-width: 640px) {
   #projekter-section {
@@ -939,6 +1151,7 @@ footer p {
   .gisitoscooters-mockup {
     @apply mt-10;
   }
+  
 
 }
 
@@ -1781,6 +1994,31 @@ footer p {
     @apply justify-center;
     @apply items-center;
   }
+
+
+  /* DETAIL PAGES FOR PROJECTS */
+  /* DA WINTI */
+  #dawinti-intro {
+    @apply px-20;
+  }
+
+  .tools-used li {
+    @apply text-sm;
+  }
+
+
+  /* LINKS */
+  #dawinti-project-link {
+    @apply grid;
+    @apply gap-y-0;
+    @apply gap-x-7;
+    @apply grid-cols-2;
+    
+  }
+
+
+
+
 }
 
 
@@ -2200,6 +2438,33 @@ footer p {
     @apply gap-y-8;
     @apply mx-36;
   }
+
+  /* DETAIL PAGES FOR PROJECTS */
+  /* DA WINTI */
+  #dawinti-intro {
+    @apply relative;
+    @apply px-28;
+    column-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "dawinti-kontekst dawinti-link";
+  }
+
+  #dawinti-intro h1 {
+    @apply text-left;
+  }
+
+  #overblik-tekst {
+    @apply grid;
+    @apply place-content-center;
+    @apply place-items-start;
+  }
+
+  .tools-used li {
+    @apply text-sm;
+  }
+
+  
 
 
 }
