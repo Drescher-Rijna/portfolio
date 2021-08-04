@@ -150,6 +150,36 @@ a {
 }
 
 
+/* General for all buttons */
+.btn-style {
+  @apply border-2;
+  @apply border-green-600;
+  @apply ease-in-out;
+  transition: all 0.25s;
+}
+
+.btn-style:hover,
+.btn-style:active,
+.btn-style:focus {
+  @apply bg-transparent;
+  @apply text-green-600;
+  font-weight: 700;
+  @apply border-green-600;
+  @apply border-2;
+}
+
+#hero-section article button:hover,
+#hero-section article button:active,
+#hero-section article button:focus {
+  @apply bg-transparent;
+  @apply text-green-600;
+  font-weight: 700;
+  @apply border-green-600;
+  @apply border-2;
+}
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -157,6 +187,8 @@ a {
 .content {
   @apply w-full;
 }
+
+
 
 /* NAVIGATION */
 header {
@@ -204,6 +236,8 @@ header * {
   @apply justify-center;
   @apply border-2;
   @apply border-white;
+  @apply ease-in-out;
+  transition: all 0.25s;
 }
 
 .header-detail-page button:hover {
@@ -1564,13 +1598,12 @@ footer p {
     @apply flex;
     @apply items-center;
     @apply pr-0;
-    
   }
 
   .menu-liste-desktop .li-default {
     @apply ease-in-out;
     @apply px-7;
-    @apply py-2;
+    @apply py-4;
     @apply text-base;
 
     /* before scroll */ 
@@ -1589,7 +1622,7 @@ footer p {
 
   .menu-liste-desktop a:hover  {
     @apply border-b-4;
-    @apply border-green-300;
+    @apply border-green-600;
   }
 
   .menu-liste-desktop-scroll a:hover  {
@@ -2054,6 +2087,10 @@ footer p {
     @apply pr-10;
     @apply pl-6;
   }
+
+  .menu-liste-desktop {
+    @apply pr-28;
+  }
   
   /* socials */
   .socials-desktop-scroll {
@@ -2266,6 +2303,10 @@ footer p {
     @apply pl-8;
   }
 
+  .menu-liste-desktop {
+    @apply pr-48;
+  }
+
   
   /* socials */
   .socials-desktop-scroll ul {
@@ -2469,20 +2510,6 @@ footer p {
 
 }
 
-/* General for all buttons */
-button {
-  @apply border-2;
-  @apply border-green-600;
-  @apply ease-in-out;
-  transition: all 0.25s;
-}
 
-button:hover,
-button:active,
-button:focus {
-  @apply bg-transparent;
-  @apply text-green-600;
-  font-weight: 700;
-  @apply border-green-600;
-  @apply border-2;
-}
+
+
