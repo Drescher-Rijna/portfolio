@@ -11,6 +11,9 @@ import Navbar from '../components/Navbar'
 import Head from 'next/head'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
+import { animateScroll as scroll } from 'react-scroll'
+import { Link as LinkS } from 'react-scroll'
 
 export default function Home() {
 
@@ -50,9 +53,13 @@ export default function Home() {
                 Multimediedesigner studerende i 3. semester, som har kompetence i webudvikling UX/UI,
                 og er altid optimistik og på udkig efter forbedringer.
               </p>
-              <button>
-                Se mine projekter
-              </button>
+              
+                <button className="btn-style">
+                  <LinkS activeClass="active" to='projekter-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
+                    Se mine projekter
+                  </LinkS>
+                </button>
+              
             </article>
             <img src="/heroimage.png" />
             <div className="socials-hero">
@@ -150,7 +157,7 @@ export default function Home() {
               <textarea required onChange={(e)=>{setMessage(e.target.value)}} value={message} name="Message" placeholder="Skriv en besked...">
 
               </textarea>
-              <button type="submit" value="Send" onSubmit={handleSubmit}>
+              <button className="btn-style" type="submit" value="Send" onSubmit={handleSubmit}>
                 Send
               </button>
               <input type="hidden" name="recipient" value="drescherrijna@drescher-rijna.dk" /> 
