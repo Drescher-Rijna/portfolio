@@ -132,21 +132,21 @@ export default function Home() {
                 <GisitoScootersModal showModal={showModal} setShowModal={setShowModal} /> : null
               }
               
-              <div onClick={() => openModal(2)} className="toscoot-area" >
+              <div onClick={() => openModal(1)} className="toscoot-area" >
                 <ToScootTilt />
               </div>
               {modalIndex == 1 ? 
                 <ToScootModal showModal={showModal} setShowModal={setShowModal} /> : null
               }
               
-              <div onClick={() => openModal(1)} className="trickdice-area" >
+              <div onClick={() => openModal(4)} className="trickdice-area" >
                 <TrickDiceTilt />
               </div>
               {modalIndex == 4 ? 
                 <TrickDiceModal showModal={showModal} setShowModal={setShowModal} /> : null
               }
               
-              <div onClick={() => openModal(4)} className="dawinti-area">
+              <div onClick={() => openModal(3)} className="dawinti-area">
                 <DaWintiTilt />
               </div>
               {modalIndex == 3 ? 

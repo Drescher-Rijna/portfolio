@@ -19,39 +19,39 @@ const TrickDiceModal = ({showModal, setShowModal}) => {
                             <FontAwesomeIcon icon={faWindowClose} />
                         </span>
                         <div className="project-modal-carousel">
-                            <Carousel variant="dark" >
-                                <Carousel.Item>
+                            <Carousel className="max-h-96" variant="dark" >
+                                <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
-                                        className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-forside.png"
+                                        className="d-block max-h-96 m-auto"
+                                        src="/trickdice-carousel/trickdice-start.jpg"
                                         alt="First slide"
                                     />
                                 </Carousel.Item>
-                                <Carousel.Item>
+                                <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
-                                        className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-booking-form.png"
+                                        className="d-block max-h-96 m-auto"
+                                        src="/trickdice-carousel/trickdice-throw.jpg"
                                         alt="Second slide"
                                     />
                                 </Carousel.Item>
-                                <Carousel.Item>
+                                <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
-                                        className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-overnatningspris-beregner.png"
+                                        className="d-block max-h-96 m-auto"
+                                        src="/trickdice-carousel/trickdice-difficulty.jpg"
                                         alt="Third slide"
                                     />
                                 </Carousel.Item>
-                                <Carousel.Item>
+                                <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
-                                        className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-sektion-lokaler.png"
+                                        className="d-block max-h-96 m-auto"
+                                        src="/trickdice-carousel/trickdice-create.jpg"
                                         alt="Fourth slide"
                                     />
                                 </Carousel.Item>
-                                <Carousel.Item>
+                                <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
-                                        className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-arrangementer.png"
+                                        className="d-block max-h-96 m-auto"
+                                        src="/trickdice-carousel/trickdice-saved.jpg"
                                         alt="Fifth slide"
                                     />
                                 </Carousel.Item>
@@ -61,38 +61,44 @@ const TrickDiceModal = ({showModal, setShowModal}) => {
                         <div className="project-modal-infobox">
                             <article>
                                 <h2 className="heading-h2">
-                                    DA WINTI'S NYE LOGO OG HJEMMESIDE
+                                    TRICK DICE TERNINGER LIGE VED HÅNDEN
                                 </h2>
                                 <ul className="tools-used">
                                     <li>
-                                        WordPress |
+                                        Unity |
                                     </li>
                                     <li>
-                                        Elementor |
+                                        C#(C-sharp) |
                                     </li>
                                     <li>
-                                        Elementor class |
-                                    </li>
-                                    <li>
-                                        Adobe XD og IA
+                                        Binary formatter
                                     </li>
                                 </ul>
                                         
                                 <p className="modal-text">
-                                    Mig og en medstuderende fik til opgave fra kunst- og kulturhuset Da Winti i Selde,
-                                    at give dem en ny visuel identitet som repræsentere dem og hvad de står for, en hjemmeside
-                                    som har et stærkt sammenhæng med den nye identitet og hjælpe dem med at styrke deres online tilstedeværelse.
+                                    En app der simulere spillet Trick Dice hvor man normalt ville have fysiske terninger man kaster med og får tricks
+                                    man skal lande for at undgå at få et strike og vinde spillet. Ideen kom af at mig og mine venner elsker at konkurrere mod 
+                                    hinanden på løbehjul og gad godt at spille "Trick Dice", men kunne ikke skaffe terningerne til at spille. Så jeg valgte at lave
+                                    en alternativ løsning selv, med en mobil app.
                                 </p>
+                                <h3 className="heading-h3">
+                                    Appen har følgende features:
+                                </h3>
+                                <ul id="trick-dice-features">
+                                    <li>
+                                        Shake-detection, så man kan ryste sin mobil for at kaste terningerne, som hvis man kastede virkelige terninger
+                                    </li>
+                                    <li>
+                                        Forskellige terninger for forskellige sværhedsgrader
+                                    </li>
+                                    <li>
+                                        Mulighed for at lave og gemme egne terninger
+                                    </li>
+                                </ul>
                             </article>
                         </div>
                     </Modal.Body>
-                    <Modal.Footer>
-                        <a className="modal-project-link" href="https://dawinti.drescher-rijna.dk/" target="_blank">
-                            <button>
-                                Besøg siden
-                            </button>
-                        </a>
-                    
+                    <Modal.Footer>                    
                         <a className="modal-project-link" href="https://github.com/Drescher-Rijna/dawinti-plugin" target="_blank">
                             <button>
                                 Kode på Github

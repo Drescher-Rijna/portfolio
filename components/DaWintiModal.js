@@ -83,6 +83,10 @@ const DaWintiModal = ({showModal, setShowModal}) => {
                                     at give dem en ny visuel identitet som repræsentere dem og hvad de står for, en hjemmeside
                                     som har et stærkt sammenhæng med den nye identitet og hjælpe dem med at styrke deres online tilstedeværelse.
                                 </p>
+                                <p className="modal-text">
+                                    Vi har gået gennem en lang fasebaseret process, hvor vores tilgang satte stor fokus på brugerenes involvering og feedback,
+                                    i form af adskillige test. Så vi havde mulighed for at skræddesye siden specielt til Da Winti's primær målgruppe.
+                                </p>
                             </article>
                         </div>
                     </Modal.Body>

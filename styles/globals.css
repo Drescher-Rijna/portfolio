@@ -134,6 +134,32 @@ a, li {
   }
 }
 
+#trick-dice-features {
+  list-style: disc;
+  @apply m-0;
+  @apply p-0;
+  
+  @apply ml-4;
+}
+
+#trick-dice-features li {
+  @apply text-base;
+  @apply py-1;
+}
+
+#toscoot-features {
+  list-style: disc;
+  @apply m-0;
+  @apply p-0;
+  
+  @apply ml-4;
+}
+
+#toscoot-features li {
+  @apply text-base;
+  @apply py-1;
+}
+
 a {
   color: inherit;
   text-decoration: none;

@@ -23,36 +23,64 @@ const GisitoScootersModal = ({showModal, setShowModal}) => {
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-forside.png"
+                                        src="/gisitoscooters-carousel/gisito-forside.png"
                                         alt="First slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-booking-form.png"
+                                        src="/gisitoscooters-carousel/gisito-search.png"
                                         alt="Second slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-overnatningspris-beregner.png"
+                                        src="/gisitoscooters-carousel/gisito-details.png"
                                         alt="Third slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-sektion-lokaler.png"
+                                        src="/gisitoscooters-carousel/gisito-incart.png"
                                         alt="Fourth slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-arrangementer.png"
+                                        src="/gisitoscooters-carousel/gisito-cart.png"
                                         alt="Fifth slide"
+                                    />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block w-100"
+                                        src="/gisitoscooters-carousel/gisito-removeditem.png"
+                                        alt="Sixth slide"
+                                    />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block w-100"
+                                        src="/gisitoscooters-carousel/gisito-auth.png"
+                                        alt="Seventh slide"
+                                    />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block w-100"
+                                        src="/gisitoscooters-carousel/gisito-admin.png"
+                                        alt="Eigth slide"
+                                    />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="d-block w-100"
+                                        src="/gisitoscooters-carousel/gisito-gallery.png"
+                                        alt="Ninth slide"
                                     />
                                 </Carousel.Item>
                             </Carousel>
@@ -61,39 +89,47 @@ const GisitoScootersModal = ({showModal, setShowModal}) => {
                         <div className="project-modal-infobox">
                             <article>
                                 <h2 className="heading-h2">
-                                    DA WINTI'S NYE LOGO OG HJEMMESIDE
+                                    GISITO SCOOTERS | LØBEHJUL WEBSHOP
                                 </h2>
                                 <ul className="tools-used">
                                     <li>
-                                        WordPress |
+                                        NextJS |
                                     </li>
                                     <li>
-                                        Elementor |
+                                        ReactJS |
                                     </li>
                                     <li>
-                                        Elementor class |
-                                    </li>
-                                    <li>
-                                        Adobe XD og IA
+                                        Firebase(NoSQL) |
                                     </li>
                                 </ul>
                                         
-                                <p className="modal-text">
-                                    Mig og en medstuderende fik til opgave fra kunst- og kulturhuset Da Winti i Selde,
-                                    at give dem en ny visuel identitet som repræsentere dem og hvad de står for, en hjemmeside
-                                    som har et stærkt sammenhæng med den nye identitet og hjælpe dem med at styrke deres online tilstedeværelse.
-                                </p>
+                                <article className="modal-text">
+                                    <p>
+                                        Løbehjul webshop projekt, hvor jeg har brugt en NoSQL-databse til at skabe bruger regristering og log ind.
+                                    </p>
+                                    <p>
+                                        Derudover har jeg brugt databasen til at gemme produktinfo og billeder, så siden dynamisk kan fremvise produkterne. Samtidigt fremvises individuelle
+                                        produkter dynamisk på produktinfo-siden, så man ikke skal lave en unik side til hvert produkt.
+                                    </p>
+                                    <p>
+                                        Brugeren har mulighed for at bruge søgefeltet til at finde specfikke produkter og kan tilføje produkter til deres kurv, som vil blive gemt på
+                                        databsen hvis man er logget ind, og på local storage hvis man ikke er logget ind.
+                                    </p>
+                                    <p>
+                                        Ydermere er der en form for tilføjelse af nye produkter, som kun kan bruges af brugere som er tildelt rollen som administrator. 
+                                    </p>
+                                </article>
                             </article>
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
-                        <a className="modal-project-link" href="https://dawinti.drescher-rijna.dk/" target="_blank">
+                        <a className="modal-project-link" href="https://gisito-scooters-nextjs.vercel.app/" target="_blank">
                             <button>
                                 Besøg siden
                             </button>
                         </a>
                     
-                        <a className="modal-project-link" href="https://github.com/Drescher-Rijna/dawinti-plugin" target="_blank">
+                        <a className="modal-project-link" href="https://github.com/Drescher-Rijna/gisito-scooters-nextjs" target="_blank">
                             <button>
                                 Kode på Github
                             </button>
