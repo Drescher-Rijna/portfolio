@@ -4,7 +4,7 @@ import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-
 const Footer = () => {
     return (
         <footer>
-            <ul className="footer-socials">
+            <ul className="footer-socials ml-4">
                 <li>
                     <a href="https://github.com/Drescher-Rijna" target="_blank">
                         <FontAwesomeIcon icon={faGithub} />

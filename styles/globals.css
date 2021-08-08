@@ -4,41 +4,46 @@
 @tailwind utilities;
 @tailwind screens;
 
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Quicksand:wght@400;600&display=swap');
 
 html,
 body {
-  
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.details-content {
-  min-height: 65vh;
+.global-menu-desktop ul {
+  margin: 0;
+  padding: 0;
 }
 
 * {
   font-family: 'Quicksand', sans-serif;
+  outline: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+*:hover,
+*:active
+*:focus {
+  outline: none !important;
+}
+
+.heading-h1, .heading-h2, .heading-h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
 /* FONT SIZES ACROOS ALL SCREENS */
-h1 {
+.heading-h1 {
   @apply text-2xl;
 }
 
-h2 {
+.heading-h2 {
   @apply text-xl;
-  max-lines: 1;
 }
 
-h3, button {
+h3, .heading-h3, button {
   @apply text-lg;
 }
 
@@ -46,8 +51,26 @@ p, div {
   @apply text-base;
 }
 
+.nav-link-dr {
+  @apply text-lg;
+  text-decoration: none;
+}
+
 a, li {
   @apply text-lg;
+}
+
+ol, ul {
+  @apply pl-0 !important;
+  @apply pr-0 !important;
+  @apply mb-0 !important;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none !important;
 }
 
 @screen sm {
@@ -129,6 +152,32 @@ a, li {
   a, li {
     
   }
+}
+
+#trick-dice-features {
+  list-style: disc;
+  @apply m-0;
+  @apply p-0;
+  
+  @apply ml-4;
+}
+
+#trick-dice-features li {
+  @apply text-base;
+  @apply py-1;
+}
+
+#toscoot-features {
+  list-style: disc;
+  @apply m-0;
+  @apply p-0;
+  
+  @apply ml-4;
+}
+
+#toscoot-features li {
+  @apply text-base;
+  @apply py-1;
 }
 
 a {
@@ -332,12 +381,13 @@ footer p {
 
 .footer-socials li a {
   @apply text-2xl;
+  color: #1a1a1a;
 }
 
 .footer-socials {
   @apply grid;
-  @apply gap-x-7;
-  @apply gap-y-7;
+  @apply gap-x-6;
+  @apply gap-y-4;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
@@ -499,7 +549,7 @@ footer p {
   @apply items-center;
 }
 
-#hero-section article h1 {
+#hero-section article .heading-h1 {
   @apply mb-2;
   @apply text-center;
 }
@@ -538,6 +588,7 @@ footer p {
 .socials-hero ul li a {
   @apply cursor-pointer;
   @apply text-2xl;
+  color: #1a1a1a;
   
 } 
 
@@ -567,8 +618,9 @@ footer p {
 }
 
 .om-mig-photo img {
-  @apply rounded-full;
-  @apply max-h-72;
+  min-width: 150px;
+  width: 80%;
+  max-width: 100%;
   @apply m-auto;
 }
 
@@ -691,7 +743,7 @@ footer p {
 }
 
 .tilt-toscoot:hover .mockup-toscoot {
-  transform: scale(1.5) rotate(-18deg);
+  transform: scale(1.3) rotate(-18deg);
   
 }
 
@@ -713,7 +765,7 @@ footer p {
   @apply ease-in-out;
   transition: all 1s;
   z-index: 3;
-  transform: scale(1.4) rotate(-18deg);
+  transform: scale(1.2) rotate(-18deg);
 }
 
 .project-container-toscoot {
@@ -837,7 +889,7 @@ footer p {
   @apply absolute;
   width: 100%;
   height: 100%;
-  background: url('../public/mockup-gisito.png');
+  background: url('../public/mockup-gisito-glossy.png');
   background-size: 110%;
   background-repeat: no-repeat;
   background-position: center;
@@ -1013,52 +1065,95 @@ footer p {
 
 
 
-/* DETAIL PAGES FOR PROJECTS */
-/* DA WINTI */
-#dawinti-intro {
-  @apply px-6;
-  @apply my-28;
-  @apply mt-20;
-  @apply grid;
-  @apply gap-y-7;
-  grid-template-areas: 
-  "dawinti-kontekst"
-  "dawinti-link";
+/* MODALS FOR PROJECTS */
+/* GENERELT */
+.modal-body {
+  @apply relative !important;
+  @apply p-0 !important;
+  @apply rounded-t-lg !important;
+  @apply border-t !important;
 }
 
-#dawinti-intro h1 {
-  @apply text-center;
-  color: #F8BB3A;
+.modal-footer {
+  @apply pt-0 !important;
 }
 
-#overblik-tekst {
-  grid-area: dawinti-kontekst;
-  @apply text-center;
-  @apply grid;
-  @apply grid-cols-1;
-  @apply gap-y-3;
+.project-modal-carousel {
+  @apply rounded-t-lg !important;
+  @apply border;
 }
 
-#overblik-tekst p {
-  @apply text-left;
+.project-modal-infobox {
+  @apply px-4;
+  @apply mt-6;
+}
+
+.close-modal-btn {
+  @apply absolute;
+  right: 0%;
+  z-index: 99;
+  margin: 0;
+  padding: 0;
+  @apply mr-5;
+  @apply text-2xl;
+  @apply text-red-600;
+  @apply bg-white;
+  @apply cursor-pointer;
+
+}
+
+.close-modal-btn:hover,
+.close-modal-btn:active {
+  @apply text-red-500;
 }
 
 .tools-used {
-  @apply max-w-full;
   @apply flex;
   @apply flex-row;
-  @apply gap-y-1;
-  flex-wrap: wrap;
+  @apply flex-wrap;
   @apply justify-start;
-  @apply items-center;
-
+  @apply items-start;
+  @apply pl-0;
 }
 
 .tools-used li {
-  @apply text-xs;
+  @apply text-sm;
   @apply pr-1;
   @apply text-green-600;
 }
+
+.modal-project-link {
+  @apply text-lg;
+  @apply text-white;
+
+}
+
+.modal-project-link button {
+  @apply bg-green-600;
+  @apply rounded-full;
+  @apply px-3;
+  @apply py-1;
+  @apply border-2;
+  @apply border-green-600;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.modal-footer {
+  @apply border-none !important;
+}
+
+.modal-project-link button:hover,
+.modal-project-link button:active {
+  @apply bg-transparent;
+  @apply text-green-600;
+  font-weight: 600;
+}
+
+
+/* DA WINTI */
+
+
+
 
 
 /* LINKS */
@@ -1159,14 +1254,32 @@ footer p {
 @media only screen and (min-width: 420px) and (max-width: 640px) {
   #projekter-section {
     @apply gap-y-24;
+    @apply px-10;
   }
 
   #projekter-section h2 {
     @apply -mb-16;
   }
 
+  .tilt-inner-toscoot,
+  .tilt-toscoot {
+    height: fit-content;
+    max-height: 100%;
+    
+  }
+  
+  .gisitoscooters-mockup {
+    @apply mt-0;
+    background-position-y: 0px;
+  }
+
+  .tilt-inner-toscoot {
+    place-items: start;
+    grid-template-rows: 0fr 1fr;
+  }
+
   .tilt-trickdice:hover .mockup-trickdice {
-    transform: scale(1.2) rotate(15deg);
+    transform: scale(1.1) rotate(15deg);
   }
 
   .tilt-toscoot:hover .mockup-toscoot {
@@ -1175,16 +1288,19 @@ footer p {
 
   .mockup-trickdice {
     @apply mr-12;
-    transform: scale(1.15) rotate(15deg);
+    transform: scale(1) rotate(15deg);
   }
 
   .mockup-toscoot {
-    transform: scale(1.15) rotate(-18deg);
+    transform: scale(1.1) rotate(-18deg);
   }
+  
 
   .gisitoscooters-mockup {
     @apply mt-10;
   }
+
+
   
 
 }
@@ -1193,51 +1309,18 @@ footer p {
 /* min-width 640px */
 @screen sm {
 
-  /* HERO-IMAGE */
   #hero-section {
-    @apply px-6;
-    @apply my-36;
-    @apply max-h-96;
-    @apply flex;
-    @apply items-center;
-    @apply justify-center;
+    @apply px-20;
   }
 
-  #hero-section img {
-    @apply max-h-96;
-
-  }
-
-  /* Om mig section */
   #om-mig-section {
-    @apply px-6;
-    @apply flex;
-    @apply items-center;
-    display: grid;
-    @apply gap-x-5;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "om-mig-photo om-mig-titel"
-    "om-mig-photo om-mig-tekst";
+    @apply px-20;
   }
-
-  .om-mig-photo {
-    grid-area: om-mig-photo;
-  }
-  #om-mig-section h2 {
-    grid-area: om-mig-titel;
-    @apply text-left;
-  }
-  #om-mig-section article {
-    grid-area: om-mig-tekst;
-  }
-
 
 
   /* Projekter section */
   #projekter-section {
     overflow: hidden;
-    @apply px-6;
     @apply mt-20;
     @apply pb-20;
     display: grid;
@@ -1454,14 +1537,14 @@ footer p {
 
   /* Skillset section */
   #skillset-section {
-    @apply px-14;
+    @apply px-20;
   }
 
 
 
   /* Kontakt mig */
   #kontakt-mig-section {
-    @apply px-14;
+    @apply px-20;
     @apply my-20;
     @apply flex;
     @apply flex-col;
@@ -1493,6 +1576,13 @@ footer p {
 
 /* min-width 768px */
 @screen md {
+
+  .om-mig-photo img {
+    min-width: 150px;
+    width: 250px;
+    max-width: 350px;
+    @apply m-auto;
+  }
 
   header * {
     color: #1a1a1a;
@@ -1744,7 +1834,7 @@ footer p {
     @apply block;
   }
 
-  #hero-section article h1 {
+  #hero-section article .heading-h1 {
     @apply mb-2;
     @apply text-left;
   }
@@ -1798,12 +1888,29 @@ footer p {
 
   /* Om mig section */
   #om-mig-section {
-    @apply px-20;
+    @apply px-6;
     @apply flex;
     @apply items-center;
-    @apply gap-y-3;
     display: grid;
+    @apply gap-x-5;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0fr 1fr;
+    grid-template-areas: 
+    "om-mig-photo om-mig-titel"
+    "om-mig-photo om-mig-tekst";
+  }
+
+  .om-mig-photo {
+    grid-area: om-mig-photo;
+    
+  }
+
+  #om-mig-section h2 {
+    grid-area: om-mig-titel;
+    @apply text-left;
+  }
+  #om-mig-section article {
+    grid-area: om-mig-tekst;
   }
 
 
@@ -1856,6 +1963,10 @@ footer p {
     background-image: linear-gradient( -55deg, #b90900 0%, #b90900 45%, #e2e2e2 45%, #e2e2e2 100%);
   }
 
+  .tilt-desc-toscoot {
+    @apply gap-y-0;
+  }
+
   .tilt-trickdice {
     @apply h-60;
     background-color: #00a19a;
@@ -1898,7 +2009,7 @@ footer p {
     @apply pl-8;
     @apply grid;
     @apply grid-cols-1;
-    @apply gap-y-3;
+    @apply gap-y-0;
     @apply text-white;
   }
 
@@ -1962,11 +2073,11 @@ footer p {
   }
 
   .tilt-desc-trickdice img {
-    max-width: 85px;
+    max-width: 80px;
   }
 
   .tilt-desc-toscoot img {
-    max-width: 100px;
+    max-width: 90px;
   }
 
   .gisitoscooters-area {
@@ -2028,25 +2139,9 @@ footer p {
     @apply items-center;
   }
 
-
-  /* DETAIL PAGES FOR PROJECTS */
-  /* DA WINTI */
-  #dawinti-intro {
-    @apply px-20;
-  }
-
-  .tools-used li {
-    @apply text-sm;
-  }
-
-
-  /* LINKS */
-  #dawinti-project-link {
-    @apply grid;
-    @apply gap-y-0;
-    @apply gap-x-7;
-    @apply grid-cols-2;
-    
+  .project-modal-infobox {
+    @apply px-8;
+    @apply mt-6;
   }
 
 
@@ -2074,6 +2169,10 @@ footer p {
     @apply max-h-16;
     @apply m-0;
     @apply p-0;
+  }
+
+  .header-bg {
+    @apply pr-28;
   }
 
   .logo-scroll {
@@ -2168,7 +2267,7 @@ footer p {
     @apply px-10;
   }
 
-  #hero-section article h1 {
+  #hero-section article .heading-h1 {
     @apply mb-2;
   }
 
@@ -2240,6 +2339,11 @@ footer p {
     @apply gap-x-16;
   }
 
+  .tilt-toscoot,
+  .tilt-trickdice {
+    height: 260px;
+  }
+
   .gisitoscooters-mockup {
     @apply mt-0;
   
@@ -2291,15 +2395,19 @@ footer p {
     @apply p-0;
   }
 
+  .header-bg {
+    @apply pr-48;
+  }
+
   .logo-scroll {
     min-width: 71px;
-    @apply pr-28;
+    padding-right: 122px;
     @apply pl-8;
   }
 
   .logo {
     min-width: 71px;
-    @apply pr-28;
+    padding-right: 122px;
     @apply pl-8;
   }
 
@@ -2357,8 +2465,8 @@ footer p {
   /* Projekter section */
   #projekter-section {
     @apply px-60;
-    @apply my-8;
-    @apply py-20;
+    @apply my-28;
+    @apply pb-28;
     @apply gap-y-16;
     @apply gap-x-16;
   }
@@ -2480,32 +2588,7 @@ footer p {
     @apply mx-36;
   }
 
-  /* DETAIL PAGES FOR PROJECTS */
-  /* DA WINTI */
-  #dawinti-intro {
-    @apply relative;
-    @apply px-28;
-    column-gap: 0px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "dawinti-kontekst dawinti-link";
-  }
-
-  #dawinti-intro h1 {
-    @apply text-left;
-  }
-
-  #overblik-tekst {
-    @apply grid;
-    @apply place-content-center;
-    @apply place-items-start;
-  }
-
-  .tools-used li {
-    @apply text-sm;
-  }
-
-  
+ 
 
 
 }

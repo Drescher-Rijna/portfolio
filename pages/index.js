@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../styles/Home.module.css'
 import GisitoScootersTilt from '../components/GisitoScootersTilt'
 import ToScootTilt from '../components/ToScootTilt'
@@ -14,6 +15,11 @@ import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-
 import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
 import { animateScroll as scroll } from 'react-scroll'
 import { Link as LinkS } from 'react-scroll'
+import DaWintiModal from '../components/DaWintiModal'
+import ToScootModal from '../components/ToScootModal';
+import GisitoScootersModal from '../components/GisitoScootersModal';
+import TrickDiceModal from '../components/TrickDiceModal';
+
 
 export default function Home() {
 
@@ -23,6 +29,23 @@ export default function Home() {
   const[name,setName]=useState("");
   const[message, setMessage]=useState("");
   const[email,setEmail]=useState("");
+
+  const [showModal, setShowModal] = useState(false);
+  const [modalIndex, setModalIndex] = useState(null);
+
+  const [screenSize, setScreenSize] = useState();
+  useEffect(() => {
+    setScreenSize(window.innerWidth);
+  },[]);
+  useEffect(() => {
+    function handleResize() {
+        setScreenSize(window.innerWidth);
+        console.log(screenSize);
+        
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+},[screenSize]);
 
   useEffect(()=>{
     console.log(inView);
@@ -40,13 +63,19 @@ export default function Home() {
     }
   }
 
+  const openModal = (index) => {
+    console.log("modal");
+    setShowModal(prev => !prev);
+    setModalIndex(index);
+  }
+
   return (
     <div className={styles.container}>
       <Navbar/>
         <div className="content">
           <section id="hero-section">
             <article>
-              <h1>
+              <h1 className="heading-h1">
                 Multimediedesigner
               </h1>
               <p>
@@ -84,11 +113,17 @@ export default function Home() {
           </section>
 
           <section id="om-mig-section">
-            <h2>
+            <h2 className="heading-h2">
               Hvem er Drescher Rijna?
             </h2>
             <div className="om-mig-photo">
-              <img src="/Drescher_300x400px.png" />
+              {screenSize > 767 ? 
+                <img src="/om-mig-desktop.png" /> :
+                ""
+              }
+              {screenSize < 767 ?
+                <img src="/om-mig-mobil.png" /> : ""
+              }
             </div>
             <article>
               <p>
@@ -107,31 +142,40 @@ export default function Home() {
               </p>
             </article>
           </section>
+          
           <section id="projekter-section">
-            <h2>Projekter</h2>
-            <Link href='/Gisito-Scooters' exact>
-              <div className="gisitoscooters-area">
+            <h2 className="heading-h2">Projekter</h2>
+              <div onClick={() => openModal(2)} className="gisitoscooters-area" >
                 <GisitoScootersTilt />
               </div>
-            </Link>
-            <Link href='/ToScoot' exact>
-              <div className="toscoot-area">
+              {modalIndex == 2 ?
+                <GisitoScootersModal showModal={showModal} setShowModal={setShowModal} /> : null
+              }
+              
+              <div onClick={() => openModal(1)} className="toscoot-area" >
                 <ToScootTilt />
               </div>
-            </Link>
-            <Link href='/Trick-Dice' exact>
-              <div className="trickdice-area">
+              {modalIndex == 1 ? 
+                <ToScootModal showModal={showModal} setShowModal={setShowModal} /> : null
+              }
+              
+              <div onClick={() => openModal(4)} className="trickdice-area" >
                 <TrickDiceTilt />
               </div>
-            </Link>
-            <Link href='/Da-Winti' exact>
-              <div className="dawinti-area">
+              {modalIndex == 4 ? 
+                <TrickDiceModal showModal={showModal} setShowModal={setShowModal} /> : null
+              }
+              
+              <div onClick={() => openModal(3)} className="dawinti-area">
                 <DaWintiTilt />
               </div>
-            </Link>
+              {modalIndex == 3 ? 
+                <DaWintiModal showModal={showModal} setShowModal={setShowModal}  /> : null
+              }
+              
           </section>
           <section ref={ref} id="skillset-section">
-            <h2 className="skillset-section-titel" >Skillset</h2>
+            <h2 className="skillset-section-titel heading-h2" >Skillset</h2>
             <div className="skills-container">
               <SkillsetMeter skill="HTML" level={90} imgUrl="/HTML.png" inView={inView} />
               <SkillsetMeter skill="CSS" level={90} imgUrl="/CSS.png" inView={inView} />
@@ -148,7 +192,7 @@ export default function Home() {
             </div>
           </section>
           <section id="kontakt-mig-section">
-            <h2>Kom i kontakt med mig</h2>
+            <h2 className="heading-h2">Kom i kontakt med mig</h2>
             <form className="kontakt-mig-form" method="post" action="none" accept-charset="ISO-8859-1" 
             onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; 
             window.onbeforeunload = function () {document.charset=originalCharset;};" >

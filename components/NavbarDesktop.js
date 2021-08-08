@@ -31,22 +31,22 @@ const NavbarDesktop = () => {
             </div>
             <div className={scrollPos > 64 ? 'header-bg-scroll' : 'header-bg'}>
                 <ul className={scrollPos > 64 ? 'menu-liste-desktop-scroll' : 'menu-liste-desktop'}>
-                    <LinkS className="nav-link" activeClass="active" to='om-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
+                    <LinkS className="nav-link-dr" activeClass="active" to='om-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
                         <li className={scrollPos > 64 ? 'li-scroll' : 'li-default'}>
                             Om mig
                         </li>
                     </LinkS>
-                    <LinkS className="nav-link" activeClass="active" to='projekter-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
+                    <LinkS className="nav-link-dr" activeClass="active" to='projekter-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
                         <li className={scrollPos > 64 ? 'li-scroll' : 'li-default'}>
                             Projekter
                         </li>
                     </LinkS>
-                    <LinkS className="nav-link" activeClass="active" to='skillset-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
+                    <LinkS className="nav-link-dr" activeClass="active" to='skillset-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
                         <li className={scrollPos > 64 ? 'li-scroll' : 'li-default'}>
                             Skillset
                         </li>
                     </LinkS>
-                    <LinkS className="nav-link" activeClass="active" to='kontakt-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-120} >
+                    <LinkS className="nav-link-dr" activeClass="active" to='kontakt-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
                         <li className={scrollPos > 64 ? 'li-scroll' : 'li-default'}>
                             Kontakt mig
                         </li>
