@@ -13,7 +13,7 @@ const GisitoScootersModal = ({showModal, setShowModal}) => {
     
 
     return(
-                <Modal  ref={modalRef} show={showModal} onHide={closeModal}>
+                <Modal  ref={modalRef} show={showModal} onHide={closeModal} >
                     <Modal.Body showModal={showModal} >
                         <span className="close-modal-btn" onClick={() => {setShowModal(prev => !prev); }}>
                             <FontAwesomeIcon icon={faWindowClose} />
@@ -122,7 +122,8 @@ const GisitoScootersModal = ({showModal, setShowModal}) => {
                             </article>
                         </div>
                     </Modal.Body>
-                    <Modal.Footer>
+                    
+                    <Modal.Footer className="mt-4">
                         <a className="modal-project-link" href="https://gisito-scooters-nextjs.vercel.app/" target="_blank">
                             <button>
                                 Besøg siden

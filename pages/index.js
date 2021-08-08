@@ -33,6 +33,20 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [modalIndex, setModalIndex] = useState(null);
 
+  const [screenSize, setScreenSize] = useState();
+  useEffect(() => {
+    setScreenSize(window.innerWidth);
+  },[]);
+  useEffect(() => {
+    function handleResize() {
+        setScreenSize(window.innerWidth);
+        console.log(screenSize);
+        
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+},[screenSize]);
+
   useEffect(()=>{
     console.log(inView);
   },[inView]);
@@ -103,7 +117,13 @@ export default function Home() {
               Hvem er Drescher Rijna?
             </h2>
             <div className="om-mig-photo">
-              <img src="/Drescher_300x400px.png" />
+              {screenSize > 767 ? 
+                <img src="/om-mig-desktop.png" /> :
+                ""
+              }
+              {screenSize < 767 ?
+                <img src="/om-mig-mobil.png" /> : ""
+              }
             </div>
             <article>
               <p>

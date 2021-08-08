@@ -44,7 +44,7 @@ const ToScootModal = ({showModal, setShowModal}) => {
                                 <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/toscoot-carousel/tricklists.jpg"
+                                        src="/toscoot-carousel/tricklists.svg"
                                         alt="Fourth slide"
                                     />
                                 </Carousel.Item>
@@ -122,7 +122,8 @@ const ToScootModal = ({showModal, setShowModal}) => {
                             </article>
                         </div>
                     </Modal.Body>
-                    <Modal.Footer>
+                    
+                    <Modal.Footer className="mt-4">
                     
                         <a className="modal-project-link" href="https://github.com/Drescher-Rijna/toscoot" target="_blank">
                             <button>

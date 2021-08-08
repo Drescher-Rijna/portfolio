@@ -18,19 +18,27 @@ const SkillsetMeter = ({imgUrl, skill, level, inView}) => {
             console.log(screenSize);
 
             if(screenSize < 480) {
-                setLogoPosOffset(7)
+                setLogoPosOffset(8)
             }
             
             if(screenSize > 480 || screenSize == 480) {
-                setLogoPosOffset(7)
-            }
-
-            if(screenSize > 640 || screenSize == 640) {
                 setLogoPosOffset(5)
             }
 
-            if(screenSize > 1025 || screenSize == 1025) {
-                setLogoPosOffset(10)
+            if(screenSize > 640 || screenSize == 640) {
+                setLogoPosOffset(7)
+            }
+
+            if(screenSize > 720 || screenSize == 640) {
+                setLogoPosOffset(5)
+            }
+
+            if(screenSize > 1024 || screenSize == 1024) {
+                setLogoPosOffset(15)
+            }
+
+            if(screenSize > 1200 || screenSize == 1200) {
+                setLogoPosOffset(12)
             }
 
             console.log(logoPosOffset);

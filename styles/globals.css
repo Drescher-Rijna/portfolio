@@ -20,6 +20,13 @@ body {
 
 * {
   font-family: 'Quicksand', sans-serif;
+  outline: none !important;
+}
+
+*:hover,
+*:active
+*:focus {
+  outline: none !important;
 }
 
 .heading-h1, .heading-h2, .heading-h3 {
@@ -51,6 +58,19 @@ p, div {
 
 a, li {
   @apply text-lg;
+}
+
+ol, ul {
+  @apply pl-0 !important;
+  @apply pr-0 !important;
+  @apply mb-0 !important;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none !important;
 }
 
 @screen sm {
@@ -366,8 +386,8 @@ footer p {
 
 .footer-socials {
   @apply grid;
-  @apply gap-x-7;
-  @apply gap-y-7;
+  @apply gap-x-6;
+  @apply gap-y-4;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
@@ -598,8 +618,9 @@ footer p {
 }
 
 .om-mig-photo img {
-  @apply rounded-full;
-  @apply max-h-72;
+  min-width: 150px;
+  width: 80%;
+  max-width: 100%;
   @apply m-auto;
 }
 
@@ -868,7 +889,7 @@ footer p {
   @apply absolute;
   width: 100%;
   height: 100%;
-  background: url('../public/mockup-gisito.png');
+  background: url('../public/mockup-gisito-glossy.png');
   background-size: 110%;
   background-repeat: no-repeat;
   background-position: center;
@@ -1063,7 +1084,8 @@ footer p {
 }
 
 .project-modal-infobox {
-  @apply px-8;
+  @apply px-4;
+  @apply mt-6;
 }
 
 .close-modal-btn {
@@ -1083,10 +1105,6 @@ footer p {
 .close-modal-btn:hover,
 .close-modal-btn:active {
   @apply text-red-500;
-}
-
-.project-modal-infobox {
-  @apply mt-4;
 }
 
 .tools-used {
@@ -1291,51 +1309,18 @@ footer p {
 /* min-width 640px */
 @screen sm {
 
-  /* HERO-IMAGE */
   #hero-section {
-    @apply px-6;
-    @apply my-36;
-    @apply max-h-96;
-    @apply flex;
-    @apply items-center;
-    @apply justify-center;
+    @apply px-20;
   }
 
-  #hero-section img {
-    @apply max-h-96;
-
-  }
-
-  /* Om mig section */
   #om-mig-section {
-    @apply px-6;
-    @apply flex;
-    @apply items-center;
-    display: grid;
-    @apply gap-x-5;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "om-mig-photo om-mig-titel"
-    "om-mig-photo om-mig-tekst";
+    @apply px-20;
   }
-
-  .om-mig-photo {
-    grid-area: om-mig-photo;
-  }
-  #om-mig-section h2 {
-    grid-area: om-mig-titel;
-    @apply text-left;
-  }
-  #om-mig-section article {
-    grid-area: om-mig-tekst;
-  }
-
 
 
   /* Projekter section */
   #projekter-section {
     overflow: hidden;
-    @apply px-6;
     @apply mt-20;
     @apply pb-20;
     display: grid;
@@ -1552,14 +1537,14 @@ footer p {
 
   /* Skillset section */
   #skillset-section {
-    @apply px-14;
+    @apply px-20;
   }
 
 
 
   /* Kontakt mig */
   #kontakt-mig-section {
-    @apply px-14;
+    @apply px-20;
     @apply my-20;
     @apply flex;
     @apply flex-col;
@@ -1591,6 +1576,13 @@ footer p {
 
 /* min-width 768px */
 @screen md {
+
+  .om-mig-photo img {
+    min-width: 150px;
+    width: 250px;
+    max-width: 350px;
+    @apply m-auto;
+  }
 
   header * {
     color: #1a1a1a;
@@ -1896,12 +1888,29 @@ footer p {
 
   /* Om mig section */
   #om-mig-section {
-    @apply px-20;
+    @apply px-6;
     @apply flex;
     @apply items-center;
-    @apply gap-y-3;
     display: grid;
+    @apply gap-x-5;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0fr 1fr;
+    grid-template-areas: 
+    "om-mig-photo om-mig-titel"
+    "om-mig-photo om-mig-tekst";
+  }
+
+  .om-mig-photo {
+    grid-area: om-mig-photo;
+    
+  }
+
+  #om-mig-section h2 {
+    grid-area: om-mig-titel;
+    @apply text-left;
+  }
+  #om-mig-section article {
+    grid-area: om-mig-tekst;
   }
 
 
@@ -1954,6 +1963,10 @@ footer p {
     background-image: linear-gradient( -55deg, #b90900 0%, #b90900 45%, #e2e2e2 45%, #e2e2e2 100%);
   }
 
+  .tilt-desc-toscoot {
+    @apply gap-y-0;
+  }
+
   .tilt-trickdice {
     @apply h-60;
     background-color: #00a19a;
@@ -1996,7 +2009,7 @@ footer p {
     @apply pl-8;
     @apply grid;
     @apply grid-cols-1;
-    @apply gap-y-3;
+    @apply gap-y-0;
     @apply text-white;
   }
 
@@ -2060,11 +2073,11 @@ footer p {
   }
 
   .tilt-desc-trickdice img {
-    max-width: 85px;
+    max-width: 80px;
   }
 
   .tilt-desc-toscoot img {
-    max-width: 100px;
+    max-width: 90px;
   }
 
   .gisitoscooters-area {
@@ -2126,6 +2139,10 @@ footer p {
     @apply items-center;
   }
 
+  .project-modal-infobox {
+    @apply px-8;
+    @apply mt-6;
+  }
 
 
 
@@ -2320,6 +2337,11 @@ footer p {
     @apply grid-cols-3;
     @apply gap-y-16;
     @apply gap-x-16;
+  }
+
+  .tilt-toscoot,
+  .tilt-trickdice {
+    height: 260px;
   }
 
   .gisitoscooters-mockup {
