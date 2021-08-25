@@ -13,45 +13,42 @@ const GisitoScootersModal = ({showModal, setShowModal}) => {
     
 
     return(
-                <Modal  ref={modalRef} show={showModal} onHide={closeModal} >
-                    <Modal.Body showModal={showModal} >
-                        <span className="close-modal-btn" onClick={() => {setShowModal(prev => !prev); }}>
-                            <FontAwesomeIcon icon={faWindowClose} />
-                        </span>
+                <Modal  ref={modalRef} show={showModal} onHide={closeModal} scrollable={true} >
+                    <Modal.Header>
                         <div className="project-modal-carousel">
                             <Carousel variant="dark" >
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/gisitoscooters-carousel/gisito-forside.png"
+                                        src="/gisitoscooters-carousel/gisito-forside.webp"
                                         alt="First slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/gisitoscooters-carousel/gisito-search.png"
+                                        src="/gisitoscooters-carousel/gisito-search.webp"
                                         alt="Second slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/gisitoscooters-carousel/gisito-details.png"
+                                        src="/gisitoscooters-carousel/gisito-details.webp"
                                         alt="Third slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/gisitoscooters-carousel/gisito-incart.png"
+                                        src="/gisitoscooters-carousel/gisito-incart.webp"
                                         alt="Fourth slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/gisitoscooters-carousel/gisito-cart.png"
+                                        src="/gisitoscooters-carousel/gisito-cart.webp"
                                         alt="Fifth slide"
                                     />
                                 </Carousel.Item>
@@ -85,7 +82,13 @@ const GisitoScootersModal = ({showModal, setShowModal}) => {
                                 </Carousel.Item>
                             </Carousel>
                         </div>
-                    
+
+                        <span className="close-modal-btn" onClick={() => {setShowModal(prev => !prev); }}>
+                            <FontAwesomeIcon icon={faWindowClose} />
+                        </span>
+                    </Modal.Header>
+
+                    <Modal.Body showModal={showModal} >
                         <div className="project-modal-infobox">
                             <article>
                                 <h2 className="heading-h2">

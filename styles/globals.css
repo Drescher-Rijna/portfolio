@@ -7,6 +7,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Quicksand:wght@400;600&display=swap');
 
+
+
+
+
 html,
 body {
   padding: 0;
@@ -74,85 +78,51 @@ a:focus {
 }
 
 @screen sm {
-  h1 {
-
+  .heading-h1 {
+    @apply text-3xl;
   }
 
-  h2 {
-
+  .heading-h2 {
+    @apply text-2xl;
   }
 
-  h3 {
-
-  }
-
-  h4 {
-
-  }
-
-  p, div {
-
-  }
-
-  a, li {
-
-  }
-
-}
-
-
-@screen md {
-  h1 {
-
-  }
-
-  h2 {
-
-  }
-
-  h3 {
-
-  }
-
-  h4 {
-
-  }
-
-  p, div {
-
-  }
-
-  a, li {
-    
-  }
 }
 
 
 @screen lg {
-  h1 {
-
+  .heading-h1 {
+    @apply text-4xl;
   }
 
-  h2 {
-
+  .heading-h2 {
+    @apply text-2xl;
   }
 
-  h3 {
-
+  #hero-section p {
+    @apply text-base;
   }
 
-  h4 {
 
-  }
-
-  p, div {
-
-  }
-
-  a, li {
-    
-  }
 }
+
+
+
+@screen xl {
+  .heading-h1 {
+    @apply text-5xl;
+  }
+
+  .heading-h2 {
+    @apply text-3xl;
+  }
+
+  #hero-section p {
+    @apply text-lg;
+  }
+
+
+}
+
 
 #trick-dice-features {
   list-style: disc;
@@ -637,6 +607,7 @@ footer p {
   grid-template-areas: 
     "projekt-titel"
     "toscoot"
+    "mayas"
     "gisitoscooters"
     "dawinti"
     "trickdice"; 
@@ -658,7 +629,8 @@ footer p {
 .tilt-desc-dawinti,
 .tilt-desc-gisitoscooters,
 .tilt-desc-toscoot,
-.tilt-desc-trickdice {
+.tilt-desc-trickdice,
+.tilt-desc-mayas {
   @apply p-7;
 }
 
@@ -719,7 +691,7 @@ footer p {
   @apply absolute;
   width: 100%;
   height: 100%;
-  background: url('../public/dawinti-mockup.png');
+  background: url('../public/dawinti-mockup.webp');
   background-size: 110%;
   background-repeat: no-repeat;
   background-position: top;
@@ -861,7 +833,7 @@ footer p {
   max-height: 510px;
   @apply relative;
   @apply grid;
-  grid-template-rows: 0.25fr 1.75fr;
+  grid-template-rows: 1fr 2fr;
   grid-template-areas: "description-gisitoscooters"
   "gisitoscooters-mockup";
 }
@@ -889,11 +861,81 @@ footer p {
   @apply absolute;
   width: 100%;
   height: 100%;
-  background: url('../public/mockup-gisito-glossy.png');
+  background: url('../public/mockup-gisito-glossy.webp');
   background-size: 110%;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+
+
+/* Maya's */
+.tilt-mayas { 
+  @apply overflow-hidden;
+  height: 510px;
+  @apply ease-in-out;
+  background-image: -webkit-linear-gradient( -10deg, #00948A 0%, #00948A 55%, #E9F0EF 55%, #E9F0EF 100%);
+  background-image: linear-gradient( -10deg, #00948A 0%, #00948A 55%, #E9F0EF 55%, #E9F0EF 100%);
+}
+
+.tilt-mayas:hover {
+  background-image: -webkit-linear-gradient( -10deg, rgb(3, 182, 173) 0%, rgb(3, 182, 173) 55%, #E9F0EF 55%, #E9F0EF 100%);
+  background-image: linear-gradient( -10deg, rgb(3, 182, 173) 0%, rgb(3, 182, 173) 55%, #E9F0EF 55%, #E9F0EF 100%);
+}
+
+.tilt-desc-mayas img {
+  max-width: 150px;
+  height: auto;
+}
+
+.tilt-mayas:hover .tilt-mayas {
+  background-color: rgb(2, 172, 160);
+}
+
+.tilt-mayas:hover .mayas-mockup {
+  transform: scale(1.2);
+}
+
+.tilt-inner-mayas {
+  max-height: 510px;
+  @apply relative;
+  @apply grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "description-mayas"
+  "mayas-mockup";
+}
+
+.tilt-desc-mayas {
+  grid-area: description-mayas;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply gap-y-3;
+  color: #1a1a1a;
+  @apply pb-0;
+  @apply place-items-center;
+}
+
+.project-container-mayas {
+  @apply relative;
+  grid-area: mayas-mockup;
+  height: 100%;
+  
+}
+
+.mayas-mockup {
+  @apply ease-in-out;
+  transition: all 1s;
+  @apply absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../public/mayas-mockups.webp');
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
 
 .gisitoscooters-area {
   grid-area: gisitoscooters;
@@ -908,6 +950,9 @@ footer p {
   grid-area: dawinti;
 }
 
+.mayas-area {
+  grid-area: mayas;
+}
 
 
 /* Skillset section */
@@ -1074,8 +1119,44 @@ footer p {
   @apply border-t !important;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  margin-right: 3px;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-green-600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-green-900;
+}
+
+.modal-header {
+  @apply p-0 !important;
+  @apply border-none !important;
+}
+
 .modal-footer {
   @apply pt-0 !important;
+  @apply border-none !important;
 }
 
 .project-modal-carousel {
@@ -1085,21 +1166,30 @@ footer p {
 
 .project-modal-infobox {
   @apply px-4;
-  @apply mt-6;
+  @apply pt-6;
+}
+
+.carousel-inner {
+  width: 100% !important;
 }
 
 .close-modal-btn {
   @apply absolute;
   right: 0%;
+  top: 0%;
   z-index: 99;
   margin: 0;
   padding: 0;
-  @apply mr-5;
+  @apply mr-3;
   @apply text-2xl;
   @apply text-red-600;
-  @apply bg-white;
+  
   @apply cursor-pointer;
 
+}
+
+.close-modal-btn .svg-inline--fa {
+  @apply bg-white;
 }
 
 .close-modal-btn:hover,
@@ -1150,102 +1240,6 @@ footer p {
 }
 
 
-/* DA WINTI */
-
-
-
-
-
-/* LINKS */
-#dawinti-project-link {
-  grid-area: dawinti-link;
-  @apply text-center;
-  @apply grid;
-  @apply gap-y-7;
-   
-}
-
-#dawinti-project-grid {
-  @apply relative;
-  @apply w-full;
-  @apply grid;
-  @apply grid-cols-1;
-  @apply place-items-center;
-}
-
-#dawinti-plugin-grid {
-  @apply relative;
-  @apply w-full;
-  @apply grid;
-  @apply grid-cols-1;
-  @apply place-items-center;
-}
-
-.link-overlay-tekst {
-  @apply text-white;
-  @apply absolute;
-  z-index: 2;
-  background-color: #f8bc3ae7;
-  @apply rounded-full;
-  @apply px-6;
-  @apply py-3;
-}
-
-.link-overlay-tekst p {
-  text-decoration: underline;
-}
-
-#dawinti-siden {
-  @apply h-80;
-  @apply w-full;
-  @apply overflow-hidden;
-  @apply border;
-  border-color: #1a1a1a;
-  @apply rounded-2xl;
-}
-
-#dawinti-plugin {
-  @apply h-80;
-  @apply w-full;
-  @apply overflow-hidden;
-  @apply border;
-  border-color: #1a1a1a;
-  @apply rounded-2xl;
-}
-
-#dawinti-siden:hover #dawinti-siden-bg,
-#dawinti-plugin:hover #dawinti-plugin-bg {
-  transform: scale(1.1);
-  filter: grayscale(20%) blur(1px);
-}
-
-#link-overlay-siden:hover #dawinti-siden-bg,
-#link-overlay-git:hover #dawinti-plugin-bg {
-  transform: scale(1.1);
-  filter: grayscale(20%) blur(1px);
-}
-
-#dawinti-siden-bg {
-  @apply h-full;
-  @apply w-full;
-  background: url('../public/dawinti-projekt-bg.PNG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: 0.3s all ease-in-out;
-  filter: grayscale(0) blur(0);
-}
-
-#dawinti-plugin-bg {
-  @apply h-full;
-  @apply w-full;
-  background: url('../public/dawinti-plugin-bg.PNG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: 0.3s all ease-in-out;
-  filter: grayscale(0) blur(0);
-}
 
 
 
@@ -1257,10 +1251,6 @@ footer p {
     @apply px-10;
   }
 
-  #projekter-section h2 {
-    @apply -mb-16;
-  }
-
   .tilt-inner-toscoot,
   .tilt-toscoot {
     height: fit-content;
@@ -1268,10 +1258,6 @@ footer p {
     
   }
   
-  .gisitoscooters-mockup {
-    @apply mt-0;
-    background-position-y: 0px;
-  }
 
   .tilt-inner-toscoot {
     place-items: start;
@@ -1297,7 +1283,11 @@ footer p {
   
 
   .gisitoscooters-mockup {
-    @apply mt-10;
+    @apply mt-0;
+  }
+
+  .mayas-mockup {
+    @apply mt-0;
   }
 
 
@@ -1318,20 +1308,23 @@ footer p {
   }
 
 
+
   /* Projekter section */
   #projekter-section {
     overflow: hidden;
     @apply mt-20;
     @apply pb-20;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    @apply gap-y-6;
+    grid-template-columns: 1fr;
+    @apply gap-y-12;
     @apply gap-x-6;
     grid-template-areas: 
-      "projekt-titel projekt-titel"
-      "toscoot toscoot"
-      "gisitoscooters dawinti"
-      "trickdice trickdice"; 
+      "projekt-titel"
+      "toscoot"
+      "mayas"
+      "gisitoscooters"
+      "dawinti"
+      "trickdice"; 
   }
   
   #projekter-section h2 {
@@ -1345,10 +1338,16 @@ footer p {
     
   }
 
+  .tilt-dawinti,
+  .tilt-gisitoscooters,
+  .tilt-mayas {
+    width: 70%;
+    margin: auto;
+  }
+
   .tilt-dawinti {
     height: 510px;
     background-color: #fcaf3b;
-    margin-top: 50px;
     @apply ease-in-out;
   }
 
@@ -1431,6 +1430,7 @@ footer p {
     @apply align-middle;
     background-color: #00a19a;
     @apply ease-in-out;
+    @apply mt-16;
     background-image: -webkit-linear-gradient( -55deg, #00a19a 0%, #00a19a 60%, #d60b52 60%, #d60b52 100%);
     background-image: linear-gradient( -55deg, #00a19a 0%, #00a19a 60%, #d60b52 60%, #d60b52 100%);
   }
@@ -1494,7 +1494,6 @@ footer p {
 
   .tilt-gisitoscooters {
     height: 510px;
-    margin-bottom: 50px;
     background-color: #00a14b;
     @apply ease-in-out;
   }
@@ -1519,6 +1518,54 @@ footer p {
   .tilt-gisitoscooters:hover {
     background-color: #017a39;
   }
+
+
+  /* Maya's */
+.tilt-mayas {
+  @apply overflow-hidden;
+  @apply ease-in-out;
+}
+
+.tilt-desc-mayas img {
+  max-width: 50%;
+  height: auto;
+}
+
+.tilt-inner-mayas:hover {
+  background-color: rgb(2, 172, 160);
+}
+
+.tilt-inner-mayas:hover .mayas-mockup {
+  transform: scale(1.1);
+}
+
+.tilt-inner-mayas {
+  max-height: 510px;
+  @apply relative;
+  @apply grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "description-mayas"
+  "mayas-mockup";
+}
+
+.tilt-desc-mayas {
+  grid-area: description-mayas;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply gap-y-3;
+  color: #1a1a1a;
+  @apply pb-0;
+  @apply place-items-center;
+}
+
+.project-container-mayas {
+  @apply relative;
+  grid-area: mayas-mockup;
+  height: 100%;
+  
+}
+
+
 
   .gisitoscooters-area {
     grid-area: gisitoscooters;
@@ -1583,6 +1630,7 @@ footer p {
     max-width: 350px;
     @apply m-auto;
   }
+
 
   header * {
     color: #1a1a1a;
@@ -1893,6 +1941,7 @@ footer p {
     @apply items-center;
     display: grid;
     @apply gap-x-5;
+    @apply gap-y-1;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0fr 1fr;
     grid-template-areas: 
@@ -1917,19 +1966,19 @@ footer p {
 
   /* Projekter section */
   #projekter-section {
-    @apply px-20;
+    @apply px-10;
     @apply my-20;
     @apply mb-4;
     @apply pb-16;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    @apply gap-y-8;
+    grid-template-columns: 1fr 1fr 1fr;
+    @apply gap-y-12;
     @apply gap-x-8;
     grid-template-areas: 
-      "projekt-titel projekt-titel"
-      "toscoot toscoot"
-      "gisitoscooters dawinti"
-      "trickdice trickdice"; 
+    "projekt-titel projekt-titel projekt-titel"
+    "toscoot toscoot toscoot"
+    "gisitoscooters mayas dawinti"
+    "trickdice trickdice trickdice"; 
   }
 
   .Tilt {
@@ -1942,12 +1991,16 @@ footer p {
   .tilt-dawinti {
     height: 450px;
     background-color: #fcaf3b;
-    margin-bottom: 50px;
     @apply ease-in-out;
   }
 
   .tilt-dawinti:hover {
     background-color: #dd9932;
+  }
+
+  .toscoot-area,
+  .trickdice-area {
+    @apply mx-12;
   }
 
   .tilt-toscoot {
@@ -1969,6 +2022,7 @@ footer p {
 
   .tilt-trickdice {
     @apply h-60;
+    @apply mt-6;
     background-color: #00a19a;
     @apply ease-in-out;
     background-image: -webkit-linear-gradient( -55deg, #00a19a 0%, #00a19a 55%, #d60b52 55%, #d60b52 100%);
@@ -2036,7 +2090,6 @@ footer p {
 
   .tilt-gisitoscooters {
     height: 450px;
-    margin-top: 50px;
     background-color: #00a14b;
     @apply ease-in-out;
   }
@@ -2061,6 +2114,7 @@ footer p {
   .dawinti-mockup {
     background-size: 110%;
     background-position: top;
+    @apply -mt-6;
   }
   
   .gisitoscooters-mockup {
@@ -2079,6 +2133,53 @@ footer p {
   .tilt-desc-toscoot img {
     max-width: 90px;
   }
+
+  /* Maya's */
+.tilt-mayas {
+  @apply overflow-hidden;
+  height: 450px;
+  background-color: #00948A;
+  @apply ease-in-out;
+}
+
+.tilt-desc-mayas img {
+  max-width: 80%;
+  height: auto;
+}
+
+.tilt-inner-mayas:hover {
+  background-color: rgb(2, 172, 160);
+}
+
+.tilt-inner-mayas:hover .mayas-mockup {
+  transform: scale(1.2);
+}
+
+.tilt-inner-mayas {
+  max-height: 430px;
+  @apply relative;
+  @apply grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "description-mayas"
+  "mayas-mockup";
+}
+
+.tilt-desc-mayas {
+  grid-area: description-mayas;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply gap-y-3;
+  color: #1a1a1a;
+  @apply pb-0;
+  @apply place-items-center;
+}
+
+.project-container-mayas {
+  @apply relative;
+  grid-area: mayas-mockup;
+  height: 100%;
+  
+}
 
   .gisitoscooters-area {
     grid-area: gisitoscooters;
@@ -2141,7 +2242,6 @@ footer p {
 
   .project-modal-infobox {
     @apply px-8;
-    @apply mt-6;
   }
 
 
@@ -2241,6 +2341,7 @@ footer p {
     max-height: 100%;
     @apply grid;
     @apply gap-y-0;
+    @apply gap-x-6;
     @apply place-content-center;
     @apply place-items-center;
     grid-template-columns: 1fr 1fr;
@@ -2302,7 +2403,7 @@ footer p {
 
   /* Om mig section */
   #om-mig-section {
-    @apply px-40;
+    @apply px-28;
     @apply flex;
     @apply items-center;
     display: grid;
@@ -2313,10 +2414,10 @@ footer p {
 
   /* Projekter section */
   #projekter-section {
-    @apply px-40;
+    @apply px-10;
     @apply my-20;
     @apply mb-12;
-    @apply gap-y-10;
+    @apply gap-y-16;
     @apply gap-x-10;
   }
 
@@ -2328,7 +2429,7 @@ footer p {
 
   /* Skillset section */
   #skillset-section {
-    @apply px-40;
+    @apply px-28;
     @apply my-20;
   }
 
@@ -2344,8 +2445,13 @@ footer p {
     height: 260px;
   }
 
+  .toscoot-area,
+  .trickdice-area {
+    @apply mx-24;
+  }
+
   .gisitoscooters-mockup {
-    @apply mt-0;
+    @apply mt-6;
   
   }
 
@@ -2361,12 +2467,58 @@ footer p {
     max-width: 100px;
   }
 
+  /* Maya's */
+.tilt-mayas {
+  @apply overflow-hidden;
+  background-color: #00948A;
+  @apply ease-in-out;
+}
+
+.tilt-desc-mayas img {
+  max-width: 60%;
+  height: auto;
+}
+
+.tilt-inner-mayas:hover {
+  background-color: rgb(2, 172, 160);
+}
+
+.tilt-inner-mayas:hover .mayas-mockup {
+  transform: scale(1.1);
+}
+
+.tilt-inner-mayas {
+  @apply relative;
+  @apply grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "description-mayas"
+  "mayas-mockup";
+}
+
+.tilt-desc-mayas {
+  grid-area: description-mayas;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply gap-y-3;
+  color: #1a1a1a;
+  @apply pb-0;
+  @apply place-items-center;
+}
+
+.project-container-mayas {
+  @apply relative;
+  grid-area: mayas-mockup;
+  height: 100%;
+  
+}
+
 
 
   /* Kontakt mig */
   #kontakt-mig-section {
     @apply px-40;
     @apply my-28;
+    @apply mt-32;
     @apply flex;
     @apply flex-col;
     @apply justify-center;
@@ -2448,26 +2600,43 @@ footer p {
 
   #hero-section {
     @apply pl-20;
+    @apply gap-x-12;
+    grid-template-columns: 1fr 0.65fr;
+  }
+
+  #hero-section article {
+    @apply grid;
+    @apply gap-y-2;
   }
 
 
   /* Om mig section */
   #om-mig-section {
     @apply px-60;
+    @apply my-28;
+    @apply mt-44;
     @apply flex;
     @apply items-center;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  
+  .toscoot-area,
+  .trickdice-area {
+    @apply mx-48;
+  }
+
+  .tilt-toscoot {
+    @apply mb-8;
+  }
 
   /* Projekter section */
   #projekter-section {
-    @apply px-60;
+    @apply px-16;
     @apply my-28;
+    @apply mt-44;
     @apply pb-28;
-    @apply gap-y-16;
+    @apply gap-y-20;
     @apply gap-x-16;
   }
 
@@ -2476,20 +2645,22 @@ footer p {
   }
 
   .tilt-dawinti,
-  .tilt-gisitoscooters {
+  .tilt-gisitoscooters,
+  .tilt-mayas {
     height: 550px;
   }
 
   .tilt-inner-dawinti {
-    height: 530px;
+    height: 550px;
   }
-  .tilt-inner-gisitoscooters {
+  .tilt-inner-gisitoscooters,
+  .tilt-inner-mayas {
     height: 550px;
   }
 
   .tilt-inner-dawinti,
   .tilt-inner-gisitoscooters {
-    max-height: 600px;
+    max-height: 550px;
   }
 
   .tilt-trickdice,
@@ -2553,7 +2724,7 @@ footer p {
   }
 
   .gisitoscooters-mockup {
-    @apply mt-0;
+    @apply mt-6;
   
   }
 
@@ -2569,6 +2740,69 @@ footer p {
     max-width: 110px;
   }
 
+  .tilt-desc-toscoot p,
+  .tilt-desc-trickdice p,
+  .tilt-desc-mayas p,
+  .tilt-desc-gisitoscooters p,
+  .tilt-desc-dawinti p {
+    @apply text-lg;
+  }
+
+  .tilt-desc-mayas p,
+  .tilt-desc-gisitoscooters p,
+  .tilt-desc-dawinti p {
+    @apply text-center;
+  }
+
+  
+
+  /* Maya's */
+.tilt-mayas {
+  @apply overflow-hidden;
+  background-color: #00948A;
+  @apply ease-in-out;
+}
+
+.tilt-desc-mayas img {
+  max-width: 70%;
+  height: auto;
+}
+
+.tilt-inner-mayas:hover {
+  background-color: rgb(2, 172, 160);
+}
+
+.tilt-inner-mayas:hover .mayas-mockup {
+  transform: scale(1.2);
+}
+
+.tilt-inner-mayas {
+  max-height: 510px;
+  @apply relative;
+  @apply grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "description-mayas"
+  "mayas-mockup";
+}
+
+.tilt-desc-mayas {
+  grid-area: description-mayas;
+  @apply grid;
+  @apply grid-cols-1;
+  @apply gap-y-3;
+  color: #1a1a1a;
+  @apply pb-0;
+  @apply place-items-center;
+}
+
+.project-container-mayas {
+  @apply relative;
+  grid-area: mayas-mockup;
+  height: 100%;
+  
+}
+
+
 
   /* Skillset section */
   #skillset-section {
@@ -2580,6 +2814,7 @@ footer p {
   #kontakt-mig-section {
     @apply px-60;
     @apply my-28;
+    @apply mt-44;
     @apply flex;
     @apply flex-col;
     @apply justify-center;

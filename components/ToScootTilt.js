@@ -40,7 +40,7 @@ const ToScootTilt = () => {
                     </article>
                 
                     <div className="project-container-toscoot">
-                        <img src="/toscoot-mockup-glossy.png" className="mockup-toscoot"/>
+                        <img src="/toscoot-mockup-glossy.webp" className="mockup-toscoot"/>
                     </div>
                 </div>
             </Tilt>

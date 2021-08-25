@@ -13,58 +13,61 @@ const ToScootModal = ({showModal, setShowModal}) => {
     
 
     return(
-                <Modal  ref={modalRef} show={showModal} onHide={closeModal}>
-                    <Modal.Body showModal={showModal} >
-                        <span className="close-modal-btn" onClick={() => {setShowModal(prev => !prev); }}>
-                            <FontAwesomeIcon icon={faWindowClose} />
-                        </span>
-                        <div className="project-modal-carousel">
+                <Modal  ref={modalRef} show={showModal} onHide={closeModal} scrollable={true}>
+                    <Modal.Header>
+                        <div className="project-modal-carousel w-full">
                             <Carousel variant="dark" >
                                 <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/toscoot-carousel/toscoot-forside.jpg"
+                                        src="/toscoot-carousel/toscoot-forside.webp"
                                         alt="First slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/toscoot-carousel/tricklist-stats.jpg"
+                                        src="/toscoot-carousel/tricklist-stats.webp"
                                         alt="Second slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/toscoot-carousel/session-stats.jpg"
+                                        src="/toscoot-carousel/session-stats.webp"
                                         alt="Third slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/toscoot-carousel/tricklists.svg"
+                                        src="/toscoot-carousel/tricklists.webp"
                                         alt="Fourth slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/toscoot-carousel/tricks.jpg"
+                                        src="/toscoot-carousel/tricks.webp"
                                         alt="Fifth slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item className="max-h-96 bg-gray-200">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/toscoot-carousel/sessions.jpg"
+                                        src="/toscoot-carousel/sessions.webp"
                                         alt="Sixth slide"
                                     />
                                 </Carousel.Item>
                             </Carousel>
                         </div>
-                    
+
+                        <span className="close-modal-btn" onClick={() => {setShowModal(prev => !prev); }}>
+                            <FontAwesomeIcon icon={faWindowClose} />
+                        </span>
+                    </Modal.Header>
+
+                    <Modal.Body showModal={showModal} >
                         <div className="project-modal-infobox">
                             <article>
                                 <h2 className="heading-h2">
