@@ -29,8 +29,12 @@ const SkillsetMeter = ({imgUrl, skill, level, inView}) => {
                 setLogoPosOffset(7)
             }
 
-            if(screenSize > 720 || screenSize == 640) {
-                setLogoPosOffset(5)
+            if(screenSize > 720 || screenSize == 720) {
+                setLogoPosOffset(7)
+            }
+
+            if(screenSize > 768 || screenSize == 768) {
+                setLogoPosOffset(15)
             }
 
             if(screenSize > 1024 || screenSize == 1024) {

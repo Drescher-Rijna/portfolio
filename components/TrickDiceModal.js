@@ -13,51 +13,54 @@ const TrickDiceModal = ({showModal, setShowModal}) => {
     
 
     return(
-                <Modal  ref={modalRef} show={showModal} onHide={closeModal} >
-                    <Modal.Body showModal={showModal} >
-                        <span className="close-modal-btn" onClick={() => {setShowModal(prev => !prev); }}>
-                            <FontAwesomeIcon icon={faWindowClose} />
-                        </span>
-                        <div className="project-modal-carousel">
+                <Modal  ref={modalRef} show={showModal} onHide={closeModal} scrollable={true} >
+                    <Modal.Header>
+                        <div className="project-modal-carousel w-full">
                             <Carousel className="max-h-96" variant="dark" >
-                                <Carousel.Item className="max-h-96 bg-gray-200">
+                                <Carousel.Item className="max-h-96 bg-gray-200 w-full">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/trickdice-carousel/trickdice-start.jpg"
+                                        src="/trickdice-carousel/trickdice-start.webp"
                                         alt="First slide"
                                     />
                                 </Carousel.Item>
-                                <Carousel.Item className="max-h-96 bg-gray-200">
+                                <Carousel.Item className="max-h-96 bg-gray-200 w-full">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/trickdice-carousel/trickdice-throw.jpg"
+                                        src="/trickdice-carousel/trickdice-throw.webp"
                                         alt="Second slide"
                                     />
                                 </Carousel.Item>
-                                <Carousel.Item className="max-h-96 bg-gray-200">
+                                <Carousel.Item className="max-h-96 bg-gray-200 w-full">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/trickdice-carousel/trickdice-difficulty.jpg"
+                                        src="/trickdice-carousel/trickdice-difficulty.webp"
                                         alt="Third slide"
                                     />
                                 </Carousel.Item>
-                                <Carousel.Item className="max-h-96 bg-gray-200">
+                                <Carousel.Item className="max-h-96 bg-gray-200 w-full">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/trickdice-carousel/trickdice-create.jpg"
+                                        src="/trickdice-carousel/trickdice-create.webp"
                                         alt="Fourth slide"
                                     />
                                 </Carousel.Item>
-                                <Carousel.Item className="max-h-96 bg-gray-200">
+                                <Carousel.Item className="max-h-96 bg-gray-200 w-full">
                                     <img
                                         className="d-block max-h-96 m-auto"
-                                        src="/trickdice-carousel/trickdice-saved.jpg"
+                                        src="/trickdice-carousel/trickdice-saved.webp"
                                         alt="Fifth slide"
                                     />
                                 </Carousel.Item>
                             </Carousel>
                         </div>
-                    
+
+                        <span className="close-modal-btn" onClick={() => {setShowModal(prev => !prev); }}>
+                            <FontAwesomeIcon icon={faWindowClose} />
+                        </span>
+                    </Modal.Header>
+
+                    <Modal.Body showModal={showModal} >
                         <div className="project-modal-infobox">
                             <article>
                                 <h2 className="heading-h2">

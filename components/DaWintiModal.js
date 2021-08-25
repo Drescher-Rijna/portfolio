@@ -13,51 +13,54 @@ const DaWintiModal = ({showModal, setShowModal}) => {
     
 
     return(
-                <Modal  ref={modalRef} show={showModal} onHide={closeModal} >
-                    <Modal.Body showModal={showModal} >
-                        <span className="close-modal-btn" onClick={() => {setShowModal(prev => !prev); }}>
-                            <FontAwesomeIcon icon={faWindowClose} />
-                        </span>
+                <Modal  ref={modalRef} show={showModal} onHide={closeModal} scrollable={true} >
+                    <Modal.Header>
                         <div className="project-modal-carousel">
                             <Carousel variant="dark" >
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-forside.png"
+                                        src="/dawinti-carousel/dawinti-forside.webp"
                                         alt="First slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-booking-form.png"
+                                        src="/dawinti-carousel/dawinti-booking-form.webp"
                                         alt="Second slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-overnatningspris-beregner.png"
+                                        src="/dawinti-carousel/dawinti-overnatningspris-beregner.webp"
                                         alt="Third slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-sektion-lokaler.png"
+                                        src="/dawinti-carousel/dawinti-sektion-lokaler.webp"
                                         alt="Fourth slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/dawinti-carousel/dawinti-arrangementer.png"
+                                        src="/dawinti-carousel/dawinti-arrangementer.webp"
                                         alt="Fifth slide"
                                     />
                                 </Carousel.Item>
                             </Carousel>
                         </div>
-                    
+
+                        <span className="close-modal-btn" onClick={() => {setShowModal(prev => !prev); }}>
+                            <FontAwesomeIcon icon={faWindowClose} />
+                        </span>
+                    </Modal.Header>
+
+                    <Modal.Body showModal={showModal} >
                         <div className="project-modal-infobox">
                             <article>
                                 <h2 className="heading-h2">

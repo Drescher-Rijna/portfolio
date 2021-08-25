@@ -30,7 +30,7 @@ const DaWintiTilt = () => {
                 <Tilt className="Tilt tilt-dawinti" tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable={true} scale={1} glareMaxOpacity={0.7}  >
                     <div animate={animation} className="Tilt-inner tilt-inner-dawinti"> 
                         <article className="tilt-desc-dawinti">
-                            <img src="/dawinti-logo.png" width="120" />
+                            <img src="/dawinti-logo.webp" width="120" />
 
                             <p>
                                 Nyt logodesign og hjemmeside i samarbejde med Da Winti

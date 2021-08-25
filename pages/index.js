@@ -19,6 +19,8 @@ import DaWintiModal from '../components/DaWintiModal'
 import ToScootModal from '../components/ToScootModal';
 import GisitoScootersModal from '../components/GisitoScootersModal';
 import TrickDiceModal from '../components/TrickDiceModal';
+import MayasTilt from '../components/MayasTilt';
+import MayasModal from '../components/MayasModal';
 
 
 export default function Home() {
@@ -51,7 +53,8 @@ export default function Home() {
     console.log(inView);
   },[inView]);
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
+    console.log("sender...");
     e.preventDefault();
     if (name != "" || email != "" || message != "") {
       setSend(true);
@@ -71,6 +74,16 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Drescher Rijna - Multimediedesigner</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Hej jeg hedder Drescher Ferdinand Rijna og er en Multimediedesigner 
+                                          studerende i 3. semester, som har kompetence i webudvikling UX/UI,
+                                          og er altid optimistik og på udkig efter forbedringer." 
+        />
+        <meta name="keywords" content="Multimediedesigner, Drescher, Web developer, Hjemmesideudvikler, programmør, HTML, JS, CSS, ReactJS, NextJS, Firebase, PHP, Photoshop, Illustrator, XD, portfolio, webudvikling, webudvikler, ux, ui, design, webdesign" />
+        <meta name="author" content="Drescher Ferdinand Rijna"></meta>
+      </Head>
       <Navbar/>
         <div className="content">
           <section id="hero-section">
@@ -90,7 +103,7 @@ export default function Home() {
                 </button>
               
             </article>
-            <img src="/heroimage.png" />
+            <img src="/heroimage.webp" />
             <div className="socials-hero">
                 <ul>
                     <li className="social-hero-git">
@@ -145,6 +158,13 @@ export default function Home() {
           
           <section id="projekter-section">
             <h2 className="heading-h2">Projekter</h2>
+              <div onClick={() => openModal(5)} className="mayas-area" >
+                <MayasTilt/>
+              </div>
+              {modalIndex == 5 ?
+                <MayasModal showModal={showModal} setShowModal={setShowModal} /> : null
+              }
+
               <div onClick={() => openModal(2)} className="gisitoscooters-area" >
                 <GisitoScootersTilt />
               </div>
@@ -180,22 +200,22 @@ export default function Home() {
               <SkillsetMeter skill="HTML" level={90} imgUrl="/HTML.png" inView={inView} />
               <SkillsetMeter skill="CSS" level={90} imgUrl="/CSS.png" inView={inView} />
               <SkillsetMeter skill="JS" level={80} imgUrl="/JS.png" inView={inView} />
-              <SkillsetMeter skill="ReactJS" level={70} imgUrl="/REACT.png" inView={inView} />
-              <SkillsetMeter skill="NextJS" level={70} imgUrl="/NEXT.png" inView={inView} />
-              <SkillsetMeter skill="Flutter" level={65} imgUrl="/FLUTTER.png" inView={inView} />
-              <SkillsetMeter skill="WP" level={85} imgUrl="/WP.png" inView={inView} />
-              <SkillsetMeter skill="Elementor" level={70} imgUrl="/ELEMENTOR.png" inView={inView} />
-              <SkillsetMeter skill="Firebase" level={70} imgUrl="/FIREBASE.png" inView={inView} />
-              <SkillsetMeter skill="Adobe XD" level={65} imgUrl="/XD.png" inView={inView} />
+              <SkillsetMeter skill="ReactJS" level={60} imgUrl="/REACT.png" inView={inView} />
+              <SkillsetMeter skill="NextJS" level={50} imgUrl="/NEXT.png" inView={inView} />
+              <SkillsetMeter skill="Flutter" level={50} imgUrl="/FLUTTER.png" inView={inView} />
+              <SkillsetMeter skill="WP" level={60} imgUrl="/WP.png" inView={inView} />
+              <SkillsetMeter skill="Elementor" level={55} imgUrl="/ELEMENTOR.png" inView={inView} />
+              <SkillsetMeter skill="Firebase" level={55} imgUrl="/FIREBASE.png" inView={inView} />
+              <SkillsetMeter skill="Adobe XD" level={60} imgUrl="/XD.png" inView={inView} />
               <SkillsetMeter skill="Illustrator" level={50} imgUrl="/ILLUSTRATOR.png" inView={inView} />
-              <SkillsetMeter skill="Photoshop" level={35} imgUrl="/PHOTOSHOP.png" inView={inView} />
+              <SkillsetMeter skill="Photoshop" level={40} imgUrl="/PHOTOSHOP.png" inView={inView} />
             </div>
           </section>
           <section id="kontakt-mig-section">
             <h2 className="heading-h2">Kom i kontakt med mig</h2>
-            <form className="kontakt-mig-form" method="post" action="none" accept-charset="ISO-8859-1" 
+            <form className="kontakt-mig-form" method="post" action="" accept-charset="ISO-8859-1" 
             onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; 
-            window.onbeforeunload = function () {document.charset=originalCharset;};" >
+            window.onbeforeunload = function () {document.charset=originalCharset;};">
               <input type="text" onChange={(e)=>{setName(e.target.value)}} value={name} name="realname" placeholder="Fulde navn" required />
               <input type="text" onChange={(e)=>{setEmail(e.target.value)}} value={email} name="email" placeholder="Email" required />
               <textarea required onChange={(e)=>{setMessage(e.target.value)}} value={message} name="Message" placeholder="Skriv en besked...">
