@@ -17,6 +17,11 @@ body {
   margin: 0;
 }
 
+html {
+  overflow-y: scroll;
+  overflow-y: overlay;
+}
+
 .global-menu-desktop ul {
   margin: 0;
   padding: 0;

@@ -21,7 +21,6 @@ import GisitoScootersModal from '../components/GisitoScootersModal';
 import TrickDiceModal from '../components/TrickDiceModal';
 import MayasTilt from '../components/MayasTilt';
 import MayasModal from '../components/MayasModal';
-import TakForBeskeden from './tak-for-beskeden/TakForBeskeden';
 
 
 export default function Home() {
