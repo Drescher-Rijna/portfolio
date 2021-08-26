@@ -21,13 +21,13 @@ import GisitoScootersModal from '../components/GisitoScootersModal';
 import TrickDiceModal from '../components/TrickDiceModal';
 import MayasTilt from '../components/MayasTilt';
 import MayasModal from '../components/MayasModal';
+import TakForBeskeden from './tak-for-beskeden/TakForBeskeden';
 
 
 export default function Home() {
 
   const {ref, inView} = useInView();
   
-  const [send, setSend] = useState(false);
   const[name,setName]=useState("");
   const[message, setMessage]=useState("");
   const[email,setEmail]=useState("");
@@ -52,19 +52,6 @@ export default function Home() {
   useEffect(()=>{
     console.log(inView);
   },[inView]);
-
-  function handleSubmit(e) {
-    console.log("sender...");
-    e.preventDefault();
-    if (name != "" || email != "" || message != "") {
-      setSend(true);
-      setName("");
-      setEmail("");
-      setMessage("");
-    } else {
-      setSend(false);
-    }
-  }
 
   const openModal = (index) => {
     console.log("modal");
@@ -213,34 +200,21 @@ export default function Home() {
           </section>
           <section id="kontakt-mig-section">
             <h2 className="heading-h2">Kom i kontakt med mig</h2>
-            <form className="kontakt-mig-form" method="post" action="" accept-charset="ISO-8859-1" 
-            onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; 
-            window.onbeforeunload = function () {document.charset=originalCharset;};">
+            <form className="kontakt-mig-form" method="post" action="https://drescher-rijna.dk/cgi-bin/FormMail.pl" accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};">
               <input type="text" onChange={(e)=>{setName(e.target.value)}} value={name} name="realname" placeholder="Fulde navn" required />
               <input type="text" onChange={(e)=>{setEmail(e.target.value)}} value={email} name="email" placeholder="Email" required />
               <textarea required onChange={(e)=>{setMessage(e.target.value)}} value={message} name="Message" placeholder="Skriv en besked...">
 
               </textarea>
-              <button className="btn-style" type="submit" value="Send" onSubmit={handleSubmit}>
+              <button className="btn-style" type="submit" value="Send">
                 Send
               </button>
               <input type="hidden" name="recipient" value="drescherrijna@drescher-rijna.dk" /> 
               <input type="hidden" name="subject" value="Subject" /> 
+              <input type="hidden" name="redirect" value="https://drescher-rijna.dk/tak-for-beskeden" /> 
+              <input type="hidden" name="missing_fields_redirect" value="https://drescher-rijna.dk/error" />
               <input type="hidden" name="required" value="realname,email,Message" /> 
             </form>
-            {send ?
-              <div id="onSubmit-message" className={send ? "thank-you-style" : "error-style"}>
-                {send ?
-                  <p className="thank-you-message">
-                    Tak for din besked. Jeg vil svare tilbage hurtigst muligt.
-                  </p> :
-                  <p className="error-message">
-                    Der skete en fejl under sendelsen. Har du udfyldt alle felter korrekt?
-                  </p>
-                }
-                
-              </div> : ""
-            }
           </section>
         </div>
     </div>
