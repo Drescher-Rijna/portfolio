@@ -80,16 +80,68 @@ const DaWintiModal = ({showModal, setShowModal}) => {
                                         Adobe XD og IA
                                     </li>
                                 </ul>
-                                        
-                                <p className="modal-text">
-                                    Mig og en medstuderende fik til opgave fra kunst- og kulturhuset Da Winti i Selde,
-                                    at give dem en ny visuel identitet som repræsentere dem og hvad de står for, en hjemmeside
-                                    som har et stærkt sammenhæng med den nye identitet og hjælpe dem med at styrke deres online tilstedeværelse.
-                                </p>
-                                <p className="modal-text">
-                                    Vi har gået gennem en lang fasebaseret process, hvor vores tilgang satte stor fokus på brugerenes involvering og feedback,
-                                    i form af adskillige test. Så vi havde mulighed for at skræddesye siden specielt til Da Winti's primær målgruppe.
-                                </p>
+
+
+                                <div className="mt-3 grid gap-y-4">
+                                    <div>
+                                        <h4 className="heading-h4">
+                                            Om Da Winti projektet
+                                        </h4>    
+                                        <p className="modal-text">
+                                            Mig og en medstuderende fik til opgave fra kunst- og kulturhuset Da Winti i Selde,
+                                            at give dem en ny visuel identitet som repræsentere dem og hvad de står for, en hjemmeside
+                                            som har et stærkt sammenhæng med den nye identitet og hjælpe dem med at styrke deres online tilstedeværelse.
+                                        </p>
+                                        <p className="modal-text">
+                                            Vi har gået gennem en lang fasebaseret process, hvor vores tilgang satte stor fokus på brugerenes involvering og feedback,
+                                            i form af adskillige test. Så vi havde mulighed for at skræddesye siden specielt til Da Winti's primær målgruppe.
+                                        </p>
+                                    </div>
+                                    
+                                    <div>
+                                        <h4 className="heading-h4">
+                                            Agil projekt | 4-5 uger
+                                        </h4>
+                                    </div>
+                                    
+                                    <div>
+                                        <h4 className="heading-h4">
+                                            Min rolle
+                                        </h4>
+
+                                        <ul className="list-disc ml-5 grid gap-y-1">
+                                            <li className="text-base">
+                                                Planlægger
+                                            </li>   
+                                            <li className="text-base">
+                                                BMC og VPC analyse
+                                            </li>
+                                            <li className="text-base">
+                                                Ideudvikling
+                                            </li>
+                                            <li className="text-base">
+                                                Kodning/programmering
+                                            </li>
+                                            <li className="text-base">
+                                                Wireframing/prototype
+                                            </li>
+                                            <li className="text-base">    
+                                                Usability test
+                                            </li>
+                                            <li className="text-base">
+                                                Tekstproduktion
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div>
+                                        <h4 className="heading-h4">
+                                            Team member: <span className="font-normal">Veli Aday</span>
+                                        </h4> 
+                                    </div>
+                                     
+                                </div>
+                                
                             </article>
                         </div>
                     </Modal.Body>

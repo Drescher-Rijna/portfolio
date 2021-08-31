@@ -110,37 +110,6 @@ export default function Home() {
                 </ul>
             </div>
           </section>
-
-          <section id="om-mig-section">
-            <h2 className="heading-h2">
-              Hvem er Drescher Rijna?
-            </h2>
-            <div className="om-mig-photo">
-              {screenSize > 767 ? 
-                <img src="/om-mig-desktop.png" /> :
-                ""
-              }
-              {screenSize < 767 ?
-                <img src="/om-mig-mobil.png" /> : ""
-              }
-            </div>
-            <article>
-              <p>
-                Jeg er en multimediedesigner, som er specialeret i programmering og webudvikling.
-                Jeg er en meget optimistisk person, som altid er klar på at lære noget nyt og tror på,
-                at alting kan altid forbedres.
-              </p>
-              <p>
-                Jeg har 1 års erfaring med programmering og webudvikling og har allerede arbejdede med mange forskellige sprog,
-                som Javascript, ReactJS, NextJS, Flutter m.m. Udover det har jeg også prøvede at lave hjemmesider til virksomheder.
-              </p>
-              <p>
-                I min fritid elsker jeg at være aktiv. Jeg styrketræner og dyrker rullesport specifikt køre jeg på løbehjul,
-                hvor jeg lære mange forskellige vilde tricks. Hvilken nok er grunden til at jeg har mit optimistiske mindset, frygtløshed og gå på mod,
-                når det kommer til at prøve noget nyt.
-              </p>
-            </article>
-          </section>
           
           <section id="projekter-section">
             <h2 className="heading-h2">Projekter</h2>
@@ -180,6 +149,7 @@ export default function Home() {
               }
               
           </section>
+
           <section ref={ref} id="skillset-section">
             <h2 className="skillset-section-titel heading-h2" >Skillset</h2>
             <div className="skills-container">
@@ -197,6 +167,38 @@ export default function Home() {
               <SkillsetMeter skill="Photoshop" level={40} imgUrl="/PHOTOSHOP.png" inView={inView} />
             </div>
           </section>
+
+          <section id="om-mig-section">
+            <h2 className="heading-h2">
+              Hvem er Drescher Rijna?
+            </h2>
+            <div className="om-mig-photo">
+              {screenSize > 767 ? 
+                <img src="/om-mig-desktop.png" /> :
+                ""
+              }
+              {screenSize < 767 ?
+                <img src="/om-mig-mobil.png" /> : ""
+              }
+            </div>
+            <article>
+              <p>
+                Jeg er en multimediedesigner, som er specialeret i programmering og webudvikling.
+                Jeg er en meget optimistisk person, som altid er klar på at lære noget nyt og tror på,
+                at alting kan altid forbedres.
+              </p>
+              <p>
+                Jeg har 1 års erfaring med programmering og webudvikling og har allerede arbejdede med mange forskellige sprog,
+                som Javascript, ReactJS, NextJS, Flutter m.m. Udover det har jeg også prøvede at lave hjemmesider til virksomheder.
+              </p>
+              <p>
+                I min fritid elsker jeg at være aktiv. Jeg styrketræner og dyrker rullesport specifikt køre jeg på løbehjul,
+                hvor jeg lære mange forskellige vilde tricks. Hvilken nok er grunden til at jeg har mit optimistiske mindset, frygtløshed og gå på mod,
+                når det kommer til at prøve noget nyt.
+              </p>
+            </article>
+          </section>
+
           <section id="kontakt-mig-section">
             <h2 className="heading-h2">Kom i kontakt med mig</h2>
             <form className="kontakt-mig-form" method="post" action="https://drescher-rijna.dk/cgi-bin/FormMail.pl" accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};">

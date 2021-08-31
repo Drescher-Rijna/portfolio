@@ -80,22 +80,70 @@ const MayasModal = ({showModal, setShowModal}) => {
                             </li>
                         </ul>
                                 
-                        <p className="modal-text">
-                            Mig og Veli Aday fik til opgave, af Maya's Tolkeservice, at lave dem en ny moderniseret hjemmeside og et nyt logodesign.
-                        </p>
-                        <p className="modal-text">
-                            Det var et 3 ugers projekt hvor vi fik lavede en masse research om Maya's Tolkeservice og deres konkurrenter og brugte den information, samt
-                            informationen om at de var blevet til en virksomhed som er mere kommune orienteret, til at lave en logodesign- og hjemmesidedesign prototype.
-                            
-                        </p>
-                        <p>
-                            Efter der var givet en præsentation af vores forslag til vores arbejdsgiver og der blev givet thumbs up gik vi igang med implementeringen af 
-                            det nye design ved hjælp af Wordpress og Elementor, og vi fik kodet et plugin til dem for at gøre den interaktive toggle-knap som skifter forsidens sprog mulig.
-                        </p>
-                        <p>
-                            Det endelig produkt skabte så meget tilfredshed, at ejerne af Maya's Tolkeservice ville have os til at bygge hjemmesider til 
-                            deres andre virksomheder de arbejder på.
-                        </p>
+
+                        <div className="mt-3 grid gap-y-4">
+                            <div>
+                                <h4 className="heading-h4">
+                                    Om Maya's Tolkeservice projektet
+                                </h4>    
+                                <p className="modal-text">
+                                    Mig og Veli Aday fik til opgave, af Maya's Tolkeservice, at lave dem en ny moderniseret hjemmeside og et nyt logodesign.
+                                </p>
+                                <p className="modal-text">
+                                    Det var et 3 ugers projekt hvor vi fik lavede en masse research om Maya's Tolkeservice og deres konkurrenter og brugte den information, samt
+                                    informationen om at de var blevet til en virksomhed som er mere kommune orienteret, til at lave en logodesign- og hjemmesidedesign prototype.
+                                    
+                                </p>
+                                <p>
+                                    Efter der var givet en præsentation af vores forslag til vores arbejdsgiver og der blev givet thumbs up gik vi igang med implementeringen af 
+                                    det nye design ved hjælp af Wordpress og Elementor, og vi fik kodet et plugin til dem for at gøre den interaktive toggle-knap som skifter forsidens sprog mulig.
+                                </p>
+                                <p>
+                                    Det endelig produkt skabte så meget tilfredshed, at ejerne af Maya's Tolkeservice ville have os til at bygge hjemmesider til 
+                                    deres andre virksomheder de arbejder på.
+                                </p>
+                            </div>
+                                    
+                            <div>
+                                <h4 className="heading-h4">
+                                    Agil projekt | 3 uger
+                                </h4>
+                            </div>
+                                    
+                            <div>
+                                <h4 className="heading-h4">
+                                    Min rolle
+                                </h4>
+
+                                <ul className="list-disc ml-5 grid gap-y-1">
+                                    <li className="text-base">
+                                        Planlægger
+                                    </li>   
+                                    <li className="text-base">
+                                        konkurrenter analyse
+                                    </li>
+                                    <li className="text-base">
+                                        Ideudvikling
+                                    </li>
+                                    <li className="text-base">
+                                        Kodning/programmering
+                                    </li>
+                                    <li className="text-base">
+                                        Wireframing/prototype
+                                    </li>
+                                    <li>
+                                        Logo design
+                                    </li>
+                                </ul>
+                            </div>
+                                    
+                            <div>
+                                <h4 className="heading-h4">
+                                    Team member: <span className="font-normal">Veli Aday</span>
+                                </h4> 
+                            </div>
+                                     
+                        </div>
                     </article>
                 </div>
             </Modal.Body>
