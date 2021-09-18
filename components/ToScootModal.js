@@ -91,21 +91,21 @@ const ToScootModal = ({showModal, setShowModal}) => {
                                             Om ToScoot
                                         </h4>    
                                         <p className="modal-text">
-                                            Som sagt elsker jeg at køre løbehjul og vil gerne forbedre mig så meget så muligt. Med det fik
-                                            jeg den ide at det ville være fedt hvis man kunne have en app der vidste hvor godt man præstere i sine træninger,
+                                            Jeg elsker at køre løbehjul og vil gerne forbedre mig så meget så muligt. Med det fik
+                                            jeg den ide, at det ville være fedt, hvis man kunne have en app der vidste hvor godt man præstere i sine træninger,
                                             som med løbe-apps, men dedikeret til løbehjul.
                                         </p>
                                         <p>
-                                            ToScoot er en form for to-do/workout app hvor man laver trickliste og derefter lave sessions ud fra de tricks man
-                                            har i sin trickliste og siger til appen hvor mange gange man lander sit trick og hvor mange gange man fejler sine tricks. 
-                                            Hvorpå appen vil gennem tiden kalkulere din succes ratio og sammenligne dem med tidligere ratios for at se om du faktisk blive bedre.
+                                            ToScoot er en form for to-do/workout app hvor man laver tricklister og derefter lave sessions ud fra de tricks man
+                                            har i sin trickliste. Man siger til appen hvor mange gange man lander sit trick og hvor mange gange man fejler sit trick. 
+                                            Hvorpå appen vil gennem tiden kalkulere din landing-ratio og sammenligne dem med tidligere landing-ratios for at se om du faktisk bliver bedre.
                                         </p>
                                         <p>
-                                            Den tager også tiden og viser hvor lang tid du bruger på en session og hvor lang tid du bruger på individuelle tricks, så du kan se
-                                            hvor du er bedst og hvor du er knap så god. 
+                                            Den viser også hvor lang tid du bruger på hver enkelt session og hvor lang tid du bruger på individuelle tricks, så du kan se,
+                                            hvor du er bedst/hurtigst og hvor du er knap så god. 
                                         </p>
                                         <p>
-                                            Appens data indsamling og udregnede statistikker giver mulighed for at måle og analysere på hvad du har brug for at arbejde på og hvad dine styrker og svagheder er.
+                                            Appens data indsamling og udregnede statistikker giver mulighed for, at måle og analysere på hvad du har brug for at arbejde på, og hvad dine styrker og svagheder er.
                                         </p>
                                     </div>
                                     
@@ -122,7 +122,7 @@ const ToScootModal = ({showModal, setShowModal}) => {
 
                                         <ul className="list-disc ml-5 grid gap-y-1">
                                             <li className="text-base">
-                                                All Time statistikker for alle tricks og tricklister, samt total landing ratio
+                                                All Time statistikker for alle tricks og tricklister, samt en total landing-ratio
                                             </li>
                                             <li className="text-base">
                                                 Statistikker for hver individuel trickliste
@@ -131,10 +131,10 @@ const ToScootModal = ({showModal, setShowModal}) => {
                                                 Statistikker for hver individuel session
                                             </li>
                                             <li className="text-base">
-                                                Ugentlige samligning af landing ratio, hvor den viser hvor bedre eller værre man bliver fra uge til uge
+                                                Ugentlige samligning af landing-ratios, hvor den viser hvor bedre eller værre man bliver fra uge til uge
                                             </li>
                                             <li className="text-base">
-                                                Landing ratios for hvert trick i odreren bedst til værst
+                                                Landing-ratios for hvert trick i odreren bedst til værst
                                             </li>
                                         </ul>
                                     </div>

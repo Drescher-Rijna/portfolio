@@ -91,15 +91,15 @@ const MayasModal = ({showModal, setShowModal}) => {
                                 </p>
                                 <p className="modal-text">
                                     Det var et 3 ugers projekt hvor vi fik lavede en masse research om Maya's Tolkeservice og deres konkurrenter og brugte den information, samt
-                                    informationen om at de var blevet til en virksomhed som er mere kommune orienteret, til at lave en logodesign- og hjemmesidedesign prototype.
+                                    informationen om, at de var blevet til en mere kommune orienteret virksomhed, til at lave en logodesign- og hjemmesidedesign prototype.
                                     
                                 </p>
                                 <p>
-                                    Efter der var givet en præsentation af vores forslag til vores arbejdsgiver og der blev givet thumbs up gik vi igang med implementeringen af 
-                                    det nye design ved hjælp af Wordpress og Elementor, og vi fik kodet et plugin til dem for at gøre den interaktive toggle-knap som skifter forsidens sprog mulig.
+                                    Efter der var givet en præsentation af vores forslag til vores arbejdsgiver, og der blev givet thumbs up gik vi igang med implementeringen af 
+                                    det nye design ved hjælp af Wordpress og Elementor, og jeg fik kodet et unikt plugin til dem for, at gøre den interaktive toggle-knap, som skifter forsidens sprog, mulig.
                                 </p>
                                 <p>
-                                    Det endelig produkt skabte så meget tilfredshed, at ejerne af Maya's Tolkeservice ville have os til at bygge hjemmesider til 
+                                    Det endelig produkt skabte så meget tilfredshed, at ejerne af Maya's Tolkeservice kontaktede os igen, og ville have os til at bygge hjemmesider til 
                                     deres andre virksomheder de arbejder på.
                                 </p>
                             </div>

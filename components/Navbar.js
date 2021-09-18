@@ -41,7 +41,7 @@ const Navbar = () => {
             {screenSize < 768 &&
             <div className="logo" >
                 <LinkS to='/' onClick={toggleHome}>
-                    <img src="/logo-black-white.png" />
+                    <img src="/logo-black-white.webp" />
                 </LinkS>
             </div>
             }
@@ -59,22 +59,22 @@ const Navbar = () => {
                     <div id="mobil-menu-container" className={menuOpen ? 'mobil-menu-container-active' : 'mobil-menu-container'}>
                         <nav className="global-menu-mobil">
                             <ul className="menu-liste-mobil">
-                                <LinkS activeClass="activeMobil" to='projekter-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                <LinkS activeClass="activeMobil" to='projekter-section' smooth={true} duration={500} spy={true} exact='true' offset={-100} >
                                     <li onClick={screenSize < 768 ? handleBurgermenu : undefined}>
                                         Projekter
                                     </li>
                                 </LinkS>
-                                <LinkS activeClass="activeMobil" to='skillset-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                <LinkS activeClass="activeMobil" to='skillset-section' smooth={true} duration={500} spy={true} exact='true' offset={-100} >
                                     <li onClick={screenSize < 768 ? handleBurgermenu : undefined}>
                                         Skillset
                                     </li>
                                 </LinkS>
-                                <LinkS activeClass="activeMobil" to='om-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                <LinkS activeClass="activeMobil" to='om-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-100} >
                                     <li onClick={screenSize < 768 ? handleBurgermenu : undefined}>
                                         Om mig
                                     </li>
                                 </LinkS>
-                                <LinkS activeClass="activeMobil" to='kontakt-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-80} >
+                                <LinkS activeClass="activeMobil" to='kontakt-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-100} >
                                     <li onClick={screenSize < 768 ? handleBurgermenu : undefined}>
                                         Kontakt mig
                                     </li>

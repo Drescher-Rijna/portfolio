@@ -45,11 +45,11 @@ html {
 
 /* FONT SIZES ACROOS ALL SCREENS */
 .heading-h1 {
-  @apply text-2xl;
+  @apply text-3xl;
 }
 
 .heading-h2 {
-  @apply text-xl;
+  @apply text-2xl;
 }
 
 h3, .heading-h3, button {
@@ -485,7 +485,7 @@ footer p {
 /* MOBIL */
 /* HERO-SECTION */
 #hero-section {
-  @apply px-6;
+  @apply px-7;
   @apply my-36;
   @apply max-h-96;
   @apply max-w-full;
@@ -579,7 +579,7 @@ footer p {
 
 .om-mig-photo img {
   min-width: 150px;
-  width: 80%;
+  width: 90%;
   max-width: 100%;
   @apply m-auto;
 }
@@ -816,7 +816,7 @@ footer p {
 }
 
 .tilt-gisitoscooters:hover .gisitoscooters-mockup {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .tilt-inner-gisitoscooters {
@@ -874,7 +874,7 @@ footer p {
 }
 
 .tilt-desc-mayas img {
-  max-width: 150px;
+  max-width: 200px;
   height: auto;
 }
 

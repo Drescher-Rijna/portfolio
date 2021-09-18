@@ -113,9 +113,9 @@ const GisitoScootersModal = ({showModal, setShowModal}) => {
                                                 Om Gisito Scooters
                                             </h4>    
                                             <p className="modal-text">
-                                                Dette er en Løbehul webshop som er blevet bygget med en NoSQL-database. Der er blevet sat fokus på
+                                                Dette er en Løbehul webshop, som er blevet bygget med en NoSQL-database. Der er blevet sat fokus på
                                                 bruger registrering, database implementering ift. produkter og informationssider til produkter, tilføjelse af
-                                                produkter til kurven der gemmes og et brugebart søgefelt. Så det er så nemt for brugeren at bruge siden og finde det
+                                                produkter til kurven der gemmes og et brugebart søgefelt. Så det er så nemt for brugeren at bruge siden, og finde det
                                                 produkt de gerne vil tilføje til kurven.
                                             </p>
                                         </div>
@@ -139,14 +139,14 @@ const GisitoScootersModal = ({showModal, setShowModal}) => {
                                                     Søgefelt
                                                 </li>
                                                 <li className="text-base">
-                                                    Dynamisk side som ændre sig alt efter hvad produkter brugeren vælger at ville have mere information om
+                                                    Dynamisk side som ændre sig alt efter hvad produkt brugeren vælger, at ville have mere information om
                                                 </li>
                                                 <li className="text-base">
-                                                    Admin links hvorpå man har mulighed for at tilføje nye produkter til databasen og som automatisk vil fremvises
+                                                    Admin links hvorpå man har mulighed for at tilføje nye produkter til databasen, og som automatisk vil fremvises
                                                     på webshoppen
                                                 </li>
                                                 <li className="text-base">
-                                                    En kurv hvor de gemte produkter er gemt i local storage for gæster uden login og i databasen for brugere
+                                                    En kurv hvor de gemte produkter er gemt i local storage for gæster uden login, og i databasen for brugere
                                                     der er logget ind
                                                 </li>
                                             </ul>

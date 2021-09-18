@@ -64,7 +64,7 @@ const TrickDiceModal = ({showModal, setShowModal}) => {
                         <div className="project-modal-infobox">
                             <article>
                                 <h2 className="heading-h2">
-                                    TRICK DICE TERNINGER LIGE VED HÅNDEN
+                                    TRICK DICE, ALTID I LOMMEN
                                 </h2>
                                 <ul className="tools-used">
                                     <li>
@@ -84,10 +84,10 @@ const TrickDiceModal = ({showModal, setShowModal}) => {
                                             Om Trick Dice
                                         </h4>    
                                         <p className="modal-text">
-                                            En app der simulere spillet Trick Dice hvor man normalt ville have fysiske terninger man kaster med og får tricks
+                                            Denne app simulerer spillet Trick Dice, hvor man normalt ville have fysiske terninger man kaster med, og får tricks
                                             man skal lande for at undgå at få et strike og vinde spillet. Ideen kom af at mig og mine venner elsker at konkurrere mod 
                                             hinanden på løbehjul og gad godt at spille "Trick Dice", men kunne ikke skaffe terningerne til at spille. Så jeg valgte at lave
-                                            en alternativ løsning selv, med en mobil app.
+                                            en alternativ løsning, med en mobil app.
                                         </p>
                                     </div>
                                     
@@ -104,7 +104,7 @@ const TrickDiceModal = ({showModal, setShowModal}) => {
 
                                         <ul className="list-disc ml-5 grid gap-y-1">
                                             <li className="text-base">
-                                                Shake-detection, så man kan ryste sin mobil for at kaste terningerne, som hvis man kastede virkelige terninger
+                                                Shake-detection, så man kan ryste sin mobil for at kaste terningerne, som hvis man kastede fysiske terninger
                                             </li>
                                             <li className="text-base">
                                                 Forskellige terninger for forskellige sværhedsgrader
