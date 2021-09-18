@@ -78,7 +78,7 @@ export default function Home() {
                 Multimediedesigner
               </h1>
               <p>
-                Multimediedesigner studerende i 3. semester, som har kompetence i webudvikling UX/UI,
+                Multimediedesigner studerende i 3. semester, med kompetencer indenfor webudvikling UX/UI,
                 og er altid optimistik og på udkig efter forbedringer.
               </p>
               
@@ -109,37 +109,6 @@ export default function Home() {
                     </li>
                 </ul>
             </div>
-          </section>
-
-          <section id="om-mig-section">
-            <h2 className="heading-h2">
-              Hvem er Drescher Rijna?
-            </h2>
-            <div className="om-mig-photo">
-              {screenSize > 767 ? 
-                <img src="/om-mig-desktop.png" /> :
-                ""
-              }
-              {screenSize < 767 ?
-                <img src="/om-mig-mobil.png" /> : ""
-              }
-            </div>
-            <article>
-              <p>
-                Jeg er en multimediedesigner, som er specialeret i programmering og webudvikling.
-                Jeg er en meget optimistisk person, som altid er klar på at lære noget nyt og tror på,
-                at alting kan altid forbedres.
-              </p>
-              <p>
-                Jeg har 1 års erfaring med programmering og webudvikling og har allerede arbejdede med mange forskellige sprog,
-                som Javascript, ReactJS, NextJS, Flutter m.m. Udover det har jeg også prøvede at lave hjemmesider til virksomheder.
-              </p>
-              <p>
-                I min fritid elsker jeg at være aktiv. Jeg styrketræner og dyrker rullesport specifikt køre jeg på løbehjul,
-                hvor jeg lære mange forskellige vilde tricks. Hvilken nok er grunden til at jeg har mit optimistiske mindset, frygtløshed og gå på mod,
-                når det kommer til at prøve noget nyt.
-              </p>
-            </article>
           </section>
           
           <section id="projekter-section">
@@ -180,23 +149,57 @@ export default function Home() {
               }
               
           </section>
+
           <section ref={ref} id="skillset-section">
             <h2 className="skillset-section-titel heading-h2" >Skillset</h2>
             <div className="skills-container">
-              <SkillsetMeter skill="HTML" level={90} imgUrl="/HTML.png" inView={inView} />
-              <SkillsetMeter skill="CSS" level={90} imgUrl="/CSS.png" inView={inView} />
-              <SkillsetMeter skill="JS" level={80} imgUrl="/JS.png" inView={inView} />
-              <SkillsetMeter skill="ReactJS" level={60} imgUrl="/REACT.png" inView={inView} />
-              <SkillsetMeter skill="NextJS" level={50} imgUrl="/NEXT.png" inView={inView} />
-              <SkillsetMeter skill="Flutter" level={50} imgUrl="/FLUTTER.png" inView={inView} />
-              <SkillsetMeter skill="WP" level={60} imgUrl="/WP.png" inView={inView} />
-              <SkillsetMeter skill="Elementor" level={55} imgUrl="/ELEMENTOR.png" inView={inView} />
-              <SkillsetMeter skill="Firebase" level={55} imgUrl="/FIREBASE.png" inView={inView} />
-              <SkillsetMeter skill="Adobe XD" level={60} imgUrl="/XD.png" inView={inView} />
-              <SkillsetMeter skill="Illustrator" level={50} imgUrl="/ILLUSTRATOR.png" inView={inView} />
-              <SkillsetMeter skill="Photoshop" level={40} imgUrl="/PHOTOSHOP.png" inView={inView} />
+              <SkillsetMeter skill="HTML" level={90} imgUrl="/HTML.webp" inView={inView} />
+              <SkillsetMeter skill="CSS" level={90} imgUrl="/CSS.webp" inView={inView} />
+              <SkillsetMeter skill="JS" level={80} imgUrl="/JS.webp" inView={inView} />
+              <SkillsetMeter skill="ReactJS" level={60} imgUrl="/REACT.webp" inView={inView} />
+              <SkillsetMeter skill="NextJS" level={50} imgUrl="/NEXT.webp" inView={inView} />
+              <SkillsetMeter skill="Flutter" level={50} imgUrl="/FLUTTER.webp" inView={inView} />
+              <SkillsetMeter skill="WP" level={60} imgUrl="/WP.webp" inView={inView} />
+              <SkillsetMeter skill="Elementor" level={55} imgUrl="/ELEMENTOR.webp" inView={inView} />
+              <SkillsetMeter skill="Firebase" level={55} imgUrl="/FIREBASE.webp" inView={inView} />
+              <SkillsetMeter skill="Adobe XD" level={60} imgUrl="/XD.webp" inView={inView} />
+              <SkillsetMeter skill="Illustrator" level={50} imgUrl="/ILLUSTRATOR.webp" inView={inView} />
+              <SkillsetMeter skill="Photoshop" level={40} imgUrl="/PHOTOSHOP.webp" inView={inView} />
             </div>
           </section>
+
+          <section id="om-mig-section">
+            <h2 className="heading-h2">
+              Hvem er Drescher Rijna?
+            </h2>
+            <div className="om-mig-photo">
+              {screenSize > 767 ? 
+                <img src="/om-mig-desktop.webp" /> :
+                ""
+              }
+              {screenSize < 767 ?
+                <img src="/om-mig-mobil.webp" /> : ""
+              }
+            </div>
+            <article>
+              <p>
+                Jeg er en multimediedesigner fra Viborg, som har mange kompetencer og færdigheder i mange områder som, kommunikation, 
+                marketing, grafisk design, videoproduktion, og har specielt interesse i programmering og webudvikling.
+                Jeg er en meget optimistisk person, som altid er klar på at lære noget nyt og tror på,
+                at alting kan altid gøres bedre.
+              </p>
+              <p>
+                Jeg har 1 års erfaring med programmering og webudvikling og har allerede arbejdede med mange forskellige sprog,
+                som Javascript, ReactJS, NextJS, Flutter m.m. Udover det har jeg også prøvede at lave hjemmesider til forskellige virksomheder.
+              </p>
+              <p>
+                I min fritid elsker jeg at være aktiv. Jeg styrketræner og dyrker rullesport specifikt køre jeg på løbehjul,
+                hvor jeg lære mange forskellige vilde tricks. Hvilket er hvor mit optimistiske mindset, frygtløshed og tålmodighed kommer fra, til 
+                når jeg skal lære noget nyt.
+              </p>
+            </article>
+          </section>
+
           <section id="kontakt-mig-section">
             <h2 className="heading-h2">Kom i kontakt med mig</h2>
             <form className="kontakt-mig-form" method="post" action="https://drescher-rijna.dk/cgi-bin/FormMail.pl" accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset; document.charset = 'ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};">

@@ -34,7 +34,7 @@ const ToScootTilt = () => {
                             TOSCOOT
                         </h3>
                         <p>
-                            Performance tracker app for løbehjulskøre til at holde styr på og optimere sin progression.
+                            Performance tracker app for løbehjulsudøvere til, at holde styr på og optimere sin progression.
                         </p>
                         <img src="/toscoot-logo-transparent.svg" width="120" />
                     </article>

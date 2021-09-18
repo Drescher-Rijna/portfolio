@@ -55,28 +55,28 @@ const GisitoScootersModal = ({showModal, setShowModal}) => {
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/gisitoscooters-carousel/gisito-removeditem.png"
+                                        src="/gisitoscooters-carousel/gisito-removeditem.webp"
                                         alt="Sixth slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/gisitoscooters-carousel/gisito-auth.png"
+                                        src="/gisitoscooters-carousel/gisito-auth.webp"
                                         alt="Seventh slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/gisitoscooters-carousel/gisito-admin.png"
+                                        src="/gisitoscooters-carousel/gisito-admin.webp"
                                         alt="Eigth slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="/gisitoscooters-carousel/gisito-gallery.png"
+                                        src="/gisitoscooters-carousel/gisito-gallery.webp"
                                         alt="Ninth slide"
                                     />
                                 </Carousel.Item>
@@ -107,20 +107,52 @@ const GisitoScootersModal = ({showModal, setShowModal}) => {
                                 </ul>
                                         
                                 <article className="modal-text">
-                                    <p>
-                                        Løbehjul webshop projekt, hvor jeg har brugt en NoSQL-databse til at skabe bruger regristering og log ind.
-                                    </p>
-                                    <p>
-                                        Derudover har jeg brugt databasen til at gemme produktinfo og billeder, så siden dynamisk kan fremvise produkterne. Samtidigt fremvises individuelle
-                                        produkter dynamisk på produktinfo-siden, så man ikke skal lave en unik side til hvert produkt.
-                                    </p>
-                                    <p>
-                                        Brugeren har mulighed for at bruge søgefeltet til at finde specfikke produkter og kan tilføje produkter til deres kurv, som vil blive gemt på
-                                        databsen hvis man er logget ind, og på local storage hvis man ikke er logget ind.
-                                    </p>
-                                    <p>
-                                        Ydermere er der en form for tilføjelse af nye produkter, som kun kan bruges af brugere som er tildelt rollen som administrator. 
-                                    </p>
+                                    <div className="mt-3 grid gap-y-4">
+                                        <div>
+                                            <h4 className="heading-h4">
+                                                Om Gisito Scooters
+                                            </h4>    
+                                            <p className="modal-text">
+                                                Dette er en Løbehul webshop, som er blevet bygget med en NoSQL-database. Der er blevet sat fokus på
+                                                bruger registrering, database implementering ift. produkter og informationssider til produkter, tilføjelse af
+                                                produkter til kurven der gemmes og et brugebart søgefelt. Så det er så nemt for brugeren at bruge siden, og finde det
+                                                produkt de gerne vil tilføje til kurven.
+                                            </p>
+                                        </div>
+                                        
+                                        <div>
+                                            <h4 className="heading-h4">
+                                                Personligt projekt | 3-4 uger
+                                            </h4>
+                                        </div>
+
+                                        <div>
+                                            <h4 className="heading-h4">
+                                                Websitet har følgende funktionaliteter:
+                                            </h4>
+
+                                            <ul className="list-disc ml-5 grid gap-y-1">
+                                                <li className="text-base">
+                                                    Bruger oprettelse og login
+                                                </li>
+                                                <li className="text-base">
+                                                    Søgefelt
+                                                </li>
+                                                <li className="text-base">
+                                                    Dynamisk side som ændre sig alt efter hvad produkt brugeren vælger, at ville have mere information om
+                                                </li>
+                                                <li className="text-base">
+                                                    Admin links hvorpå man har mulighed for at tilføje nye produkter til databasen, og som automatisk vil fremvises
+                                                    på webshoppen
+                                                </li>
+                                                <li className="text-base">
+                                                    En kurv hvor de gemte produkter er gemt i local storage for gæster uden login, og i databasen for brugere
+                                                    der er logget ind
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>
                                 </article>
                             </article>
                         </div>

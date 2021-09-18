@@ -34,7 +34,7 @@ const TrickDiceTilt = () => {
                                 TRICK DICE
                             </h3>
                             <p>
-                                Løbehjulsterninger i lommen til at afholde sjove konkurrencer med sine venner.
+                                Løbehjulsterninger i lommen til sjove konkurrencer med vennerne.
                             </p>
                             <img src="/trick-dice-logo.webp" width="120" />
                         </article>

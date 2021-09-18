@@ -38,22 +38,26 @@ html {
   outline: none !important;
 }
 
-.heading-h1, .heading-h2, .heading-h3 {
+.heading-h1, .heading-h2, .heading-h3, .heading-h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
 /* FONT SIZES ACROOS ALL SCREENS */
 .heading-h1 {
-  @apply text-2xl;
+  @apply text-3xl;
 }
 
 .heading-h2 {
-  @apply text-xl;
+  @apply text-2xl;
 }
 
 h3, .heading-h3, button {
   @apply text-lg;
+}
+
+.heading-h4 {
+  @apply text-base;
 }
 
 p, div {
@@ -107,6 +111,10 @@ a:focus {
     @apply text-base;
   }
 
+  .project-modal-infobox article .heading-h2 {
+    @apply text-xl;
+  }
+
 
 }
 
@@ -125,34 +133,11 @@ a:focus {
     @apply text-lg;
   }
 
+  .project-modal-infobox article .heading-h2 {
+    @apply text-2xl;
+  }
 
-}
 
-
-#trick-dice-features {
-  list-style: disc;
-  @apply m-0;
-  @apply p-0;
-  
-  @apply ml-4;
-}
-
-#trick-dice-features li {
-  @apply text-base;
-  @apply py-1;
-}
-
-#toscoot-features {
-  list-style: disc;
-  @apply m-0;
-  @apply p-0;
-  
-  @apply ml-4;
-}
-
-#toscoot-features li {
-  @apply text-base;
-  @apply py-1;
 }
 
 a {
@@ -500,7 +485,7 @@ footer p {
 /* MOBIL */
 /* HERO-SECTION */
 #hero-section {
-  @apply px-6;
+  @apply px-7;
   @apply my-36;
   @apply max-h-96;
   @apply max-w-full;
@@ -594,7 +579,7 @@ footer p {
 
 .om-mig-photo img {
   min-width: 150px;
-  width: 80%;
+  width: 90%;
   max-width: 100%;
   @apply m-auto;
 }
@@ -831,7 +816,7 @@ footer p {
 }
 
 .tilt-gisitoscooters:hover .gisitoscooters-mockup {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .tilt-inner-gisitoscooters {
@@ -889,7 +874,7 @@ footer p {
 }
 
 .tilt-desc-mayas img {
-  max-width: 150px;
+  max-width: 200px;
   height: auto;
 }
 
@@ -1244,6 +1229,9 @@ footer p {
   font-weight: 600;
 }
 
+.mockup-trickdice {
+  @apply pb-8;
+}
 
 
 
@@ -1286,6 +1274,9 @@ footer p {
     transform: scale(1.1) rotate(-18deg);
   }
   
+  .mockup-trickdice {
+    @apply pb-2;
+  }
 
   .gisitoscooters-mockup {
     @apply mt-0;
@@ -1522,6 +1513,10 @@ footer p {
 
   .tilt-gisitoscooters:hover {
     background-color: #017a39;
+  }
+
+  .mockup-trickdice {
+    @apply pb-0;
   }
 
 
@@ -2066,6 +2061,7 @@ footer p {
     @apply h-60;
     @apply p-5;
     @apply pl-8;
+    @apply pr-2;
     @apply grid;
     @apply grid-cols-1;
     @apply gap-y-0;
