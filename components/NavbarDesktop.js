@@ -40,7 +40,7 @@ const NavbarDesktop = () => {
                         <li className={scrollPos > 64 ? 'li-scroll' : 'li-default'}>
                             Skillset
                         </li>
-                    </LinkS>    
+                    </LinkS>
                     <LinkS className="nav-link-dr" activeClass="active" to='om-mig-section' smooth={true} duration={500} spy={true} exact='true' offset={-100} >
                         <li className={scrollPos > 64 ? 'li-scroll' : 'li-default'}>
                             Om mig
@@ -56,17 +56,17 @@ const NavbarDesktop = () => {
             <div className={scrollPos > 64 ? 'socials-desktop-scroll' : 'socials-desktop'}>
                 <ul>
                     <li className="social-desktop-git">
-                        <a href="https://github.com/Drescher-Rijna" target="_blank">
+                        <a href="https://github.com/Drescher-Rijna">
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                     </li>
                     <li className="social-desktop-li">
-                        <a href="https://www.linkedin.com/in/drescher-rijna/" target="_blank">
+                        <a href="https://www.linkedin.com/in/drescher-rijna/">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </a>
                     </li>
                     <li className="social-desktop-ig">
-                        <a href="https://www.instagram.com/thisisgisito/" target="_blank">
+                        <a href="https://www.instagram.com/thisisgisito/">
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
                     </li>

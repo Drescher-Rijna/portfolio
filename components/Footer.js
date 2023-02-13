@@ -6,17 +6,17 @@ const Footer = () => {
         <footer>
             <ul className="footer-socials ml-4">
                 <li>
-                    <a href="https://github.com/Drescher-Rijna" target="_blank">
+                    <a href="https://github.com/Drescher-Rijna">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/drescher-rijna/" target="_blank">
+                    <a href="https://www.linkedin.com/in/drescher-rijna/">
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/thisisgisito/" target="_blank">
+                    <a href="https://www.instagram.com/thisisgisito/">
                         <FontAwesomeIcon icon={faInstagram} />
                     </a>
                 </li>
